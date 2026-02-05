@@ -9,6 +9,8 @@ import PricingSection from '../../components/leadgenies/PricingSection.tsx';
 import FAQSection from '../../components/leadgenies/FAQSection.tsx';
 import ContactSection from '../../components/leadgenies/ContactSection.tsx';
 import FooterSection from '../../components/leadgenies/FooterSection.tsx';
+import ROICalculator from '../../components/leadgenies/ROICalculator.tsx';
+import TestimonialSection from '../../components/leadgenies/TestimonialSection.tsx';
 
 // Language for this page
 const lang = 'en';
@@ -33,6 +35,9 @@ const pageDescription = "Verified B2B contacts with personal ICP consulting. GDP
     <!-- Data Transformation Section -->
     <DataTransformSection lang={lang} client:idle />
 
+    <!-- ROI Calculator Section -->
+    <ROICalculator lang={lang} client:idle />
+
     <!-- What We Do Section (Process + Comparison) -->
     <WhatWeDoSection lang={lang} client:idle />
 
@@ -43,6 +48,9 @@ const pageDescription = "Verified B2B contacts with personal ICP consulting. GDP
 
     <!-- Pricing Section -->
     <PricingSection lang={lang} client:idle />
+
+    <!-- Testimonial Section -->
+    <TestimonialSection lang={lang} client:idle />
 
     <!-- FAQ Section -->
     <section id="faq">

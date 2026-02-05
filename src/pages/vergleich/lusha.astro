@@ -1,0 +1,160 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HeaderLeadGenies from '../../components/leadgenies/HeaderLeadGenies.tsx';
+import FooterSection from '../../components/leadgenies/FooterSection.tsx';
+import ComparisonTable from '../../components/leadgenies/ComparisonTable.tsx';
+
+const lang = 'de';
+const competitor = 'lusha';
+const competitorName = 'Lusha';
+
+const pageTitle = `Lead-Schmiede vs ${competitorName} - Ehrlicher Vergleich 2024`;
+const pageDescription = `Vergleich Lead-Schmiede vs ${competitorName}: Preise, Features, Vor- und Nachteile. Finden Sie die beste Lösung für Ihre B2B-Lead-Generierung.`;
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  type="Article"
+  lang={lang}
+>
+  <HeaderLeadGenies lang={lang} client:load />
+
+  <main style="padding-top: 140px; padding-bottom: 80px; background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);">
+    <div style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+      <!-- Breadcrumb -->
+      <nav style="margin-bottom: 32px;">
+        <a href="/" style="font-family: 'Source Sans 3', sans-serif; font-size: 0.875rem; color: #9a8c98; text-decoration: none;">
+          Home
+        </a>
+        <span style="color: #9a8c98; margin: 0 8px;">›</span>
+        <span style="font-family: 'Source Sans 3', sans-serif; font-size: 0.875rem; color: #4a4e69;">
+          Vergleich: {competitorName}
+        </span>
+      </nav>
+
+      <!-- Page Header -->
+      <header style="text-align: center; margin-bottom: 48px;">
+        <span style="display: inline-block; background: rgba(224, 122, 95, 0.1); color: #e07a5f; font-family: 'Source Sans 3', sans-serif; font-size: 0.8125rem; font-weight: 600; padding: 8px 16px; border-radius: 100px; margin-bottom: 16px;">
+          Vergleich 2024
+        </span>
+        <h1 style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 400; color: #1a1a2e; margin-bottom: 16px;">
+          Lead-Schmiede vs {competitorName}
+        </h1>
+        <p style="font-family: 'Source Sans 3', sans-serif; font-size: 1.125rem; color: #4a4e69; max-width: 600px; margin: 0 auto;">
+          Browser-Extension vs. Done-for-you Service: Schnelle Kontaktdaten-Suche vs. fertige Lead-Listen.
+        </p>
+      </header>
+
+      <!-- Quick Summary -->
+      <div style="background: #ffffff; border-radius: 16px; padding: 24px; margin-bottom: 48px; border: 1px solid rgba(74, 78, 105, 0.1);">
+        <h2 style="font-family: 'Source Sans 3', sans-serif; font-size: 1rem; font-weight: 600; color: #1a1a2e; margin-bottom: 16px;">
+          TL;DR - Schneller Überblick
+        </h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div style="padding: 16px; background: rgba(74, 78, 105, 0.05); border-radius: 12px;">
+            <p style="font-family: 'Source Sans 3', sans-serif; font-weight: 600; color: #1a1a2e; margin: 0 0 8px 0;">{competitorName}</p>
+            <p style="font-family: 'Source Sans 3', sans-serif; font-size: 0.875rem; color: #4a4e69; margin: 0;">
+              Browser-Extension für schnelle Kontaktdaten auf LinkedIn & Websites. Günstige Credits, aber Datenqualität schwankt.
+            </p>
+          </div>
+          <div style="padding: 16px; background: rgba(129, 178, 154, 0.1); border-radius: 12px;">
+            <p style="font-family: 'Source Sans 3', sans-serif; font-weight: 600; color: #2d6a4f; margin: 0 0 8px 0;">Lead-Schmiede</p>
+            <p style="font-family: 'Source Sans 3', sans-serif; font-size: 0.875rem; color: #4a4e69; margin: 0;">
+              Fertige, kuratierte Lead-Listen statt einzelner Kontaktdaten. Manuell verifiziert, mit ICP-Beratung.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparison Table Component -->
+      <ComparisonTable competitor={competitor} lang={lang} client:idle />
+
+      <!-- SEO Content -->
+      <article style="margin-top: 64px;">
+        <h2 style="font-family: 'DM Serif Display', Georgia, serif; font-size: 1.75rem; color: #1a1a2e; margin-bottom: 24px;">
+          Detaillierter Vergleich: {competitorName} vs Lead-Schmiede
+        </h2>
+
+        <section style="margin-bottom: 32px;">
+          <h3 style="font-family: 'Source Sans 3', sans-serif; font-size: 1.25rem; font-weight: 600; color: #1a1a2e; margin-bottom: 12px;">
+            Was ist {competitorName}?
+          </h3>
+          <p style="font-family: 'Source Sans 3', sans-serif; font-size: 1rem; line-height: 1.7; color: #4a4e69;">
+            Lusha ist eine Browser-Extension, die Kontaktdaten (E-Mail, Telefon) zu LinkedIn-Profilen oder
+            Unternehmenswebsites anzeigt. Mit einem Credit-System zahlen Sie pro Kontakt. Die Daten stammen
+            aus Community-Quellen und variieren in der Qualität.
+          </p>
+        </section>
+
+        <section style="margin-bottom: 32px;">
+          <h3 style="font-family: 'Source Sans 3', sans-serif; font-size: 1.25rem; font-weight: 600; color: #1a1a2e; margin-bottom: 12px;">
+            Der Unterschied im Ansatz
+          </h3>
+          <p style="font-family: 'Source Sans 3', sans-serif; font-size: 1rem; line-height: 1.7; color: #4a4e69;">
+            Lusha ist ein <strong>Recherche-Tool</strong> – Sie suchen Kontakte einzeln und decken deren Daten auf.
+            Lead-Schmiede ist ein <strong>Listen-Service</strong> – Sie erhalten fertige, kuratierte Lead-Listen
+            basierend auf Ihrem definierten Idealkunden-Profil (ICP).
+          </p>
+        </section>
+
+        <section style="margin-bottom: 32px;">
+          <h3 style="font-family: 'Source Sans 3', sans-serif; font-size: 1.25rem; font-weight: 600; color: #1a1a2e; margin-bottom: 12px;">
+            Wann sollten Sie {competitorName} wählen?
+          </h3>
+          <ul style="font-family: 'Source Sans 3', sans-serif; font-size: 1rem; line-height: 1.8; color: #4a4e69; padding-left: 24px;">
+            <li>Sie brauchen nur wenige Kontaktdaten pro Woche</li>
+            <li>Sie haben bereits Leads auf LinkedIn identifiziert</li>
+            <li>Schneller Zugriff auf E-Mail/Telefon ist wichtiger als Kontext</li>
+            <li>Ihr Budget ist sehr begrenzt (Freemium verfügbar)</li>
+            <li>Basisdaten reichen aus, kein ICP-Matching nötig</li>
+          </ul>
+        </section>
+
+        <section style="margin-bottom: 32px;">
+          <h3 style="font-family: 'Source Sans 3', sans-serif; font-size: 1.25rem; font-weight: 600; color: #1a1a2e; margin-bottom: 12px;">
+            Wann sollten Sie Lead-Schmiede wählen?
+          </h3>
+          <ul style="font-family: 'Source Sans 3', sans-serif; font-size: 1rem; line-height: 1.8; color: #4a4e69; padding-left: 24px;">
+            <li>Sie brauchen regelmäßig größere Lead-Mengen (50-500+)</li>
+            <li>Datenqualität und Aktualität sind geschäftskritisch</li>
+            <li>ICP-Definition und -Beratung ist wichtig</li>
+            <li>Sie wollen keine Zeit mit Einzelrecherche verbringen</li>
+            <li>100% DSGVO-Konformität aus Deutschland ist Pflicht</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3 style="font-family: 'Source Sans 3', sans-serif; font-size: 1.25rem; font-weight: 600; color: #1a1a2e; margin-bottom: 12px;">
+            Fazit
+          </h3>
+          <p style="font-family: 'Source Sans 3', sans-serif; font-size: 1rem; line-height: 1.7; color: #4a4e69;">
+            Lusha ist praktisch für schnelle Einzelabfragen mit begrenztem Budget. Für systematische
+            B2B-Lead-Generierung mit verifizierten, ICP-gematched Listen bietet Lead-Schmiede mehr
+            Wert: Keine Recherche-Arbeit, konsistent hohe Datenqualität und persönliche Beratung.
+          </p>
+        </section>
+      </article>
+
+      <!-- Related Comparisons -->
+      <nav style="margin-top: 64px; padding-top: 32px; border-top: 1px solid rgba(74, 78, 105, 0.1);">
+        <h3 style="font-family: 'Source Sans 3', sans-serif; font-size: 1rem; font-weight: 600; color: #1a1a2e; margin-bottom: 16px;">
+          Weitere Vergleiche
+        </h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+          <a href="/vergleich/apollo" style="font-family: 'Source Sans 3', sans-serif; font-size: 0.875rem; color: #e07a5f; text-decoration: none; padding: 8px 16px; background: rgba(224, 122, 95, 0.1); border-radius: 100px;">
+            vs Apollo.io →
+          </a>
+          <a href="/vergleich/cognism" style="font-family: 'Source Sans 3', sans-serif; font-size: 0.875rem; color: #e07a5f; text-decoration: none; padding: 8px 16px; background: rgba(224, 122, 95, 0.1); border-radius: 100px;">
+            vs Cognism →
+          </a>
+          <a href="/vergleich/linkedin-sales-navigator" style="font-family: 'Source Sans 3', sans-serif; font-size: 0.875rem; color: #e07a5f; text-decoration: none; padding: 8px 16px; background: rgba(224, 122, 95, 0.1); border-radius: 100px;">
+            vs LinkedIn Sales Navigator →
+          </a>
+        </div>
+      </nav>
+    </div>
+  </main>
+
+  <FooterSection lang={lang} client:load />
+</Layout>

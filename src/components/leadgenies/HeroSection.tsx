@@ -242,6 +242,70 @@ export default function HeroSection({ lang = 'de' }: HeroSectionProps) {
                 ))}
               </div>
             )}
+
+            {/* Customer Counter */}
+            <div
+              style={{
+                ...fadeInUp(0.5),
+                display: 'flex',
+                alignItems: 'center',
+                gap: '12px',
+                marginTop: '32px',
+                padding: '16px 20px',
+                background: 'linear-gradient(135deg, rgba(26, 26, 46, 0.03) 0%, rgba(26, 26, 46, 0.06) 100%)',
+                borderRadius: '12px',
+                border: '1px solid rgba(26, 26, 46, 0.06)'
+              }}
+            >
+              {/* Avatars Stack */}
+              <div style={{ display: 'flex', marginRight: '4px' }}>
+                {[0, 1, 2, 3].map((i) => (
+                  <div
+                    key={i}
+                    style={{
+                      width: '32px',
+                      height: '32px',
+                      borderRadius: '50%',
+                      background: `linear-gradient(135deg, ${['#e07a5f', '#5c4d7d', '#81b29a', '#f4a261'][i]} 0%, ${['#f4a261', '#1a1a2e', '#2d6a4f', '#e07a5f'][i]} 100%)`,
+                      border: '2px solid #ffffff',
+                      marginLeft: i === 0 ? 0 : '-10px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontFamily: 'Source Sans 3, sans-serif',
+                      fontSize: '0.75rem',
+                      fontWeight: 600,
+                      color: '#ffffff'
+                    }}
+                  >
+                    {['TR', 'SS', 'VP', 'MM'][i]}
+                  </div>
+                ))}
+              </div>
+              <div>
+                <p
+                  style={{
+                    fontFamily: 'Space Grotesk, monospace',
+                    fontSize: '1rem',
+                    fontWeight: 600,
+                    color: '#1a1a2e',
+                    margin: 0
+                  }}
+                >
+                  120+ {lang === 'de' ? 'Unternehmen' : 'Companies'}
+                </p>
+                <p
+                  style={{
+                    fontFamily: 'Source Sans 3, sans-serif',
+                    fontSize: '0.8125rem',
+                    color: '#9a8c98',
+                    margin: 0
+                  }}
+                >
+                  {lang === 'de' ? 'vertrauen uns bereits' : 'already trust us'}
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Right: Visual Card */}
