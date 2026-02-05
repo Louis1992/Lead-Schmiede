@@ -281,7 +281,7 @@ export default function HeaderLeadGenies({
               src="/logo-lead-schmiede.png"
               alt="Lead-Schmiede"
               style={{
-                height: isCompact ? '32px' : '40px',
+                height: isCompact ? '32px' : '48px',
                 width: 'auto',
                 transition: 'all 0.3s ease',
                 filter: isMobileMenuOpen ? 'brightness(0) invert(1)' : 'none'
