@@ -1,34 +1,92 @@
-/* Manual color definitions for Tailwind */
+/* Lead-Schmiede "Industrial Forge" Color Palette */
+:root {
+  /* Primary - Deep Forge */
+  --forge-black: #1a1a2e;
+  --forge-steel: #4a4e69;
+  --ember-orange: #e07a5f;
+  --forge-purple: #5c4d7d;
+
+  /* Secondary */
+  --white-hot: #f2f2f2;
+  --cool-steel: #9a8c98;
+  --success-green: #81b29a;
+  --error-red: #e63946;
+
+  /* Neutrals */
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a4e69;
+  --text-muted: #9a8c98;
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --border-light: #e5e5e5;
+
+  /* Gradients */
+  --gradient-forge: linear-gradient(135deg, #1a1a2e 0%, #5c4d7d 100%);
+  --gradient-ember: linear-gradient(135deg, #e07a5f 0%, #f4a261 100%);
+  --gradient-steel: linear-gradient(135deg, #4a4e69 0%, #9a8c98 100%);
+}
+
+/* Tailwind Utility Classes */
 @layer utilities {
-  .bg-primary { background-color: #B19CD9; }
-  .bg-secondary { background-color: #F7E98E; }
-  .bg-accent { background-color: #6B5B95; }
-  .bg-charcoal { background-color: #333333; }
-  .bg-ivory { background-color: #FFFFF0; }
-  .bg-cream { background-color: #FFF9F5; }
-  .bg-background { background-color: #FFFFF0; }
-  
-  .text-primary { color: #B19CD9; }
-  .text-secondary { color: #F7E98E; }
-  .text-accent { color: #6B5B95; }
-  .text-charcoal { color: #333333; }
-  .text-ivory { color: #FFFFF0; }
-  .text-foreground { color: #333333; }
-  
-  .border-primary { border-color: #B19CD9; }
-  .border-secondary { border-color: #F7E98E; }
-  .border-accent { border-color: #6B5B95; }
-  .border-charcoal { border-color: #333333; }
-  
-  .from-primary { --tw-gradient-from: #B19CD9; }
-  .to-primary { --tw-gradient-to: #B19CD9; }
-  .via-primary { --tw-gradient-stops: var(--tw-gradient-from), #B19CD9, var(--tw-gradient-to); }
-  
-  .from-secondary { --tw-gradient-from: #F7E98E; }
-  .to-secondary { --tw-gradient-to: #F7E98E; }
-  .via-secondary { --tw-gradient-stops: var(--tw-gradient-from), #F7E98E, var(--tw-gradient-to); }
-  
-  .from-accent { --tw-gradient-from: #6B5B95; }
-  .to-accent { --tw-gradient-to: #6B5B95; }
-  .via-accent { --tw-gradient-stops: var(--tw-gradient-from), #6B5B95, var(--tw-gradient-to); }
+  /* Background colors */
+  .bg-forge-black { background-color: var(--forge-black); }
+  .bg-forge-steel { background-color: var(--forge-steel); }
+  .bg-ember-orange { background-color: var(--ember-orange); }
+  .bg-forge-purple { background-color: var(--forge-purple); }
+  .bg-white-hot { background-color: var(--white-hot); }
+  .bg-cool-steel { background-color: var(--cool-steel); }
+  .bg-success-green { background-color: var(--success-green); }
+
+  /* Text colors */
+  .text-forge-black { color: var(--forge-black); }
+  .text-forge-steel { color: var(--forge-steel); }
+  .text-ember-orange { color: var(--ember-orange); }
+  .text-forge-purple { color: var(--forge-purple); }
+  .text-white-hot { color: var(--white-hot); }
+  .text-cool-steel { color: var(--cool-steel); }
+  .text-success-green { color: var(--success-green); }
+
+  /* Border colors */
+  .border-forge-black { border-color: var(--forge-black); }
+  .border-forge-steel { border-color: var(--forge-steel); }
+  .border-ember-orange { border-color: var(--ember-orange); }
+  .border-forge-purple { border-color: var(--forge-purple); }
+  .border-cool-steel { border-color: var(--cool-steel); }
+
+  /* Gradient utilities */
+  .from-forge-black { --tw-gradient-from: var(--forge-black); }
+  .to-forge-purple { --tw-gradient-to: var(--forge-purple); }
+  .from-ember-orange { --tw-gradient-from: var(--ember-orange); }
+  .to-ember-light { --tw-gradient-to: #f4a261; }
+
+  /* Hover states */
+  .hover\:bg-ember-orange:hover { background-color: var(--ember-orange); }
+  .hover\:text-ember-orange:hover { color: var(--ember-orange); }
+
+  /* Ring/Focus colors */
+  .ring-ember-orange { --tw-ring-color: var(--ember-orange); }
+  .focus\:ring-ember-orange:focus { --tw-ring-color: var(--ember-orange); }
+}
+
+/* Legacy color support for backward compatibility */
+@layer utilities {
+  .bg-primary { background-color: var(--forge-purple); }
+  .bg-secondary { background-color: var(--ember-orange); }
+  .bg-accent { background-color: var(--forge-steel); }
+  .bg-charcoal { background-color: var(--forge-black); }
+  .bg-ivory { background-color: var(--white-hot); }
+  .bg-cream { background-color: var(--bg-light); }
+  .bg-background { background-color: var(--bg-white); }
+
+  .text-primary { color: var(--forge-purple); }
+  .text-secondary { color: var(--ember-orange); }
+  .text-accent { color: var(--forge-steel); }
+  .text-charcoal { color: var(--forge-black); }
+  .text-ivory { color: var(--white-hot); }
+  .text-foreground { color: var(--text-primary); }
+
+  .border-primary { border-color: var(--forge-purple); }
+  .border-secondary { border-color: var(--ember-orange); }
+  .border-accent { border-color: var(--forge-steel); }
+  .border-charcoal { border-color: var(--forge-black); }
 }

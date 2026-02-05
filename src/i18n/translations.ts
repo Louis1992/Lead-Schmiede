@@ -15,12 +15,17 @@ export const translations = {
       ctaText: 'Kostenlos beraten lassen'
     },
 
-    // Hero
+    // Hero - Conversion-optimized
     hero: {
-      title: 'Maßgeschneiderte B2B Lead-Listen mit persönlicher ICP-Beratung',
-      subtitle: 'Wir liefern Ihnen verifizierte Entscheider-Kontakte, die genau zu Ihrem Wunschkunden passen. DSGVO-konform, manuell kuratiert, mit Qualitätsgarantie.',
-      cta: 'Jetzt Leads anfragen',
-      belowText: 'Qualifizierte B2B-Kontakte für <strong>Startups, KMU und Selbstständige</strong> – ohne teure Self-Service-Tools oder Agentur-Verträge',
+      title: 'Leads, die wirklich kaufen wollen',
+      subtitle: '100 verifizierte Entscheider-Kontakte in 48h – ohne Self-Service-Chaos oder Agentur-Verträge.',
+      cta: 'Kostenloses Erstgespräch',
+      ctaSubtext: 'Unverbindlich • 15 Min • Sofort Klarheit',
+      trustBadges: [
+        '95% Verifizierungsquote',
+        'DSGVO-konform',
+        'Made in Germany'
+      ],
       reviews: [
         {
           logo: '',
@@ -59,6 +64,49 @@ export const translations = {
           text: '"Schnell, unkompliziert und DSGVO-konform."',
           attribution: '— Freelance Berater',
           personImage: ''
+        }
+      ]
+    },
+
+    // Problem Section - Pain Agitation
+    problem: {
+      title: 'Kennen Sie das?',
+      painPoints: [
+        {
+          icon: 'wallet',
+          text: 'Apollo, Cognism, LinkedIn Sales Navigator... hunderte Euro pro Monat für Tools, die Sie selbst bedienen müssen'
+        },
+        {
+          icon: 'clock',
+          text: 'Stunden verbrannt mit Filtern, die nie genau zu Ihrer Zielgruppe passen'
+        },
+        {
+          icon: 'alert',
+          text: 'Am Ende: Eine Liste mit 30% veralteten oder falschen Kontakten'
+        }
+      ],
+      solution: 'Es gibt einen besseren Weg.',
+      solutionSubtext: 'Wir übernehmen die komplette Recherche – Sie bekommen nur verifizierte Kontakte, die wirklich zu Ihnen passen.'
+    },
+
+    // Benefits Section - Outcome focused
+    benefits: {
+      title: 'Was Sie bekommen',
+      items: [
+        {
+          icon: 'target',
+          title: 'Ihr Wunschkunde, kristallklar definiert',
+          description: 'Persönliche ICP-Beratung statt anonymer Filter. Wir verstehen, wen Sie wirklich erreichen wollen.'
+        },
+        {
+          icon: 'verified',
+          title: '100% aktuelle Kontaktdaten',
+          description: 'Jeder Kontakt wird manuell verifiziert. Keine Bounces, keine veralteten Jobtitel.'
+        },
+        {
+          icon: 'shield',
+          title: 'Rechtssicher dokumentiert',
+          description: 'DSGVO-konforme Datenherkunft. Sie bekommen die komplette Dokumentation für Ihre Unterlagen.'
         }
       ]
     },
@@ -346,12 +394,17 @@ export const translations = {
       ctaText: 'Get Started'
     },
 
-    // Hero
+    // Hero - Conversion-optimized
     hero: {
-      title: 'Custom B2B Lead Lists with Personal ICP Consulting',
-      subtitle: 'We deliver verified decision-maker contacts that match your ideal customer profile. GDPR-compliant, manually curated, with quality guarantee.',
-      cta: 'Request Leads Now',
-      belowText: 'Qualified B2B contacts for <strong>startups, SMBs and freelancers</strong> – without expensive self-service tools or agency contracts',
+      title: 'Leads That Actually Want to Buy',
+      subtitle: '100 verified decision-maker contacts in 48h – without self-service chaos or agency contracts.',
+      cta: 'Free Consultation',
+      ctaSubtext: 'No commitment • 15 min • Instant clarity',
+      trustBadges: [
+        '95% Verification Rate',
+        'GDPR Compliant',
+        'Made in Germany'
+      ],
       reviews: [
         {
           logo: '',
@@ -390,6 +443,49 @@ export const translations = {
           text: '"Fast, straightforward, and GDPR-compliant."',
           attribution: '— Freelance Consultant',
           personImage: ''
+        }
+      ]
+    },
+
+    // Problem Section - Pain Agitation
+    problem: {
+      title: 'Sound Familiar?',
+      painPoints: [
+        {
+          icon: 'wallet',
+          text: 'Apollo, Cognism, LinkedIn Sales Navigator... hundreds of euros per month for tools you have to operate yourself'
+        },
+        {
+          icon: 'clock',
+          text: 'Hours wasted on filters that never quite match your target audience'
+        },
+        {
+          icon: 'alert',
+          text: 'In the end: A list with 30% outdated or incorrect contacts'
+        }
+      ],
+      solution: 'There is a better way.',
+      solutionSubtext: 'We handle the complete research – you only get verified contacts that actually match your needs.'
+    },
+
+    // Benefits Section - Outcome focused
+    benefits: {
+      title: 'What You Get',
+      items: [
+        {
+          icon: 'target',
+          title: 'Your Ideal Customer, Crystal Clear',
+          description: 'Personal ICP consulting instead of anonymous filters. We understand who you really want to reach.'
+        },
+        {
+          icon: 'verified',
+          title: '100% Current Contact Data',
+          description: 'Every contact is manually verified. No bounces, no outdated job titles.'
+        },
+        {
+          icon: 'shield',
+          title: 'Legally Documented',
+          description: 'GDPR-compliant data sources. You receive complete documentation for your records.'
         }
       ]
     },

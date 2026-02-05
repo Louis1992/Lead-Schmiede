@@ -6,9 +6,81 @@
   .section-zen {
     @apply py-16 md:py-20 lg:py-24;
   }
-  
+
   .container-zen {
     @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+
+  /* Lead-Schmiede specific components */
+  .section-forge {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .container-forge {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+    max-width: 1200px;
+  }
+
+  /* Button styles */
+  .btn-ember {
+    background: linear-gradient(135deg, #e07a5f 0%, #f4a261 100%);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(224, 122, 95, 0.3);
+  }
+
+  .btn-ember:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(224, 122, 95, 0.4);
+  }
+
+  .btn-forge {
+    background: var(--forge-black);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-forge:hover {
+    background: var(--forge-purple);
+  }
+
+  /* Card styles */
+  .card-forge {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(26, 26, 46, 0.08);
+    border: 1px solid rgba(26, 26, 46, 0.06);
+    transition: all 0.3s ease;
+  }
+
+  .card-forge:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(26, 26, 46, 0.12);
+  }
+
+  /* Text gradient */
+  .text-gradient-forge {
+    background: linear-gradient(135deg, var(--forge-black) 0%, var(--forge-purple) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-ember {
+    background: linear-gradient(135deg, var(--ember-orange) 0%, #f4a261 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
 
@@ -21,4 +93,15 @@ html, body {
 /* Ensure proper box-sizing */
 * {
   box-sizing: border-box;
+}
+
+/* Selection styling */
+::selection {
+  background: var(--ember-orange);
+  color: #ffffff;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }

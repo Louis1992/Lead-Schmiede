@@ -159,42 +159,55 @@ const ogUrl = canonicalUrl;
     <link rel="canonical" href={canonicalUrl} />
     <title>{pageTitle}</title>
 
-    <!-- Custom Fonts -->
+    <!-- Custom Fonts - Lead-Schmiede Industrial Design -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Custom Font for Headers (Fremont) -->
+    <!-- Lead-Schmiede Brand Styles -->
     <style>
-      @font-face {
-        font-family: 'Fremont';
-        src: url('/fonts/Fremont-Regular.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-      }
-
-      /* Apply brand colors and fonts */
+      /* Lead-Schmiede Typography System */
       :root {
-        --color-primary: #c10000;
+        /* Colors */
+        --forge-black: #1a1a2e;
+        --forge-steel: #4a4e69;
+        --ember-orange: #e07a5f;
+        --forge-purple: #5c4d7d;
+        --white-hot: #f2f2f2;
+        --success-green: #81b29a;
+
+        /* Typography */
+        --font-heading: 'DM Serif Display', Georgia, serif;
+        --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+        --font-mono: 'Space Grotesk', monospace;
+
+        /* Legacy support */
+        --color-primary: var(--ember-orange);
         --color-bg: #ffffff;
-        --font-heading: 'Fremont', serif;
-        --font-body: 'Raleway', sans-serif;
       }
 
       body {
         font-family: var(--font-body);
         background-color: var(--color-bg);
-        color: #0d0d28;
+        color: var(--forge-black);
         margin: 0;
         padding: 0;
+        font-weight: 400;
+        line-height: 1.6;
       }
 
       h1, h2, h3, h4, h5, h6 {
         font-family: var(--font-heading);
-        color: #ffffff;
+        color: var(--forge-black);
         margin: 0;
         padding: 0;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+
+      /* Stats and numbers use Space Grotesk */
+      .font-stats {
+        font-family: var(--font-mono);
       }
 
       /* Lenis smooth scroll styles */

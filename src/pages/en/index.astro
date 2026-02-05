@@ -1,12 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import HeaderLeadGenies from '../../components/leadgenies/HeaderLeadGenies.tsx';
-import HeroLeadGeniesv2 from '../../components/leadgenies/HeroLeadGeniesv2.tsx';
-import TrustSection from '../../components/leadgenies/TrustSection.tsx';
-import HowItWorksSectionV5 from '../../components/leadgenies/HowItWorksSectionV5.tsx';
-import GuaranteeTempSection from '../../components/leadgenies/GuaranteeTempSection.tsx';
-import FAQSection from '../../components/leadgenies/FAQSection.tsx';
+import HeroSection from '../../components/leadgenies/HeroSection.tsx';
+import ProblemSection from '../../components/leadgenies/ProblemSection.tsx';
+import BenefitsSection from '../../components/leadgenies/BenefitsSection.tsx';
 import PricingSection from '../../components/leadgenies/PricingSection.tsx';
+import FAQSection from '../../components/leadgenies/FAQSection.tsx';
 import ContactSection from '../../components/leadgenies/ContactSection.tsx';
 import FooterSection from '../../components/leadgenies/FooterSection.tsx';
 
@@ -30,28 +29,19 @@ const pageDescription = "Verified B2B contacts with personal ICP consulting. GDP
     <!-- SEO H1 (hidden but crawlable) -->
     <h1 class="sr-only">Lead-Schmiede - Custom B2B Lead Lists with ICP Consulting</h1>
 
-    <!-- Hero Section with Intro Animation -->
-    <section id="hero">
-      <HeroLeadGeniesv2 lang={lang} client:load />
-    </section>
+    <!-- Hero Section -->
+    <HeroSection lang={lang} client:load />
 
-    <!-- Trust Section with Animated Stats -->
-    <TrustSection lang={lang} client:idle />
+    <!-- Problem Agitation Section -->
+    <ProblemSection lang={lang} client:idle />
 
-    <!-- How It Works Section -->
+    <!-- Benefits Section -->
     <section id="how-it-works">
-      <HowItWorksSectionV5 lang={lang} client:idle />
-    </section>
-
-    <!-- Guarantee Section -->
-    <section id="guarantee">
-      <GuaranteeTempSection lang={lang} client:idle />
+      <BenefitsSection lang={lang} client:idle />
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing">
-      <PricingSection lang={lang} client:idle />
-    </section>
+    <PricingSection lang={lang} client:idle />
 
     <!-- FAQ Section -->
     <section id="faq">
