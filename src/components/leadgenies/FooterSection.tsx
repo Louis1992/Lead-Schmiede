@@ -59,17 +59,27 @@ export default function FooterSection({ lang = 'de' }: FooterSectionProps) {
             gap: '12px'
           }}
         >
-          <img
-            src="/logo-lead-schmiede.png"
-            alt="Lead-Schmiede"
-            width={154}
-            height={48}
+          <div
             style={{
-              height: '48px',
-              width: 'auto',
-              filter: 'brightness(0) invert(1)'
+              backgroundColor: 'rgba(255, 255, 255, 0.95)',
+              borderRadius: '12px',
+              padding: '12px 20px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
             }}
-          />
+          >
+            <img
+              src="/logo-lead-schmiede.png"
+              alt="Lead-Schmiede"
+              width={154}
+              height={48}
+              style={{
+                height: '40px',
+                width: 'auto'
+              }}
+            />
+          </div>
           <span
             style={{
               fontFamily: 'Source Sans 3, sans-serif',
