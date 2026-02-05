@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import CountUp from './CountUp';
-import ReviewCardsSection from './ReviewCardsSection';
 import { translations, type Language } from '../../i18n/translations';
 
 interface TrustSectionProps {
@@ -270,9 +269,6 @@ export default function TrustSection({ lang = 'de' }: TrustSectionProps) {
           </div>
         </div>
       </div>
-
-      {/* Review Cards Section */}
-      <ReviewCardsSection lang={lang} />
     </section>
   );
 }

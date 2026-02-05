@@ -3,9 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import HeaderLeadGenies from '../../components/leadgenies/HeaderLeadGenies.tsx';
 import HeroLeadGeniesv2 from '../../components/leadgenies/HeroLeadGeniesv2.tsx';
 import TrustSection from '../../components/leadgenies/TrustSection.tsx';
-import ProcessSection from '../../components/leadgenies/ProcessSection.tsx';
 import HowItWorksSectionV5 from '../../components/leadgenies/HowItWorksSectionV5.tsx';
-import ROICalculatorSection from '../../components/leadgenies/ROICalculatorSection.tsx';
 import GuaranteeTempSection from '../../components/leadgenies/GuaranteeTempSection.tsx';
 import FAQSection from '../../components/leadgenies/FAQSection.tsx';
 import PricingSection from '../../components/leadgenies/PricingSection.tsx';
@@ -16,8 +14,8 @@ import FooterSection from '../../components/leadgenies/FooterSection.tsx';
 const lang = 'en';
 
 // Page metadata (English)
-const pageTitle = "LeadGenies - AI-Powered B2B Cold Calling";
-const pageDescription = "Transform your B2B sales with AI-powered cold calling. German precision meets cutting-edge technology for unmatched lead generation.";
+const pageTitle = "Lead-Schmiede - Custom B2B Lead Lists";
+const pageDescription = "Verified B2B contacts with personal ICP consulting. GDPR-compliant, manually curated. From €149 for 100 qualified leads.";
 ---
 
 <Layout
@@ -30,7 +28,7 @@ const pageDescription = "Transform your B2B sales with AI-powered cold calling. 
 
   <main class="relative" style="margin: 0; padding: 0; overflow-x: hidden; width: 100%;">
     <!-- SEO H1 (hidden but crawlable) -->
-    <h1 class="sr-only">LeadGenies - AI-Powered B2B Cold Calling Services</h1>
+    <h1 class="sr-only">Lead-Schmiede - Custom B2B Lead Lists with ICP Consulting</h1>
 
     <!-- Hero Section with Intro Animation -->
     <section id="hero">
@@ -40,30 +38,24 @@ const pageDescription = "Transform your B2B sales with AI-powered cold calling. 
     <!-- Trust Section with Animated Stats -->
     <TrustSection lang={lang} client:idle />
 
-    <!-- Process Section with Video -->
-    <!-- <ProcessSection client:idle /> -->
-
-    <!-- How It Works Section (V5) -->
+    <!-- How It Works Section -->
     <section id="how-it-works">
       <HowItWorksSectionV5 lang={lang} client:idle />
     </section>
 
-    <!-- ROI Calculator Section -->
-    <section id="roi-calculator">
-      <ROICalculatorSection lang={lang} client:idle />
-    </section>
-
-    <!-- Guarantee Section (with InfiniteMenu) -->
+    <!-- Guarantee Section -->
     <section id="guarantee">
       <GuaranteeTempSection lang={lang} client:idle />
     </section>
 
-    <!-- FAQ Section -->
-    <FAQSection lang={lang} client:idle />
-
     <!-- Pricing Section -->
     <section id="pricing">
       <PricingSection lang={lang} client:idle />
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+      <FAQSection lang={lang} client:idle />
     </section>
 
     <!-- Contact Section -->
