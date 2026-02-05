@@ -3,9 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import HeaderLeadGenies from '../components/leadgenies/HeaderLeadGenies.tsx';
 import HeroLeadGeniesv2 from '../components/leadgenies/HeroLeadGeniesv2.tsx';
 import TrustSection from '../components/leadgenies/TrustSection.tsx';
-import ProcessSection from '../components/leadgenies/ProcessSection.tsx';
 import HowItWorksSectionV5 from '../components/leadgenies/HowItWorksSectionV5.tsx';
-import ROICalculatorSection from '../components/leadgenies/ROICalculatorSection.tsx';
 import GuaranteeTempSection from '../components/leadgenies/GuaranteeTempSection.tsx';
 import FAQSection from '../components/leadgenies/FAQSection.tsx';
 import PricingSection from '../components/leadgenies/PricingSection.tsx';
@@ -16,10 +14,10 @@ import FooterSection from '../components/leadgenies/FooterSection.tsx';
 const lang = 'de';
 
 // Page metadata (German)
-const pageTitle = "LeadGenies - KI-gestützte B2B Kaltakquise";
-const pageDescription = "Transformieren Sie Ihren B2B-Vertrieb mit KI-gestützter Kaltakquise. Deutsche Präzision trifft auf modernste Technologie für unübertroffene Leadgenerierung.";
+const pageTitle = "Lead-Schmiede - Maßgeschneiderte B2B Lead-Listen";
+const pageDescription = "Verifizierte B2B-Kontakte mit persönlicher ICP-Beratung. DSGVO-konform, manuell kuratiert. Ab €149 für 100 qualifizierte Leads.";
 ---
- 
+
 <Layout
   title={pageTitle}
   description={pageDescription}
@@ -30,7 +28,7 @@ const pageDescription = "Transformieren Sie Ihren B2B-Vertrieb mit KI-gestützte
 
   <main class="relative" style="margin: 0; padding: 0; overflow-x: hidden; width: 100%;">
     <!-- SEO H1 (hidden but crawlable) -->
-    <h1 class="sr-only">LeadGenies - KI-gestützte B2B Kaltakquise Services</h1>
+    <h1 class="sr-only">Lead-Schmiede - Maßgeschneiderte B2B Lead-Listen mit ICP-Beratung</h1>
 
     <!-- Hero Section with Intro Animation -->
     <section id="hero">
@@ -40,30 +38,24 @@ const pageDescription = "Transformieren Sie Ihren B2B-Vertrieb mit KI-gestützte
     <!-- Trust Section with Animated Stats -->
     <TrustSection lang={lang} client:idle />
 
-    <!-- Process Section with Video -->
-    <!-- <ProcessSection client:idle /> -->
-
-    <!-- How It Works Section (V5) -->
+    <!-- How It Works Section -->
     <section id="how-it-works">
       <HowItWorksSectionV5 lang={lang} client:idle />
     </section>
 
-    <!-- ROI Calculator Section -->
-    <section id="roi-calculator">
-      <ROICalculatorSection lang={lang} client:idle />
-    </section>
-
-    <!-- Guarantee Section (with InfiniteMenu) -->
+    <!-- Guarantee Section -->
     <section id="guarantee">
       <GuaranteeTempSection lang={lang} client:idle />
     </section>
 
-    <!-- FAQ Section -->
-    <FAQSection lang={lang} client:idle />
-
     <!-- Pricing Section -->
     <section id="pricing">
       <PricingSection lang={lang} client:idle />
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+      <FAQSection lang={lang} client:idle />
     </section>
 
     <!-- Contact Section -->
@@ -89,4 +81,3 @@ const pageDescription = "Transformieren Sie Ihren B2B-Vertrieb mit KI-gestützte
     border-width: 0;
   }
 </style>
- 

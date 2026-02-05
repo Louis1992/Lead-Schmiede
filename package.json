@@ -1,7 +1,7 @@
 {
-  "name": "leadgenies",
+  "name": "lead-schmiede",
   "version": "1.0.0",
-  "description": "AI-Powered B2B Cold Calling with German Excellence - LeadGenies",
+  "description": "Maßgeschneiderte B2B Lead-Listen mit ICP-Beratung - Lead-Schmiede",
   "type": "module",
   "license": "MIT",
   "scripts": {
