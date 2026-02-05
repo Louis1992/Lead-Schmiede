@@ -72,23 +72,143 @@ export default function WhatWeDoSection({ lang = 'de' }: WhatWeDoSectionProps) {
         position: 'relative'
       }}
     >
-      {/* Section Header */}
-      <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center', marginBottom: '60px' }}>
+      {/* Process Section - FIRST */}
+      <div
+        className="process-container"
+        style={{
+          maxWidth: '900px',
+          margin: '0 auto 80px'
+        }}
+      >
         <h2
           style={{
             fontFamily: '"DM Serif Display", Georgia, serif',
-            fontSize: 'clamp(2rem, 5vw, 3rem)',
+            fontSize: 'clamp(1.75rem, 4vw, 2.5rem)',
+            fontWeight: 400,
+            color: '#1a1a2e',
+            textAlign: 'center',
+            marginBottom: '16px'
+          }}
+        >
+          {t.process.title}
+        </h2>
+        <p
+          style={{
+            fontFamily: '"Source Sans 3", sans-serif',
+            fontSize: '1.125rem',
+            color: '#4a4e69',
+            textAlign: 'center',
+            maxWidth: '600px',
+            margin: '0 auto 48px'
+          }}
+        >
+          {lang === 'de' ? 'In 4 Schritten zu Ihren perfekten Leads' : '4 steps to your perfect leads'}
+        </p>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          {t.process.steps.map((step, index) => {
+            const Icon = processIcons[index];
+            return (
+              <div
+                key={index}
+                className="process-step"
+                style={{
+                  display: 'flex',
+                  gap: '24px',
+                  alignItems: 'flex-start',
+                  background: '#ffffff',
+                  padding: '28px 32px',
+                  borderRadius: '16px',
+                  border: '1px solid rgba(74, 78, 105, 0.1)',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 8px 30px rgba(224, 122, 95, 0.12)';
+                  e.currentTarget.style.borderColor = 'rgba(224, 122, 95, 0.3)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.borderColor = 'rgba(74, 78, 105, 0.1)';
+                }}
+              >
+                {/* Step Number & Icon */}
+                <div
+                  style={{
+                    flexShrink: 0,
+                    width: '56px',
+                    height: '56px',
+                    borderRadius: '14px',
+                    background: 'linear-gradient(135deg, rgba(224, 122, 95, 0.1) 0%, rgba(244, 162, 97, 0.15) 100%)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    position: 'relative'
+                  }}
+                >
+                  <span
+                    style={{
+                      fontFamily: '"Space Grotesk", monospace',
+                      fontSize: '0.75rem',
+                      fontWeight: 600,
+                      color: '#e07a5f',
+                      position: 'absolute',
+                      top: '6px'
+                    }}
+                  >
+                    {step.number}
+                  </span>
+                  <Icon size={20} color="#e07a5f" style={{ marginTop: '8px' }} />
+                </div>
+
+                {/* Content */}
+                <div style={{ flex: 1 }}>
+                  <h4
+                    style={{
+                      fontFamily: '"Source Sans 3", sans-serif',
+                      fontSize: '1.125rem',
+                      fontWeight: 600,
+                      color: '#1a1a2e',
+                      marginBottom: '8px'
+                    }}
+                  >
+                    {step.title}
+                  </h4>
+                  <p
+                    style={{
+                      fontFamily: '"Source Sans 3", sans-serif',
+                      fontSize: '0.9375rem',
+                      color: '#4a4e69',
+                      lineHeight: 1.7,
+                      margin: 0
+                    }}
+                  >
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Comparison Section Header */}
+      <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center', marginBottom: '40px' }}>
+        <h3
+          style={{
+            fontFamily: '"DM Serif Display", Georgia, serif',
+            fontSize: 'clamp(1.5rem, 4vw, 2rem)',
             fontWeight: 400,
             color: '#1a1a2e',
             marginBottom: '16px'
           }}
         >
           {t.title}
-        </h2>
+        </h3>
         <p
           style={{
             fontFamily: '"Source Sans 3", sans-serif',
-            fontSize: '1.125rem',
+            fontSize: '1rem',
             color: '#4a4e69',
             maxWidth: '600px',
             margin: '0 auto'
@@ -274,114 +394,6 @@ export default function WhatWeDoSection({ lang = 'de' }: WhatWeDoSectionProps) {
               </li>
             ))}
           </ul>
-        </div>
-      </div>
-
-      {/* Process Section */}
-      <div
-        className="process-container"
-        style={{
-          maxWidth: '900px',
-          margin: '0 auto'
-        }}
-      >
-        <h3
-          style={{
-            fontFamily: '"DM Serif Display", Georgia, serif',
-            fontSize: 'clamp(1.5rem, 4vw, 2rem)',
-            fontWeight: 400,
-            color: '#1a1a2e',
-            textAlign: 'center',
-            marginBottom: '48px'
-          }}
-        >
-          {t.process.title}
-        </h3>
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-          {t.process.steps.map((step, index) => {
-            const Icon = processIcons[index];
-            return (
-              <div
-                key={index}
-                className="process-step"
-                style={{
-                  display: 'flex',
-                  gap: '24px',
-                  alignItems: 'flex-start',
-                  background: '#ffffff',
-                  padding: '28px 32px',
-                  borderRadius: '16px',
-                  border: '1px solid rgba(74, 78, 105, 0.1)',
-                  transition: 'all 0.3s ease'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = '0 8px 30px rgba(224, 122, 95, 0.12)';
-                  e.currentTarget.style.borderColor = 'rgba(224, 122, 95, 0.3)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = 'none';
-                  e.currentTarget.style.borderColor = 'rgba(74, 78, 105, 0.1)';
-                }}
-              >
-                {/* Step Number & Icon */}
-                <div
-                  style={{
-                    flexShrink: 0,
-                    width: '56px',
-                    height: '56px',
-                    borderRadius: '14px',
-                    background: 'linear-gradient(135deg, rgba(224, 122, 95, 0.1) 0%, rgba(244, 162, 97, 0.15) 100%)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    position: 'relative'
-                  }}
-                >
-                  <span
-                    style={{
-                      fontFamily: '"Space Grotesk", monospace',
-                      fontSize: '0.75rem',
-                      fontWeight: 600,
-                      color: '#e07a5f',
-                      position: 'absolute',
-                      top: '6px'
-                    }}
-                  >
-                    {step.number}
-                  </span>
-                  <Icon size={20} color="#e07a5f" style={{ marginTop: '8px' }} />
-                </div>
-
-                {/* Content */}
-                <div style={{ flex: 1 }}>
-                  <h4
-                    style={{
-                      fontFamily: '"Source Sans 3", sans-serif',
-                      fontSize: '1.125rem',
-                      fontWeight: 600,
-                      color: '#1a1a2e',
-                      marginBottom: '8px'
-                    }}
-                  >
-                    {step.title}
-                  </h4>
-                  <p
-                    style={{
-                      fontFamily: '"Source Sans 3", sans-serif',
-                      fontSize: '0.9375rem',
-                      color: '#4a4e69',
-                      lineHeight: 1.7,
-                      margin: 0
-                    }}
-                  >
-                    {step.description}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
         </div>
       </div>
     </section>

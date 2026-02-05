@@ -337,7 +337,7 @@ export default function HeroSection({ lang = 'de' }: HeroSectionProps) {
                       lineHeight: 1
                     }}
                   >
-                    100+
+                    1000+
                   </p>
                   <p
                     style={{

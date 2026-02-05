@@ -2,8 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import HeaderLeadGenies from '../../components/leadgenies/HeaderLeadGenies.tsx';
 import HeroSection from '../../components/leadgenies/HeroSection.tsx';
+import DataTransformSection from '../../components/leadgenies/DataTransformSection.tsx';
 import WhatWeDoSection from '../../components/leadgenies/WhatWeDoSection.tsx';
-import ProblemSection from '../../components/leadgenies/ProblemSection.tsx';
 import BenefitsSection from '../../components/leadgenies/BenefitsSection.tsx';
 import PricingSection from '../../components/leadgenies/PricingSection.tsx';
 import FAQSection from '../../components/leadgenies/FAQSection.tsx';
@@ -33,11 +33,11 @@ const pageDescription = "Verified B2B contacts with personal ICP consulting. GDP
     <!-- Hero Section -->
     <HeroSection lang={lang} client:load />
 
-    <!-- What We Do Section -->
-    <WhatWeDoSection lang={lang} client:idle />
+    <!-- Data Transformation Section -->
+    <DataTransformSection lang={lang} client:idle />
 
-    <!-- Problem Agitation Section -->
-    <ProblemSection lang={lang} client:idle />
+    <!-- What We Do Section (Process + Comparison) -->
+    <WhatWeDoSection lang={lang} client:idle />
 
     <!-- Benefits Section -->
     <section id="how-it-works">
