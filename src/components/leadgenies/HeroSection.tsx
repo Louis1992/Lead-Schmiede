@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { translations, type Language } from '../../i18n/translations';
-import { CheckCircle, ArrowRight, Shield, Users, Zap } from 'lucide-react';
+import { CheckCircle, ArrowRight, Shield, Users, Zap, Check, Mail, Phone, Building2, TrendingUp } from 'lucide-react';
 
 interface HeroSectionProps {
   lang?: Language;
@@ -27,7 +27,7 @@ export default function HeroSection({ lang = 'de' }: HeroSectionProps) {
   }, []);
 
   const handleCTAClick = () => {
-    window.open('https://calendly.com/louis-mickley-leadgenies/30min', '_blank');
+    window.open('https://calendly.com/louis-mickley-leadgenies/kurze-vorstellung-klon', '_blank');
   };
 
   // Animation styles
@@ -394,24 +394,40 @@ export default function HeroSection({ lang = 'de' }: HeroSectionProps) {
                   color: '#ffffff'
                 }}
               >
-                <p
-                  style={{
-                    fontFamily: 'Source Sans 3, sans-serif',
-                    fontSize: '0.75rem',
-                    textTransform: 'uppercase',
-                    letterSpacing: '1px',
-                    opacity: 0.7,
-                    marginBottom: '12px',
-                    margin: 0
-                  }}
-                >
-                  Beispiel-Lead
-                </p>
-                <div style={{ marginTop: '16px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
                   <p
                     style={{
                       fontFamily: 'Source Sans 3, sans-serif',
-                      fontSize: '1rem',
+                      fontSize: '0.75rem',
+                      textTransform: 'uppercase',
+                      letterSpacing: '1px',
+                      opacity: 0.7,
+                      margin: 0
+                    }}
+                  >
+                    Beispiel-Lead
+                  </p>
+                  <span
+                    style={{
+                      background: '#81b29a',
+                      color: '#ffffff',
+                      fontFamily: 'Source Sans 3, sans-serif',
+                      fontSize: '0.6875rem',
+                      fontWeight: 600,
+                      padding: '4px 10px',
+                      borderRadius: '100px'
+                    }}
+                  >
+                    Verifiziert
+                  </span>
+                </div>
+
+                {/* Contact Info */}
+                <div style={{ marginBottom: '16px' }}>
+                  <p
+                    style={{
+                      fontFamily: 'Source Sans 3, sans-serif',
+                      fontSize: '1.125rem',
                       fontWeight: 600,
                       margin: '0 0 4px 0'
                     }}
@@ -423,52 +439,115 @@ export default function HeroSection({ lang = 'de' }: HeroSectionProps) {
                       fontFamily: 'Source Sans 3, sans-serif',
                       fontSize: '0.875rem',
                       opacity: 0.9,
-                      margin: '0 0 4px 0'
+                      margin: 0
                     }}
                   >
                     Head of Sales • TechCorp GmbH
                   </p>
-                  <p
-                    style={{
-                      fontFamily: 'Source Sans 3, sans-serif',
-                      fontSize: '0.8125rem',
-                      opacity: 0.7,
-                      margin: '0 0 4px 0'
-                    }}
-                  >
-                    max.mustermann@techcorp.de
-                  </p>
-                  <p
-                    style={{
-                      fontFamily: 'Source Sans 3, sans-serif',
-                      fontSize: '0.8125rem',
-                      opacity: 0.7,
-                      margin: 0
-                    }}
-                  >
-                    +49 170 1234567
-                  </p>
                 </div>
+
+                {/* Verified Details */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <Mail size={14} style={{ opacity: 0.7 }} />
+                      <span style={{ fontFamily: 'Source Sans 3, sans-serif', fontSize: '0.8125rem', opacity: 0.8 }}>
+                        max.mustermann@techcorp.de
+                      </span>
+                    </div>
+                    <Check size={14} color="#81b29a" />
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <Phone size={14} style={{ opacity: 0.7 }} />
+                      <span style={{ fontFamily: 'Source Sans 3, sans-serif', fontSize: '0.8125rem', opacity: 0.8 }}>
+                        +49 170 1234567
+                      </span>
+                    </div>
+                    <Check size={14} color="#81b29a" />
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <Building2 size={14} style={{ opacity: 0.7 }} />
+                      <span style={{ fontFamily: 'Source Sans 3, sans-serif', fontSize: '0.8125rem', opacity: 0.8 }}>
+                        SaaS / Software
+                      </span>
+                    </div>
+                    <Check size={14} color="#81b29a" />
+                  </div>
+                </div>
+
+                {/* Signals */}
                 <div
                   style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '8px',
-                    marginTop: '16px',
-                    paddingTop: '16px',
+                    paddingTop: '12px',
                     borderTop: '1px solid rgba(255, 255, 255, 0.1)'
                   }}
                 >
-                  <Shield size={14} style={{ opacity: 0.7 }} />
-                  <span
+                  <p
                     style={{
                       fontFamily: 'Source Sans 3, sans-serif',
-                      fontSize: '0.75rem',
-                      opacity: 0.7
+                      fontSize: '0.6875rem',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.5px',
+                      opacity: 0.5,
+                      marginBottom: '8px',
+                      margin: '0 0 8px 0'
                     }}
                   >
-                    DSGVO-konform verifiziert
-                  </span>
+                    Signale
+                  </p>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                    <span
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '4px',
+                        background: 'rgba(129, 178, 154, 0.2)',
+                        color: '#81b29a',
+                        fontFamily: 'Source Sans 3, sans-serif',
+                        fontSize: '0.6875rem',
+                        fontWeight: 500,
+                        padding: '4px 8px',
+                        borderRadius: '6px'
+                      }}
+                    >
+                      <TrendingUp size={10} />
+                      Neuer Job
+                    </span>
+                    <span
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '4px',
+                        background: 'rgba(224, 122, 95, 0.2)',
+                        color: '#f4a261',
+                        fontFamily: 'Source Sans 3, sans-serif',
+                        fontSize: '0.6875rem',
+                        fontWeight: 500,
+                        padding: '4px 8px',
+                        borderRadius: '6px'
+                      }}
+                    >
+                      Funding Q4
+                    </span>
+                    <span
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '4px',
+                        background: 'rgba(255, 255, 255, 0.1)',
+                        color: 'rgba(255, 255, 255, 0.8)',
+                        fontFamily: 'Source Sans 3, sans-serif',
+                        fontSize: '0.6875rem',
+                        fontWeight: 500,
+                        padding: '4px 8px',
+                        borderRadius: '6px'
+                      }}
+                    >
+                      50-200 MA
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -492,7 +571,7 @@ export default function HeroSection({ lang = 'de' }: HeroSectionProps) {
                 transition: 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.5s'
               }}
             >
-              Ab €1,49/Lead
+              Ab €1,29/Lead
             </div>
           </div>
         </div>

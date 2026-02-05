@@ -24,7 +24,7 @@ export default function HeaderLeadGenies({
   lang = 'de',
   menuItems,
   ctaText,
-  ctaHref = 'https://calendly.com/louis-mickley-leadgenies/30min'
+  ctaHref = 'https://calendly.com/louis-mickley-leadgenies/kurze-vorstellung-klon'
 }: HeaderLeadGeniesProps) {
 
   const t = translations[lang].header;
@@ -43,8 +43,8 @@ export default function HeaderLeadGenies({
   const finalCtaText = ctaText || t.ctaText;
 
   const headerMaxWidth = lang === 'de' ? '1130px' : '1040px';
-  const headerShrunkWidth = lang === 'de' ? '325px' : '290px';
-  const headerShrunkOvershoot = lang === 'de' ? '320px' : '285px';
+  const headerShrunkWidth = lang === 'de' ? '420px' : '380px';
+  const headerShrunkOvershoot = lang === 'de' ? '425px' : '385px';
   const [isMounted, setIsMounted] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

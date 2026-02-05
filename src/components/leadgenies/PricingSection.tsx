@@ -40,7 +40,7 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
   }, []);
 
   const handleCTAClick = () => {
-    window.open('https://calendly.com/louis-mickley-leadgenies/30min', '_blank');
+    window.open('https://calendly.com/louis-mickley-leadgenies/kurze-vorstellung-klon', '_blank');
   };
 
   const fadeInUp = (delay: number) => ({

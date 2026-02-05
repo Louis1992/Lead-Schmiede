@@ -467,7 +467,7 @@ export default function HeroLeadGenies({ lang = 'de' }: HeroLeadGeniesProps) {
                 {/* CTA Button */}
                 <a
                   ref={ctaRef}
-                  href="https://calendly.com/louis-mickley-leadgenies/30min"
+                  href="https://calendly.com/louis-mickley-leadgenies/kurze-vorstellung-klon"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-3 bg-[#0d0d28] text-white rounded-full font-medium hover:bg-[#1a1a3f] hover:shadow-lg transition-[background-color,box-shadow] duration-300"
@@ -857,7 +857,7 @@ export default function HeroLeadGenies({ lang = 'de' }: HeroLeadGeniesProps) {
                 {/* CTA Button */}
                 <a
                   ref={ctaRef}
-                  href="https://calendly.com/louis-mickley-leadgenies/30min"
+                  href="https://calendly.com/louis-mickley-leadgenies/kurze-vorstellung-klon"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 bg-[#0d0d28] text-white rounded-full font-medium text-lg hover:bg-[#1a1a3f] hover:shadow-lg transition-[background-color,box-shadow] duration-300"

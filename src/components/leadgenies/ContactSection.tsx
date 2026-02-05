@@ -115,7 +115,7 @@ export default function ContactSection({ lang = 'de' }: ContactSectionProps) {
       label: 'Email',
       value: 'Louis.Mickley@leadgenies.de',
       link: 'mailto:Louis.Mickley@leadgenies.de',
-      color: '#4136b3'
+      color: '#e07a5f'
     },
     {
       icon: <Linkedin size={24} />,
@@ -250,7 +250,7 @@ export default function ContactSection({ lang = 'de' }: ContactSectionProps) {
                     }}
                     onFocus={(e) => {
                       if (!formErrors.name) {
-                        e.currentTarget.style.borderColor = '#4136b3';
+                        e.currentTarget.style.borderColor = '#e07a5f';
                       }
                     }}
                     onBlur={(e) => {
@@ -299,7 +299,7 @@ export default function ContactSection({ lang = 'de' }: ContactSectionProps) {
                     }}
                     onFocus={(e) => {
                       if (!formErrors.company) {
-                        e.currentTarget.style.borderColor = '#4136b3';
+                        e.currentTarget.style.borderColor = '#e07a5f';
                       }
                     }}
                     onBlur={(e) => {
@@ -348,7 +348,7 @@ export default function ContactSection({ lang = 'de' }: ContactSectionProps) {
                     }}
                     onFocus={(e) => {
                       if (!formErrors.email) {
-                        e.currentTarget.style.borderColor = '#4136b3';
+                        e.currentTarget.style.borderColor = '#e07a5f';
                       }
                     }}
                     onBlur={(e) => {
@@ -393,7 +393,7 @@ export default function ContactSection({ lang = 'de' }: ContactSectionProps) {
                       transition: 'border-color 0.2s ease'
                     }}
                     onFocus={(e) => {
-                      e.currentTarget.style.borderColor = '#4136b3';
+                      e.currentTarget.style.borderColor = '#e07a5f';
                     }}
                     onBlur={(e) => {
                       e.currentTarget.style.borderColor = '#E5E7EB';
@@ -434,7 +434,7 @@ export default function ContactSection({ lang = 'de' }: ContactSectionProps) {
                       resize: 'vertical'
                     }}
                     onFocus={(e) => {
-                      e.currentTarget.style.borderColor = '#4136b3';
+                      e.currentTarget.style.borderColor = '#e07a5f';
                     }}
                     onBlur={(e) => {
                       e.currentTarget.style.borderColor = '#E5E7EB';
@@ -449,22 +449,29 @@ export default function ContactSection({ lang = 'de' }: ContactSectionProps) {
                   type="submit"
                   disabled={state.submitting}
                   style={{
-                    fontFamily: 'Inter, sans-serif',
+                    fontFamily: 'Source Sans 3, sans-serif',
                     fontSize: isMobile ? '1rem' : '1.125rem',
-                    fontWeight: '700',
+                    fontWeight: '600',
                     color: '#ffffff',
-                    backgroundColor: state.submitting ? '#9CA3AF' : '#4136b3',
+                    background: state.submitting ? '#9CA3AF' : 'linear-gradient(135deg, #e07a5f 0%, #f4a261 100%)',
                     border: 'none',
                     borderRadius: '12px',
                     padding: isMobile ? '1rem' : '1.25rem',
                     cursor: state.submitting ? 'not-allowed' : 'pointer',
                     transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-                    marginTop: '0.5rem'
+                    marginTop: '0.5rem',
+                    boxShadow: '0 4px 15px rgba(224, 122, 95, 0.3)'
                   }}
                   onMouseEnter={(e) => {
                     if (!state.submitting) {
                       e.currentTarget.style.transform = 'translateY(-2px)';
-                      e.currentTarget.style.boxShadow = '0 8px 24px rgba(65, 54, 179, 0.4)';
+                      e.currentTarget.style.boxShadow = '0 8px 24px rgba(224, 122, 95, 0.4)';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!state.submitting) {
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.boxShadow = '0 4px 15px rgba(224, 122, 95, 0.3)';
                     }
                   }}
                 >
@@ -635,7 +642,7 @@ export default function ContactSection({ lang = 'de' }: ContactSectionProps) {
                   borderRadius: '12px'
                 }}
               >
-                <Clock size={24} color="#4136b3" />
+                <Clock size={24} color="#e07a5f" />
                 <div>
                   <p
                     style={{

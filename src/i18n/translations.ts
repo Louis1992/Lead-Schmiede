@@ -18,7 +18,7 @@ export const translations = {
     // Hero - Conversion-optimized
     hero: {
       title: 'Leads, die wirklich kaufen wollen',
-      subtitle: '100 verifizierte Entscheider-Kontakte in 48h – ohne Self-Service-Chaos oder Agentur-Verträge.',
+      subtitle: 'Verifizierte Entscheider-Kontakte in 48h – ohne Self-Service-Chaos oder Agentur-Verträge.',
       cta: 'Kostenloses Erstgespräch',
       ctaSubtext: 'Unverbindlich • 15 Min • Sofort Klarheit',
       trustBadges: [
@@ -92,7 +92,8 @@ export const translations = {
             'Experten-KI-Prompts für Signal-Filterung',
             'Manuelle Verifizierung jedes einzelnen Kontakts',
             'Persönliche ICP-Beratung und Iteration',
-            'Spezifische Signale: Jobwechsel, Funding, Expansionen'
+            'Spezifische Signale: Jobwechsel, Funding, Expansionen',
+            'Datenaufbereitung exakt nach Ihren Wünschen'
           ]
         }
       },
@@ -317,7 +318,7 @@ export const translations = {
           items: [
             {
               question: 'Wie lange dauert die Lieferung?',
-              answer: 'Nach dem Beratungsgespräch liefern wir innerhalb von 3-5 Werktagen. Bei größeren Listen oder komplexen Anforderungen entsprechend länger.'
+              answer: 'Nach dem Beratungsgespräch liefern wir innerhalb von spätestens 3 Werktagen – meistens sogar schneller. Bei größeren Listen oder sehr komplexen Anforderungen entsprechend länger.'
             },
             {
               question: 'Was passiert, wenn die Leads nicht passen?',
@@ -450,7 +451,7 @@ export const translations = {
     // Hero - Conversion-optimized
     hero: {
       title: 'Leads That Actually Want to Buy',
-      subtitle: '100 verified decision-maker contacts in 48h – without self-service chaos or agency contracts.',
+      subtitle: 'Verified decision-maker contacts in 48h – without self-service chaos or agency contracts.',
       cta: 'Free Consultation',
       ctaSubtext: 'No commitment • 15 min • Instant clarity',
       trustBadges: [
@@ -524,7 +525,8 @@ export const translations = {
             'Expert AI prompts for signal filtering',
             'Manual verification of each individual contact',
             'Personal ICP consulting and iteration',
-            'Specific signals: job changes, funding, expansions'
+            'Specific signals: job changes, funding, expansions',
+            'Data formatting exactly as you need it'
           ]
         }
       },
@@ -685,7 +687,7 @@ export const translations = {
           items: [
             {
               question: 'How long does delivery take?',
-              answer: 'After the consultation, we deliver within 3-5 business days. Longer for larger lists or complex requirements.'
+              answer: 'After the consultation, we deliver within 3 business days at most – usually even faster. Longer for larger lists or very complex requirements.'
             },
             {
               question: 'What if the leads dont fit?',

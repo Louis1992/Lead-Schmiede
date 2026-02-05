@@ -536,7 +536,7 @@ export default function ROICalculatorSection({ lang = 'de' }: ROICalculatorSecti
               {t.letsDiscuss}
             </p>
             <a
-              href="https://calendly.com/louis-mickley-leadgenies/30min"
+              href="https://calendly.com/louis-mickley-leadgenies/kurze-vorstellung-klon"
               target="_blank"
               rel="noopener noreferrer"
               style={{
