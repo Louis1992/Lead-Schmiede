@@ -97,7 +97,7 @@ export default function ComparisonTable({ competitor, lang = 'de' }: ComparisonT
     name: 'Lead-Schmiede',
     pricePerLead: '€1.29-1.49',
     timeInvestment: '0h',
-    verification: lang === 'de' ? 'Manuell + KI (100%)' : 'Manual + AI (100%)',
+    verification: lang === 'de' ? 'Manuell + KI' : 'Manual + AI',
     icpConsulting: true,
     gdprCompliance: lang === 'de' ? 'Deutschland, 100% DSGVO' : 'Germany, 100% GDPR',
     dataQuality: '95%+',
@@ -121,7 +121,7 @@ export default function ComparisonTable({ competitor, lang = 'de' }: ComparisonT
     consTitle: `Wann Lead-Schmiede besser passt`,
     leadSchmiedePros: [
       'Sie haben keine Zeit für eigene Recherche',
-      'Sie brauchen 100% verifizierte Kontakte',
+      'Sie brauchen verifizierte, aktuelle Kontakte',
       'DSGVO-Konformität ist entscheidend',
       'Sie wollen persönliche ICP-Beratung',
       'Sie bevorzugen Done-for-you statt DIY'
@@ -144,7 +144,7 @@ export default function ComparisonTable({ competitor, lang = 'de' }: ComparisonT
     consTitle: `When Lead-Schmiede fits better`,
     leadSchmiedePros: [
       'You have no time for research',
-      'You need 100% verified contacts',
+      'You need verified, current contacts',
       'GDPR compliance is crucial',
       'You want personal ICP consulting',
       'You prefer done-for-you over DIY'

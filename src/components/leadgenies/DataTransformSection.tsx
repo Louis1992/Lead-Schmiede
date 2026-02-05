@@ -24,7 +24,7 @@ export default function DataTransformSection({ lang = 'de' }: DataTransformSecti
     before: 'Rohdaten-Export',
     after: 'Ihre Lead-Liste',
     beforeItems: ['Tausende Zeilen', 'Unstrukturiert', 'Duplikate', 'Veraltete Daten', 'Fehlende Felder'],
-    afterItems: ['Nur relevante Kontakte', 'Strukturiert & formatiert', 'Dedupliziert', '100% verifiziert', 'Vollständige Profile']
+    afterItems: ['Nur relevante Kontakte', 'Strukturiert & formatiert', 'Dedupliziert', 'Verifiziert', 'Vollständige Profile']
   } : {
     title: 'From Raw Data to Sales-Ready: Data Preparation Included',
     subtitle: 'Real humans + smart AI transform massive raw data exports into perfectly prepared lead lists',
@@ -32,7 +32,7 @@ export default function DataTransformSection({ lang = 'de' }: DataTransformSecti
     before: 'Raw Data Export',
     after: 'Your Lead List',
     beforeItems: ['Thousands of rows', 'Unstructured', 'Duplicates', 'Outdated data', 'Missing fields'],
-    afterItems: ['Only relevant contacts', 'Structured & formatted', 'Deduplicated', '100% verified', 'Complete profiles']
+    afterItems: ['Only relevant contacts', 'Structured & formatted', 'Deduplicated', 'Verified', 'Complete profiles']
   };
 
   useEffect(() => {

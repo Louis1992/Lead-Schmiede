@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Check, ArrowRight, Star } from 'lucide-react';
+import { Check, ArrowRight, Star, Gift, Zap, Crown, Building2 } from 'lucide-react';
 import { translations, type Language } from '../../i18n/translations';
 
 interface PricingSectionProps {
@@ -10,6 +10,7 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
   const t = translations[lang].pricing;
   const [isMobile, setIsMobile] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [billingCycle, setBillingCycle] = useState<'oneTime' | 'monthly'>('oneTime');
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -49,6 +50,9 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
     transition: `all 0.7s cubic-bezier(0.16, 1, 0.3, 1) ${delay}s`
   });
 
+  const packages = billingCycle === 'oneTime' ? t.packages : t.monthlyPackages;
+  const icons = [Gift, Zap, Star, Crown, Building2];
+
   return (
     <section
       ref={sectionRef}
@@ -77,12 +81,12 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
       <div
         style={{
           position: 'relative',
-          maxWidth: '1200px',
+          maxWidth: '1400px',
           margin: '0 auto'
         }}
       >
         {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: isMobile ? '48px' : '64px' }}>
+        <div style={{ textAlign: 'center', marginBottom: isMobile ? '32px' : '48px' }}>
           <h2
             style={{
               ...fadeInUp(0),
@@ -102,26 +106,186 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
               fontFamily: 'Source Sans 3, sans-serif',
               fontSize: isMobile ? '1rem' : '1.125rem',
               color: '#4a4e69',
-              maxWidth: '500px',
-              margin: '0 auto'
+              maxWidth: '600px',
+              margin: '0 auto 32px'
             }}
           >
             {t.subtitle}
           </p>
+
+          {/* Billing Toggle */}
+          <div
+            style={{
+              ...fadeInUp(0.15),
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '12px',
+              background: '#ffffff',
+              padding: '6px',
+              borderRadius: '100px',
+              border: '1px solid rgba(26, 26, 46, 0.1)',
+              boxShadow: '0 2px 8px rgba(26, 26, 46, 0.06)'
+            }}
+          >
+            <button
+              onClick={() => setBillingCycle('oneTime')}
+              style={{
+                padding: '10px 20px',
+                borderRadius: '100px',
+                border: 'none',
+                fontFamily: 'Source Sans 3, sans-serif',
+                fontSize: '0.9375rem',
+                fontWeight: 600,
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                background: billingCycle === 'oneTime'
+                  ? 'linear-gradient(135deg, #1a1a2e 0%, #5c4d7d 100%)'
+                  : 'transparent',
+                color: billingCycle === 'oneTime' ? '#ffffff' : '#4a4e69'
+              }}
+            >
+              {t.oneTimeLabel}
+            </button>
+            <button
+              onClick={() => setBillingCycle('monthly')}
+              style={{
+                padding: '10px 20px',
+                borderRadius: '100px',
+                border: 'none',
+                fontFamily: 'Source Sans 3, sans-serif',
+                fontSize: '0.9375rem',
+                fontWeight: 600,
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                background: billingCycle === 'monthly'
+                  ? 'linear-gradient(135deg, #1a1a2e 0%, #5c4d7d 100%)'
+                  : 'transparent',
+                color: billingCycle === 'monthly' ? '#ffffff' : '#4a4e69',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px'
+              }}
+            >
+              {t.monthlyLabel}
+              <span
+                style={{
+                  background: '#81b29a',
+                  color: '#ffffff',
+                  fontSize: '0.6875rem',
+                  fontWeight: 700,
+                  padding: '2px 8px',
+                  borderRadius: '100px'
+                }}
+              >
+                {t.monthlySavingsBadge}
+              </span>
+            </button>
+          </div>
         </div>
+
+        {/* Free Test Banner - Only for oneTime */}
+        {billingCycle === 'oneTime' && t.freeTestBanner && (
+          <div
+            style={{
+              ...fadeInUp(0.2),
+              background: 'linear-gradient(135deg, rgba(129, 178, 154, 0.15) 0%, rgba(129, 178, 154, 0.25) 100%)',
+              border: '2px dashed #81b29a',
+              borderRadius: '16px',
+              padding: isMobile ? '20px' : '24px 32px',
+              marginBottom: '40px',
+              display: 'flex',
+              flexDirection: isMobile ? 'column' : 'row',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: '16px'
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+              <div
+                style={{
+                  width: '48px',
+                  height: '48px',
+                  borderRadius: '50%',
+                  background: '#81b29a',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0
+                }}
+              >
+                <Gift size={24} color="#ffffff" />
+              </div>
+              <div>
+                <h3
+                  style={{
+                    fontFamily: 'Source Sans 3, sans-serif',
+                    fontSize: '1.125rem',
+                    fontWeight: 700,
+                    color: '#1a1a2e',
+                    margin: '0 0 4px 0'
+                  }}
+                >
+                  {t.freeTestBanner.title}
+                </h3>
+                <p
+                  style={{
+                    fontFamily: 'Source Sans 3, sans-serif',
+                    fontSize: '0.9375rem',
+                    color: '#4a4e69',
+                    margin: 0
+                  }}
+                >
+                  {t.freeTestBanner.description}
+                </p>
+              </div>
+            </div>
+            <button
+              onClick={handleCTAClick}
+              style={{
+                padding: '12px 24px',
+                borderRadius: '100px',
+                border: 'none',
+                background: '#81b29a',
+                color: '#ffffff',
+                fontFamily: 'Source Sans 3, sans-serif',
+                fontSize: '0.9375rem',
+                fontWeight: 600,
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                whiteSpace: 'nowrap',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 8px 20px rgba(129, 178, 154, 0.4)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
+              {t.freeTestBanner.cta}
+              <ArrowRight size={16} />
+            </button>
+          </div>
+        )}
 
         {/* Pricing Cards */}
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)',
-            gap: isMobile ? '24px' : '24px',
+            gridTemplateColumns: isMobile ? '1fr' : `repeat(${packages.length}, 1fr)`,
+            gap: isMobile ? '24px' : '20px',
             alignItems: 'stretch'
           }}
         >
-          {t.packages.map((pkg, index) => {
+          {packages.map((pkg, index) => {
             const isHighlighted = pkg.highlighted;
-            const cardDelay = 0.2 + index * 0.15;
+            const isEnterprise = pkg.isEnterprise;
+            const cardDelay = 0.25 + index * 0.1;
+            const Icon = icons[index] || Star;
 
             return (
               <div
@@ -131,18 +295,24 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                   position: 'relative',
                   background: isHighlighted
                     ? 'linear-gradient(135deg, #1a1a2e 0%, #5c4d7d 100%)'
+                    : isEnterprise
+                    ? 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)'
                     : '#ffffff',
-                  borderRadius: '24px',
-                  padding: isMobile ? '32px 24px' : '40px 32px',
+                  borderRadius: '20px',
+                  padding: isMobile ? '28px 20px' : '32px 24px',
                   border: isHighlighted
                     ? 'none'
+                    : isEnterprise
+                    ? '2px solid #e07a5f'
                     : '1px solid rgba(26, 26, 46, 0.08)',
                   boxShadow: isHighlighted
                     ? '0 20px 60px rgba(26, 26, 46, 0.25)'
+                    : isEnterprise
+                    ? '0 8px 32px rgba(224, 122, 95, 0.15)'
                     : '0 4px 24px rgba(26, 26, 46, 0.04)',
                   display: 'flex',
                   flexDirection: 'column',
-                  transform: isHighlighted && !isMobile ? 'scale(1.02)' : 'none',
+                  transform: isHighlighted && !isMobile ? 'scale(1.03)' : 'none',
                   zIndex: isHighlighted ? 2 : 1
                 }}
               >
@@ -157,50 +327,75 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                       background: '#e07a5f',
                       color: '#ffffff',
                       fontFamily: 'Source Sans 3, sans-serif',
-                      fontSize: '0.8125rem',
-                      fontWeight: 600,
-                      padding: '8px 20px',
+                      fontSize: '0.75rem',
+                      fontWeight: 700,
+                      padding: '6px 16px',
                       borderRadius: '100px',
                       display: 'flex',
                       alignItems: 'center',
                       gap: '6px',
-                      boxShadow: '0 4px 12px rgba(224, 122, 95, 0.4)'
+                      boxShadow: '0 4px 12px rgba(224, 122, 95, 0.4)',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.5px'
                     }}
                   >
-                    <Star size={14} fill="#ffffff" />
-                    {t.popularBadge || 'Empfohlen'}
+                    <Star size={12} fill="#ffffff" />
+                    {t.popularBadge}
                   </div>
                 )}
 
                 {/* Savings Badge */}
-                {pkg.savings && (
+                {pkg.savings && !isHighlighted && (
                   <div
                     style={{
                       position: 'absolute',
-                      top: isHighlighted ? '24px' : '-14px',
-                      right: '20px',
+                      top: '-12px',
+                      right: '16px',
                       background: '#81b29a',
                       color: '#ffffff',
                       fontFamily: 'Source Sans 3, sans-serif',
-                      fontSize: '0.75rem',
-                      fontWeight: 600,
-                      padding: '6px 12px',
-                      borderRadius: '100px'
+                      fontSize: '0.6875rem',
+                      fontWeight: 700,
+                      padding: '5px 10px',
+                      borderRadius: '100px',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.3px'
                     }}
                   >
                     {pkg.savings}
                   </div>
                 )}
 
-                {/* Package Name */}
-                <div style={{ marginBottom: '24px', marginTop: isHighlighted ? '12px' : 0 }}>
+                {/* Icon + Package Name */}
+                <div style={{ marginBottom: '20px', marginTop: isHighlighted ? '8px' : 0 }}>
+                  <div
+                    style={{
+                      width: '40px',
+                      height: '40px',
+                      borderRadius: '10px',
+                      background: isHighlighted
+                        ? 'rgba(255, 255, 255, 0.15)'
+                        : isEnterprise
+                        ? 'rgba(224, 122, 95, 0.1)'
+                        : 'rgba(26, 26, 46, 0.05)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      marginBottom: '12px'
+                    }}
+                  >
+                    <Icon
+                      size={20}
+                      color={isHighlighted ? '#ffffff' : isEnterprise ? '#e07a5f' : '#5c4d7d'}
+                    />
+                  </div>
                   <h3
                     style={{
                       fontFamily: 'Source Sans 3, sans-serif',
-                      fontSize: isMobile ? '1.25rem' : '1.375rem',
+                      fontSize: '1.25rem',
                       fontWeight: 700,
                       color: isHighlighted ? '#ffffff' : '#1a1a2e',
-                      marginBottom: '4px'
+                      marginBottom: '2px'
                     }}
                   >
                     {pkg.name}
@@ -208,7 +403,7 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                   <p
                     style={{
                       fontFamily: 'Source Sans 3, sans-serif',
-                      fontSize: '0.9375rem',
+                      fontSize: '0.875rem',
                       color: isHighlighted ? 'rgba(255, 255, 255, 0.7)' : '#9a8c98',
                       margin: 0
                     }}
@@ -220,8 +415,8 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                 {/* Price */}
                 <div
                   style={{
-                    marginBottom: '24px',
-                    paddingBottom: '24px',
+                    marginBottom: '20px',
+                    paddingBottom: '20px',
                     borderBottom: isHighlighted
                       ? '1px solid rgba(255, 255, 255, 0.15)'
                       : '1px solid rgba(26, 26, 46, 0.08)'
@@ -231,7 +426,7 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                     <span
                       style={{
                         fontFamily: 'Space Grotesk, monospace',
-                        fontSize: isMobile ? '2.5rem' : '3rem',
+                        fontSize: isMobile ? '2.25rem' : '2.5rem',
                         fontWeight: 600,
                         color: isHighlighted ? '#ffffff' : '#1a1a2e',
                         lineHeight: 1
@@ -239,19 +434,44 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                     >
                       {pkg.price}
                     </span>
+                    {billingCycle === 'monthly' && (
+                      <span
+                        style={{
+                          fontFamily: 'Source Sans 3, sans-serif',
+                          fontSize: '1rem',
+                          color: isHighlighted ? 'rgba(255, 255, 255, 0.7)' : '#9a8c98'
+                        }}
+                      >
+                        /{t.perMonthLabel}
+                      </span>
+                    )}
                   </div>
                   {pkg.pricePerLead && (
                     <p
                       style={{
                         fontFamily: 'Source Sans 3, sans-serif',
                         fontSize: '1rem',
-                        fontWeight: 600,
+                        fontWeight: 700,
                         color: '#e07a5f',
-                        marginTop: '8px',
+                        marginTop: '6px',
                         marginBottom: 0
                       }}
                     >
                       {pkg.pricePerLead}
+                    </p>
+                  )}
+                  {pkg.originalPrice && (
+                    <p
+                      style={{
+                        fontFamily: 'Source Sans 3, sans-serif',
+                        fontSize: '0.875rem',
+                        color: '#9a8c98',
+                        marginTop: '4px',
+                        marginBottom: 0,
+                        textDecoration: 'line-through'
+                      }}
+                    >
+                      {pkg.originalPrice}
                     </p>
                   )}
                 </div>
@@ -262,8 +482,8 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                     flex: 1,
                     display: 'flex',
                     flexDirection: 'column',
-                    gap: '14px',
-                    marginBottom: '32px'
+                    gap: '12px',
+                    marginBottom: '24px'
                   }}
                 >
                   {pkg.features.map((feature, featureIndex) => (
@@ -272,30 +492,34 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                       style={{
                         display: 'flex',
                         alignItems: 'flex-start',
-                        gap: '12px'
+                        gap: '10px'
                       }}
                     >
                       <div
                         style={{
                           flexShrink: 0,
-                          width: '22px',
-                          height: '22px',
+                          width: '20px',
+                          height: '20px',
                           borderRadius: '50%',
-                          background: '#81b29a',
+                          background: isHighlighted ? '#81b29a' : 'rgba(129, 178, 154, 0.2)',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
                           marginTop: '2px'
                         }}
                       >
-                        <Check size={14} color="#ffffff" strokeWidth={3} />
+                        <Check
+                          size={12}
+                          color={isHighlighted ? '#ffffff' : '#81b29a'}
+                          strokeWidth={3}
+                        />
                       </div>
                       <span
                         style={{
                           fontFamily: 'Source Sans 3, sans-serif',
-                          fontSize: '0.9375rem',
+                          fontSize: '0.875rem',
                           color: isHighlighted ? 'rgba(255, 255, 255, 0.9)' : '#4a4e69',
-                          lineHeight: 1.5
+                          lineHeight: 1.4
                         }}
                       >
                         {feature}
@@ -305,29 +529,31 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                 </div>
 
                 {/* Best For */}
-                <div
-                  style={{
-                    background: isHighlighted
-                      ? 'rgba(255, 255, 255, 0.1)'
-                      : 'rgba(26, 26, 46, 0.04)',
-                    borderRadius: '12px',
-                    padding: '12px 16px',
-                    marginBottom: '24px'
-                  }}
-                >
-                  <p
+                {pkg.bestFor && (
+                  <div
                     style={{
-                      fontFamily: 'Source Sans 3, sans-serif',
-                      fontSize: '0.875rem',
-                      fontWeight: 600,
-                      color: isHighlighted ? 'rgba(255, 255, 255, 0.8)' : '#9a8c98',
-                      textAlign: 'center',
-                      margin: 0
+                      background: isHighlighted
+                        ? 'rgba(255, 255, 255, 0.1)'
+                        : 'rgba(26, 26, 46, 0.04)',
+                      borderRadius: '10px',
+                      padding: '10px 14px',
+                      marginBottom: '20px'
                     }}
                   >
-                    {t.bestForLabel} {pkg.bestFor}
-                  </p>
-                </div>
+                    <p
+                      style={{
+                        fontFamily: 'Source Sans 3, sans-serif',
+                        fontSize: '0.8125rem',
+                        fontWeight: 600,
+                        color: isHighlighted ? 'rgba(255, 255, 255, 0.8)' : '#9a8c98',
+                        textAlign: 'center',
+                        margin: 0
+                      }}
+                    >
+                      {t.bestForLabel} {pkg.bestFor}
+                    </p>
+                  </div>
+                )}
 
                 {/* CTA Button */}
                 <button
@@ -338,56 +564,110 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                     justifyContent: 'center',
                     gap: '8px',
                     width: '100%',
-                    padding: '16px 24px',
-                    borderRadius: '12px',
+                    padding: '14px 20px',
+                    borderRadius: '10px',
                     border: 'none',
                     fontFamily: 'Source Sans 3, sans-serif',
-                    fontSize: '1rem',
+                    fontSize: '0.9375rem',
                     fontWeight: 600,
                     cursor: 'pointer',
                     transition: 'all 0.3s ease',
                     background: isHighlighted
                       ? 'linear-gradient(135deg, #e07a5f 0%, #f4a261 100%)'
+                      : isEnterprise
+                      ? '#e07a5f'
                       : '#1a1a2e',
                     color: '#ffffff',
                     boxShadow: isHighlighted
                       ? '0 8px 24px rgba(224, 122, 95, 0.4)'
+                      : isEnterprise
+                      ? '0 4px 16px rgba(224, 122, 95, 0.3)'
                       : '0 4px 12px rgba(26, 26, 46, 0.2)'
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-2px)';
                     e.currentTarget.style.boxShadow = isHighlighted
                       ? '0 12px 32px rgba(224, 122, 95, 0.5)'
+                      : isEnterprise
+                      ? '0 8px 24px rgba(224, 122, 95, 0.4)'
                       : '0 8px 20px rgba(26, 26, 46, 0.3)';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = 'translateY(0)';
                     e.currentTarget.style.boxShadow = isHighlighted
                       ? '0 8px 24px rgba(224, 122, 95, 0.4)'
+                      : isEnterprise
+                      ? '0 4px 16px rgba(224, 122, 95, 0.3)'
                       : '0 4px 12px rgba(26, 26, 46, 0.2)';
                   }}
                 >
                   {pkg.cta}
-                  <ArrowRight size={18} />
+                  <ArrowRight size={16} />
                 </button>
               </div>
             );
           })}
         </div>
 
-        {/* Payment Note */}
-        <p
+        {/* Guarantee + Payment Note */}
+        <div
           style={{
             ...fadeInUp(0.8),
-            fontFamily: 'Source Sans 3, sans-serif',
-            fontSize: '0.9375rem',
-            color: '#9a8c98',
-            textAlign: 'center',
-            marginTop: '40px'
+            display: 'flex',
+            flexDirection: isMobile ? 'column' : 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: isMobile ? '16px' : '32px',
+            marginTop: '48px',
+            padding: '24px',
+            background: 'rgba(129, 178, 154, 0.08)',
+            borderRadius: '16px'
           }}
         >
-          {t.paymentNote}
-        </p>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <div
+              style={{
+                width: '32px',
+                height: '32px',
+                borderRadius: '50%',
+                background: '#81b29a',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
+              <Check size={18} color="#ffffff" strokeWidth={3} />
+            </div>
+            <span
+              style={{
+                fontFamily: 'Source Sans 3, sans-serif',
+                fontSize: '0.9375rem',
+                fontWeight: 600,
+                color: '#1a1a2e'
+              }}
+            >
+              {t.guaranteeText}
+            </span>
+          </div>
+          <div
+            style={{
+              height: isMobile ? '1px' : '24px',
+              width: isMobile ? '100%' : '1px',
+              background: 'rgba(26, 26, 46, 0.1)'
+            }}
+          />
+          <p
+            style={{
+              fontFamily: 'Source Sans 3, sans-serif',
+              fontSize: '0.875rem',
+              color: '#9a8c98',
+              margin: 0,
+              textAlign: 'center'
+            }}
+          >
+            {t.paymentNote}
+          </p>
+        </div>
       </div>
     </section>
   );

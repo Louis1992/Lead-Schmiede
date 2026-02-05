@@ -157,7 +157,7 @@ export const translations = {
         },
         {
           icon: 'verified',
-          title: '100% aktuelle Kontaktdaten',
+          title: 'Aktuelle Kontaktdaten',
           description: 'Jeder Kontakt wird manuell verifiziert. Keine Bounces, keine veralteten Jobtitel.'
         },
         {
@@ -327,7 +327,7 @@ export const translations = {
             },
             {
               question: 'Kann ich erst testen?',
-              answer: 'Ja! Unser Testpaket mit 20 Leads für €39 ist perfekt zum Kennenlernen. Sie können danach jederzeit zum Growth-Paket upgraden.'
+              answer: 'Ja! Wir bieten 10 kostenlose Test-Leads, damit Sie unsere Qualität unverbindlich erleben können. Danach können Sie mit dem Starter-Paket (100 Leads für €149) einsteigen oder direkt skalieren.'
             }
           ]
         }
@@ -336,31 +336,40 @@ export const translations = {
 
     // Pricing Section
     pricing: {
-      title: 'Transparente Preise ohne Abo-Zwang',
-      subtitle: 'Einmalige Pakete – zahlen Sie nur, was Sie brauchen',
+      title: 'Transparente Preise',
+      subtitle: 'Wählen Sie das passende Modell für Ihre Lead-Generierung',
+      oneTimeLabel: 'Einmalig',
+      monthlyLabel: 'Monatlich',
+      monthlySavingsBadge: 'Flexibel',
+      perMonthLabel: 'Monat',
+      freeTestBanner: {
+        title: '10 Gratis Test-Leads',
+        description: 'Überzeugen Sie sich selbst – völlig unverbindlich und kostenlos.',
+        cta: 'Gratis testen'
+      },
       packages: [
         {
-          name: 'Test',
-          duration: '20 Leads',
-          price: '€39',
-          pricePerLead: '€1,95/Lead',
+          name: 'Starter',
+          duration: '100 Leads',
+          price: '€149',
+          pricePerLead: '€1,49/Lead',
           features: [
-            '20 verifizierte B2B-Kontakte',
-            'Kurze ICP-Abstimmung',
+            '100 verifizierte B2B-Kontakte',
+            'ICP-Kurzberatung (15 Min)',
             'DSGVO-Dokumentation',
             'Excel/CSV-Export',
             'E-Mail-Support'
           ],
-          bestFor: 'Zum Testen & Kennenlernen',
-          cta: 'Testpaket anfragen',
+          bestFor: 'Erste Kampagne starten',
+          cta: 'Starter anfragen',
           highlighted: false
         },
         {
           name: 'Growth',
           duration: '500 Leads',
-          price: '€745',
-          pricePerLead: '€1,49/Lead',
-          savings: '23% günstiger',
+          price: '€595',
+          pricePerLead: '€1,19/Lead',
+          savings: '20% gespart',
           features: [
             '500 verifizierte B2B-Kontakte',
             'Ausführliche ICP-Beratung',
@@ -369,33 +378,106 @@ export const translations = {
             'Prioritäts-Support',
             '1 Iteration inklusive'
           ],
-          bestFor: 'Kampagnen & Skalierung',
-          cta: 'Growth-Paket anfragen',
+          bestFor: 'Skalierung & Wachstum',
+          cta: 'Growth anfragen',
           highlighted: true
         },
         {
           name: 'Scale',
           duration: '1.000 Leads',
-          price: '€1.290',
-          pricePerLead: '€1,29/Lead',
-          savings: '34% günstiger',
+          price: '€990',
+          pricePerLead: '€0,99/Lead',
+          savings: '33% gespart',
           features: [
             '1.000 verifizierte B2B-Kontakte',
             'Premium ICP-Workshop',
             'DSGVO-Dokumentation',
-            'Excel/CSV-Export',
             'Dedizierter Ansprechpartner',
             'Wöchentliche Iteration',
             'Signal-basierte Filterung'
           ],
           bestFor: 'Maximale Skalierung',
-          cta: 'Scale-Paket anfragen',
+          cta: 'Scale anfragen',
+          highlighted: false
+        },
+        {
+          name: 'Enterprise',
+          duration: '2.500+ Leads',
+          price: 'Ab €2.250',
+          pricePerLead: 'Ab €0,90/Lead',
+          features: [
+            'Unbegrenzte Leads nach Bedarf',
+            'Dedizierter Account Manager',
+            'API-Integration möglich',
+            'Custom Reporting',
+            'SLA & Premium Support',
+            'Individuelle Konditionen'
+          ],
+          bestFor: 'Große Vertriebsteams',
+          cta: 'Gespräch vereinbaren',
+          highlighted: false,
+          isEnterprise: true
+        }
+      ],
+      monthlyPackages: [
+        {
+          name: 'Starter',
+          duration: '100 Leads/Monat',
+          price: '€129',
+          pricePerLead: '€1,29/Lead',
+          originalPrice: '€149 einmalig',
+          features: [
+            '100 Leads jeden Monat',
+            'Monatliche ICP-Optimierung',
+            'DSGVO-Dokumentation',
+            'Jederzeit pausierbar',
+            'Prioritäts-Support'
+          ],
+          bestFor: 'Kontinuierlicher Pipeline-Aufbau',
+          cta: 'Abo starten',
+          highlighted: false
+        },
+        {
+          name: 'Growth',
+          duration: '250 Leads/Monat',
+          price: '€279',
+          pricePerLead: '€1,12/Lead',
+          savings: '25% gespart',
+          features: [
+            '250 Leads jeden Monat',
+            'Wöchentliche Optimierung',
+            'DSGVO-Dokumentation',
+            'Ungenutzte Leads übertragbar',
+            'Dedizierter Ansprechpartner',
+            'Kampagnen-Analyse'
+          ],
+          bestFor: 'Wachsende Teams',
+          cta: 'Abo starten',
+          highlighted: true
+        },
+        {
+          name: 'Scale',
+          duration: '500 Leads/Monat',
+          price: '€449',
+          pricePerLead: '€0,90/Lead',
+          savings: '40% gespart',
+          features: [
+            '500 Leads jeden Monat',
+            'Tägliche Optimierung',
+            'DSGVO-Dokumentation',
+            'Ungenutzte Leads übertragbar',
+            'Premium Account Manager',
+            'Wöchentliche Strategy Calls'
+          ],
+          bestFor: 'Sales-Teams mit Volumen',
+          cta: 'Abo starten',
           highlighted: false
         }
       ],
       bestForLabel: 'Ideal für:',
-      popularBadge: 'Empfohlen',
-      paymentNote: 'Einmalige Zahlung per Vorkasse. Keine versteckten Kosten, kein Abo.'
+      popularBadge: 'Beliebteste',
+      guaranteeText: 'Qualitätsgarantie: Ungültige Leads ersetzen wir 1:1',
+      paymentNote: 'Einmalig = Vorkasse • Monatlich = Jederzeit kündbar'
     },
 
     // Contact Section
@@ -591,7 +673,7 @@ export const translations = {
         },
         {
           icon: 'verified',
-          title: '100% Current Contact Data',
+          title: 'Current Contact Data',
           description: 'Every contact is manually verified. No bounces, no outdated job titles.'
         },
         {
@@ -697,7 +779,7 @@ export const translations = {
             },
             {
               question: 'Can I test first?',
-              answer: 'Yes! Our Test package with 20 leads for €39 is perfect for getting started. You can upgrade to the Growth package anytime.'
+              answer: 'Yes! We offer 10 free test leads so you can experience our quality with no commitment. After that, you can start with the Starter package (100 leads for €149) or scale directly.'
             }
           ]
         }
@@ -706,31 +788,40 @@ export const translations = {
 
     // Pricing Section
     pricing: {
-      title: 'Transparent Pricing Without Subscriptions',
-      subtitle: 'One-time packages – pay only for what you need',
+      title: 'Transparent Pricing',
+      subtitle: 'Choose the right model for your lead generation',
+      oneTimeLabel: 'One-Time',
+      monthlyLabel: 'Monthly',
+      monthlySavingsBadge: 'Flexible',
+      perMonthLabel: 'month',
+      freeTestBanner: {
+        title: '10 Free Test Leads',
+        description: 'See for yourself – completely free and no strings attached.',
+        cta: 'Get Free Test'
+      },
       packages: [
         {
-          name: 'Test',
-          duration: '20 Leads',
-          price: '€39',
-          pricePerLead: '€1.95/lead',
+          name: 'Starter',
+          duration: '100 Leads',
+          price: '€149',
+          pricePerLead: '€1.49/lead',
           features: [
-            '20 verified B2B contacts',
-            'Brief ICP alignment',
+            '100 verified B2B contacts',
+            'ICP brief consultation (15 min)',
             'GDPR documentation',
             'Excel/CSV export',
             'Email support'
           ],
-          bestFor: 'Testing & Getting Started',
-          cta: 'Request Test Package',
+          bestFor: 'First campaign launch',
+          cta: 'Request Starter',
           highlighted: false
         },
         {
           name: 'Growth',
           duration: '500 Leads',
-          price: '€745',
-          pricePerLead: '€1.49/lead',
-          savings: '23% cheaper',
+          price: '€595',
+          pricePerLead: '€1.19/lead',
+          savings: '20% saved',
           features: [
             '500 verified B2B contacts',
             'Detailed ICP consulting',
@@ -739,33 +830,106 @@ export const translations = {
             'Priority support',
             '1 iteration included'
           ],
-          bestFor: 'Campaigns & Scaling',
-          cta: 'Request Growth Package',
+          bestFor: 'Scaling & Growth',
+          cta: 'Request Growth',
           highlighted: true
         },
         {
           name: 'Scale',
           duration: '1,000 Leads',
-          price: '€1,290',
-          pricePerLead: '€1.29/lead',
-          savings: '34% cheaper',
+          price: '€990',
+          pricePerLead: '€0.99/lead',
+          savings: '33% saved',
           features: [
             '1,000 verified B2B contacts',
             'Premium ICP workshop',
             'GDPR documentation',
-            'Excel/CSV export',
             'Dedicated contact person',
             'Weekly iteration',
             'Signal-based filtering'
           ],
-          bestFor: 'Maximum Scaling',
-          cta: 'Request Scale Package',
+          bestFor: 'Maximum scaling',
+          cta: 'Request Scale',
+          highlighted: false
+        },
+        {
+          name: 'Enterprise',
+          duration: '2,500+ Leads',
+          price: 'From €2,250',
+          pricePerLead: 'From €0.90/lead',
+          features: [
+            'Unlimited leads as needed',
+            'Dedicated Account Manager',
+            'API integration possible',
+            'Custom reporting',
+            'SLA & Premium support',
+            'Custom terms'
+          ],
+          bestFor: 'Large sales teams',
+          cta: 'Schedule Call',
+          highlighted: false,
+          isEnterprise: true
+        }
+      ],
+      monthlyPackages: [
+        {
+          name: 'Starter',
+          duration: '100 Leads/month',
+          price: '€129',
+          pricePerLead: '€1.29/lead',
+          originalPrice: '€149 one-time',
+          features: [
+            '100 leads every month',
+            'Monthly ICP optimization',
+            'GDPR documentation',
+            'Pause anytime',
+            'Priority support'
+          ],
+          bestFor: 'Continuous pipeline building',
+          cta: 'Start Subscription',
+          highlighted: false
+        },
+        {
+          name: 'Growth',
+          duration: '250 Leads/month',
+          price: '€279',
+          pricePerLead: '€1.12/lead',
+          savings: '25% saved',
+          features: [
+            '250 leads every month',
+            'Weekly optimization',
+            'GDPR documentation',
+            'Unused leads roll over',
+            'Dedicated contact person',
+            'Campaign analysis'
+          ],
+          bestFor: 'Growing teams',
+          cta: 'Start Subscription',
+          highlighted: true
+        },
+        {
+          name: 'Scale',
+          duration: '500 Leads/month',
+          price: '€449',
+          pricePerLead: '€0.90/lead',
+          savings: '40% saved',
+          features: [
+            '500 leads every month',
+            'Daily optimization',
+            'GDPR documentation',
+            'Unused leads roll over',
+            'Premium Account Manager',
+            'Weekly strategy calls'
+          ],
+          bestFor: 'High-volume sales teams',
+          cta: 'Start Subscription',
           highlighted: false
         }
       ],
       bestForLabel: 'Best for:',
-      popularBadge: 'Recommended',
-      paymentNote: 'One-time payment upfront. No hidden costs, no subscription.'
+      popularBadge: 'Most Popular',
+      guaranteeText: 'Quality guarantee: Invalid leads replaced 1:1',
+      paymentNote: 'One-time = Prepaid • Monthly = Cancel anytime'
     },
 
     // Contact Section

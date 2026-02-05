@@ -208,7 +208,7 @@ export default function ROICalculator({ lang = 'de' }: ROICalculatorProps) {
               <input
                 type="range"
                 min="50"
-                max="500"
+                max="5000"
                 step="50"
                 value={leadsPerMonth}
                 onChange={(e) => setLeadsPerMonth(Number(e.target.value))}
@@ -216,14 +216,14 @@ export default function ROICalculator({ lang = 'de' }: ROICalculatorProps) {
                   width: '100%',
                   height: '8px',
                   borderRadius: '4px',
-                  background: `linear-gradient(to right, #e07a5f 0%, #e07a5f ${((leadsPerMonth - 50) / 450) * 100}%, #e5e7eb ${((leadsPerMonth - 50) / 450) * 100}%, #e5e7eb 100%)`,
+                  background: `linear-gradient(to right, #e07a5f 0%, #e07a5f ${((leadsPerMonth - 50) / 4950) * 100}%, #e5e7eb ${((leadsPerMonth - 50) / 4950) * 100}%, #e5e7eb 100%)`,
                   appearance: 'none',
                   cursor: 'pointer'
                 }}
               />
               <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '4px' }}>
                 <span style={{ fontFamily: '"Source Sans 3", sans-serif', fontSize: '0.75rem', color: '#9a8c98' }}>50</span>
-                <span style={{ fontFamily: '"Source Sans 3", sans-serif', fontSize: '0.75rem', color: '#9a8c98' }}>500</span>
+                <span style={{ fontFamily: '"Source Sans 3", sans-serif', fontSize: '0.75rem', color: '#9a8c98' }}>5.000</span>
               </div>
             </div>
 
@@ -253,22 +253,22 @@ export default function ROICalculator({ lang = 'de' }: ROICalculatorProps) {
               </div>
               <input
                 type="range"
-                min="5"
+                min="2"
                 max="30"
-                step="5"
+                step="1"
                 value={minutesPerLead}
                 onChange={(e) => setMinutesPerLead(Number(e.target.value))}
                 style={{
                   width: '100%',
                   height: '8px',
                   borderRadius: '4px',
-                  background: `linear-gradient(to right, #e07a5f 0%, #e07a5f ${((minutesPerLead - 5) / 25) * 100}%, #e5e7eb ${((minutesPerLead - 5) / 25) * 100}%, #e5e7eb 100%)`,
+                  background: `linear-gradient(to right, #e07a5f 0%, #e07a5f ${((minutesPerLead - 2) / 28) * 100}%, #e5e7eb ${((minutesPerLead - 2) / 28) * 100}%, #e5e7eb 100%)`,
                   appearance: 'none',
                   cursor: 'pointer'
                 }}
               />
               <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '4px' }}>
-                <span style={{ fontFamily: '"Source Sans 3", sans-serif', fontSize: '0.75rem', color: '#9a8c98' }}>5 min</span>
+                <span style={{ fontFamily: '"Source Sans 3", sans-serif', fontSize: '0.75rem', color: '#9a8c98' }}>2 min</span>
                 <span style={{ fontFamily: '"Source Sans 3", sans-serif', fontSize: '0.75rem', color: '#9a8c98' }}>30 min</span>
               </div>
             </div>
