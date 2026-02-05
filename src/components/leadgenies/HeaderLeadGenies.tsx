@@ -263,7 +263,7 @@ export default function HeaderLeadGenies({
       {/* Desktop & Mobile Header */}
       <header
         ref={headerRef}
-        className="fixed top-[20px] left-1/2 -translate-x-1/2 z-50 px-8 py-2 backdrop-blur-lg bg-white/60 rounded-[99px] shadow-lg opacity-0"
+        className="fixed top-[20px] left-1/2 -translate-x-1/2 z-50 px-8 py-3 backdrop-blur-md bg-white rounded-[99px] shadow-lg opacity-0"
         style={{
           width: 'calc(100% - 50px)',
           maxWidth: headerMaxWidth
@@ -352,7 +352,7 @@ export default function HeaderLeadGenies({
             href={ctaHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:flex items-center justify-center px-5 py-2.5 text-white text-sm rounded-full font-medium transition-all duration-300 whitespace-nowrap flex-shrink-0"
+            className="hidden md:flex items-center justify-center px-8 py-3 text-white text-sm rounded-full font-medium transition-all duration-300 whitespace-nowrap flex-shrink-0"
             style={{
               fontFamily: 'Source Sans 3, sans-serif',
               background: 'linear-gradient(135deg, #e07a5f 0%, #f4a261 100%)',

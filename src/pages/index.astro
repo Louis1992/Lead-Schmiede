@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import HeaderLeadGenies from '../components/leadgenies/HeaderLeadGenies.tsx';
 import HeroSection from '../components/leadgenies/HeroSection.tsx';
+import WhatWeDoSection from '../components/leadgenies/WhatWeDoSection.tsx';
 import ProblemSection from '../components/leadgenies/ProblemSection.tsx';
 import BenefitsSection from '../components/leadgenies/BenefitsSection.tsx';
 import PricingSection from '../components/leadgenies/PricingSection.tsx';
@@ -31,6 +32,9 @@ const pageDescription = "Verifizierte B2B-Kontakte mit persönlicher ICP-Beratun
 
     <!-- Hero Section -->
     <HeroSection lang={lang} client:load />
+
+    <!-- What We Do Section -->
+    <WhatWeDoSection lang={lang} client:idle />
 
     <!-- Problem Agitation Section -->
     <ProblemSection lang={lang} client:idle />

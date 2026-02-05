@@ -7,7 +7,7 @@ export const translations = {
     // Header
     header: {
       menuItems: [
-        { label: 'Was wir tun', href: '#hero' },
+        { label: 'Was wir tun', href: '#what-we-do' },
         { label: 'So funktioniert es', href: '#how-it-works' },
         { label: 'Preise', href: '#pricing' },
         { label: 'FAQ', href: '#faq' }
@@ -66,6 +66,61 @@ export const translations = {
           personImage: ''
         }
       ]
+    },
+
+    // What We Do Section - Service Explanation
+    whatWeDo: {
+      title: 'Was wir tun',
+      subtitle: 'Der Unterschied zwischen Self-Service-Tools und echtem Lead-Service',
+      comparison: {
+        selfService: {
+          title: 'Self-Service-Tools',
+          subtitle: 'Apollo, Cognism, LinkedIn Sales Navigator',
+          problems: [
+            'Sie investieren Stunden ins Filtern und Suchen',
+            'Generische Filter passen nie genau zu Ihrem ICP',
+            'Keine Überprüfung der Datenaktualität',
+            'Sie zahlen für Features, die Sie nicht brauchen',
+            'Kein persönlicher Ansprechpartner'
+          ]
+        },
+        leadSchmiede: {
+          title: 'Lead-Schmiede',
+          subtitle: 'Maßgeschneiderte Lead-Recherche',
+          benefits: [
+            'Wöchentliche Evaluation Ihrer Kampagnen-Performance',
+            'Experten-KI-Prompts für Signal-Filterung',
+            'Manuelle Verifizierung jedes einzelnen Kontakts',
+            'Persönliche ICP-Beratung und Iteration',
+            'Spezifische Signale: Jobwechsel, Funding, Expansionen'
+          ]
+        }
+      },
+      process: {
+        title: 'Unser Prozess im Detail',
+        steps: [
+          {
+            number: '01',
+            title: 'ICP-Workshop',
+            description: 'Wir definieren gemeinsam Ihre idealen Kunden: Branche, Unternehmensgröße, Entscheider-Level, technologische Signale.'
+          },
+          {
+            number: '02',
+            title: 'Signal-Filterung',
+            description: 'Unsere KI-gestützten Prompts identifizieren Kaufsignale: aktuelle Jobwechsel, Funding-Runden, Expansion in neue Märkte.'
+          },
+          {
+            number: '03',
+            title: 'Manuelle Verifizierung',
+            description: 'Jeder Kontakt wird auf Aktualität geprüft. Wir verifizieren E-Mail, Jobtitel und Unternehmenszugehörigkeit.'
+          },
+          {
+            number: '04',
+            title: 'Wöchentliche Iteration',
+            description: 'Wir analysieren gemeinsam Ihre Kampagnen-Ergebnisse und optimieren die Zielgruppen-Definition kontinuierlich.'
+          }
+        ]
+      }
     },
 
     // Problem Section - Pain Agitation
@@ -309,11 +364,31 @@ export const translations = {
             'Ausführliche ICP-Beratung',
             'DSGVO-Dokumentation',
             'Excel/CSV-Export',
-            'Prioritäts-Support'
+            'Prioritäts-Support',
+            '1 Iteration inklusive'
           ],
           bestFor: 'Kampagnen & Skalierung',
           cta: 'Growth-Paket anfragen',
           highlighted: true
+        },
+        {
+          name: 'Scale',
+          duration: '1.000 Leads',
+          price: '€1.290',
+          pricePerLead: '€1,29/Lead',
+          savings: '34% günstiger',
+          features: [
+            '1.000 verifizierte B2B-Kontakte',
+            'Premium ICP-Workshop',
+            'DSGVO-Dokumentation',
+            'Excel/CSV-Export',
+            'Dedizierter Ansprechpartner',
+            'Wöchentliche Iteration',
+            'Signal-basierte Filterung'
+          ],
+          bestFor: 'Maximale Skalierung',
+          cta: 'Scale-Paket anfragen',
+          highlighted: false
         }
       ],
       bestForLabel: 'Ideal für:',
@@ -364,7 +439,7 @@ export const translations = {
     // Header
     header: {
       menuItems: [
-        { label: 'What We Do', href: '#hero' },
+        { label: 'What We Do', href: '#what-we-do' },
         { label: 'How It Works', href: '#how-it-works' },
         { label: 'Pricing', href: '#pricing' },
         { label: 'FAQ', href: '#faq' }
@@ -423,6 +498,61 @@ export const translations = {
           personImage: ''
         }
       ]
+    },
+
+    // What We Do Section - Service Explanation
+    whatWeDo: {
+      title: 'What We Do',
+      subtitle: 'The difference between self-service tools and real lead service',
+      comparison: {
+        selfService: {
+          title: 'Self-Service Tools',
+          subtitle: 'Apollo, Cognism, LinkedIn Sales Navigator',
+          problems: [
+            'You spend hours filtering and searching',
+            'Generic filters never match your ICP exactly',
+            'No verification of data accuracy',
+            'You pay for features you don\'t need',
+            'No personal contact person'
+          ]
+        },
+        leadSchmiede: {
+          title: 'Lead-Schmiede',
+          subtitle: 'Custom Lead Research',
+          benefits: [
+            'Weekly evaluation of your campaign performance',
+            'Expert AI prompts for signal filtering',
+            'Manual verification of each individual contact',
+            'Personal ICP consulting and iteration',
+            'Specific signals: job changes, funding, expansions'
+          ]
+        }
+      },
+      process: {
+        title: 'Our Process in Detail',
+        steps: [
+          {
+            number: '01',
+            title: 'ICP Workshop',
+            description: 'We define your ideal customers together: industry, company size, decision-maker level, tech signals.'
+          },
+          {
+            number: '02',
+            title: 'Signal Filtering',
+            description: 'Our AI-powered prompts identify buying signals: recent job changes, funding rounds, expansion into new markets.'
+          },
+          {
+            number: '03',
+            title: 'Manual Verification',
+            description: 'Every contact is checked for accuracy. We verify email, job title, and company affiliation.'
+          },
+          {
+            number: '04',
+            title: 'Weekly Iteration',
+            description: 'We analyze your campaign results together and continuously optimize target group definition.'
+          }
+        ]
+      }
     },
 
     // Problem Section - Pain Agitation
@@ -602,11 +732,31 @@ export const translations = {
             'Detailed ICP consulting',
             'GDPR documentation',
             'Excel/CSV export',
-            'Priority support'
+            'Priority support',
+            '1 iteration included'
           ],
           bestFor: 'Campaigns & Scaling',
           cta: 'Request Growth Package',
           highlighted: true
+        },
+        {
+          name: 'Scale',
+          duration: '1,000 Leads',
+          price: '€1,290',
+          pricePerLead: '€1.29/lead',
+          savings: '34% cheaper',
+          features: [
+            '1,000 verified B2B contacts',
+            'Premium ICP workshop',
+            'GDPR documentation',
+            'Excel/CSV export',
+            'Dedicated contact person',
+            'Weekly iteration',
+            'Signal-based filtering'
+          ],
+          bestFor: 'Maximum Scaling',
+          cta: 'Request Scale Package',
+          highlighted: false
         }
       ],
       bestForLabel: 'Best for:',
