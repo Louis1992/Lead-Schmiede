@@ -11,6 +11,7 @@ import ContactSection from '../components/leadgenies/ContactSection.tsx';
 import FooterSection from '../components/leadgenies/FooterSection.tsx';
 import ROICalculator from '../components/leadgenies/ROICalculator.tsx';
 import TestimonialSection from '../components/leadgenies/TestimonialSection.tsx';
+import CrossSellBanner from '../components/leadgenies/CrossSellBanner.tsx';
 
 // Language for this page
 const lang = 'de';
@@ -51,6 +52,9 @@ const pageDescription = "Verifizierte B2B-Kontakte mit persönlicher ICP-Beratun
 
     <!-- Testimonial Section -->
     <TestimonialSection lang={lang} client:idle />
+
+    <!-- Cross-Sell Banner (LeadGenies) -->
+    <CrossSellBanner lang={lang} client:idle />
 
     <!-- FAQ Section -->
     <section id="faq">
