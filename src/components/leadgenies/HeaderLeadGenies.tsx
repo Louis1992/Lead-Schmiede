@@ -263,7 +263,7 @@ export default function HeaderLeadGenies({
       {/* Desktop & Mobile Header */}
       <header
         ref={headerRef}
-        className="fixed top-[25px] left-1/2 -translate-x-1/2 z-50 px-6 py-3 backdrop-blur-lg bg-white/60 rounded-[99px] shadow-lg opacity-0"
+        className="fixed top-[20px] left-1/2 -translate-x-1/2 z-50 px-8 py-2 backdrop-blur-lg bg-white/60 rounded-[99px] shadow-lg opacity-0"
         style={{
           width: 'calc(100% - 50px)',
           maxWidth: headerMaxWidth
@@ -281,7 +281,7 @@ export default function HeaderLeadGenies({
               src="/logo-lead-schmiede.png"
               alt="Lead-Schmiede"
               style={{
-                height: isCompact ? '32px' : '48px',
+                height: isCompact ? '36px' : '56px',
                 width: 'auto',
                 transition: 'all 0.3s ease',
                 filter: isMobileMenuOpen ? 'brightness(0) invert(1)' : 'none'
