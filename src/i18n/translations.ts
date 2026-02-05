@@ -10,6 +10,7 @@ export const translations = {
         { label: 'Was wir tun', href: '#what-we-do' },
         { label: 'So funktioniert es', href: '#how-it-works' },
         { label: 'Preise', href: '#pricing' },
+        { label: 'Kundenstimmen', href: '#testimonials' },
         { label: 'FAQ', href: '#faq' }
       ],
       ctaText: 'Kostenlos beraten lassen'
@@ -443,6 +444,7 @@ export const translations = {
         { label: 'What We Do', href: '#what-we-do' },
         { label: 'How It Works', href: '#how-it-works' },
         { label: 'Pricing', href: '#pricing' },
+        { label: 'Testimonials', href: '#testimonials' },
         { label: 'FAQ', href: '#faq' }
       ],
       ctaText: 'Get Started'
