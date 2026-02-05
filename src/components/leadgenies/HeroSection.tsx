@@ -409,7 +409,7 @@ export default function HeroSection({ lang = 'de' }: HeroSectionProps) {
                   </p>
                   <span
                     style={{
-                      background: '#81b29a',
+                      background: '#2d6a4f',
                       color: '#ffffff',
                       fontFamily: 'Source Sans 3, sans-serif',
                       fontSize: '0.6875rem',

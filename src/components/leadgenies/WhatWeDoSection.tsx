@@ -163,7 +163,7 @@ export default function WhatWeDoSection({ lang = 'de' }: WhatWeDoSectionProps) {
 
                 {/* Content */}
                 <div style={{ flex: 1 }}>
-                  <h4
+                  <h3
                     style={{
                       fontFamily: '"Source Sans 3", sans-serif',
                       fontSize: '1.125rem',
@@ -173,7 +173,7 @@ export default function WhatWeDoSection({ lang = 'de' }: WhatWeDoSectionProps) {
                     }}
                   >
                     {step.title}
-                  </h4>
+                  </h3>
                   <p
                     style={{
                       fontFamily: '"Source Sans 3", sans-serif',

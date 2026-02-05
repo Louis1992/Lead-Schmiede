@@ -401,10 +401,10 @@ export default function ContactSection({ lang = 'de' }: ContactSectionProps) {
                   />
                 </div>
 
-                {/* Challenge Textarea */}
+                {/* Message Textarea */}
                 <div>
                   <label
-                    htmlFor="challenge"
+                    htmlFor="message"
                     style={{
                       fontFamily: 'Inter, sans-serif',
                       fontSize: '0.875rem',
@@ -414,11 +414,12 @@ export default function ContactSection({ lang = 'de' }: ContactSectionProps) {
                       marginBottom: '0.5rem'
                     }}
                   >
-                    {t.challengeLabel}
+                    {t.leadsNeededLabel}
                   </label>
                   <textarea
                     id="message"
                     name="message"
+                    aria-label={lang === 'de' ? 'Ihre Nachricht' : 'Your message'}
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={4}
@@ -569,6 +570,7 @@ export default function ContactSection({ lang = 'de' }: ContactSectionProps) {
                     href={option.link}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`${option.label}: ${option.value}`}
                     style={{
                       display: 'flex',
                       alignItems: 'center',

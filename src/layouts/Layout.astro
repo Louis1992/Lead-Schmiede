@@ -159,6 +159,9 @@ const ogUrl = canonicalUrl;
     <link rel="canonical" href={canonicalUrl} />
     <title>{pageTitle}</title>
 
+    <!-- Preload LCP image (logo) for better performance -->
+    <link rel="preload" as="image" href="/logo-lead-schmiede.png" fetchpriority="high">
+
     <!-- Custom Fonts - Lead-Schmiede Industrial Design -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

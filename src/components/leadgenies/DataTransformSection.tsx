@@ -369,7 +369,7 @@ export default function DataTransformSection({ lang = 'de' }: DataTransformSecti
                 </span>
                 <span
                   style={{
-                    background: '#81b29a',
+                    background: '#2d6a4f',
                     color: '#ffffff',
                     fontFamily: '"Source Sans 3", sans-serif',
                     fontSize: '0.625rem',

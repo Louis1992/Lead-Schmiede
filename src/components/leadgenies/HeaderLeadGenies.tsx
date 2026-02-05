@@ -280,6 +280,8 @@ export default function HeaderLeadGenies({
               ref={logoRef as React.RefObject<HTMLImageElement>}
               src="/logo-lead-schmiede.png"
               alt="Lead-Schmiede"
+              width={180}
+              height={56}
               style={{
                 height: isCompact ? '36px' : '56px',
                 width: 'auto',

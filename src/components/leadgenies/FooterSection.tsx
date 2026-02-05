@@ -62,6 +62,8 @@ export default function FooterSection({ lang = 'de' }: FooterSectionProps) {
           <img
             src="/logo-lead-schmiede.png"
             alt="Lead-Schmiede"
+            width={154}
+            height={48}
             style={{
               height: '48px',
               width: 'auto',
