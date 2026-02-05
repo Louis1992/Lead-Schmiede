@@ -17,8 +17,8 @@ export const translations = {
 
     // Hero - Conversion-optimized
     hero: {
-      title: 'Leads, die wirklich kaufen wollen',
-      subtitle: 'Verifizierte Entscheider-Kontakte in 48h – ohne Self-Service-Chaos oder Agentur-Verträge.',
+      title: 'Sparen Sie sich die nervige Leadlisten-Erstellung',
+      subtitle: 'Echte Menschen + smarte KI recherchieren Ihre B2B-Leads. Verifiziert, aufbereitet, in 48h geliefert.',
       cta: 'Kostenloses Erstgespräch',
       ctaSubtext: 'Unverbindlich • 15 Min • Sofort Klarheit',
       trustBadges: [
@@ -98,27 +98,27 @@ export const translations = {
         }
       },
       process: {
-        title: 'Unser Prozess im Detail',
+        title: 'Unser Prozess: Mensch + KI',
         steps: [
           {
             number: '01',
-            title: 'ICP-Workshop',
-            description: 'Wir definieren gemeinsam Ihre idealen Kunden: Branche, Unternehmensgröße, Entscheider-Level, technologische Signale.'
+            title: 'Persönlicher ICP-Workshop',
+            description: 'Ein echter Mensch definiert mit Ihnen Ihre idealen Kunden: Branche, Unternehmensgröße, Entscheider-Level, technologische Signale.'
           },
           {
             number: '02',
-            title: 'Signal-Filterung',
-            description: 'Unsere KI-gestützten Prompts identifizieren Kaufsignale: aktuelle Jobwechsel, Funding-Runden, Expansion in neue Märkte.'
+            title: 'KI-gestützte Signal-Filterung',
+            description: 'Smarte KI identifiziert Kaufsignale: aktuelle Jobwechsel, Funding-Runden, Expansion in neue Märkte – überwacht von unserem Team.'
           },
           {
             number: '03',
             title: 'Manuelle Verifizierung',
-            description: 'Jeder Kontakt wird auf Aktualität geprüft. Wir verifizieren E-Mail, Jobtitel und Unternehmenszugehörigkeit.'
+            description: 'Echte Menschen prüfen jeden Kontakt auf Aktualität. Wir verifizieren E-Mail, Jobtitel und Unternehmenszugehörigkeit persönlich.'
           },
           {
             number: '04',
             title: 'Wöchentliche Iteration',
-            description: 'Wir analysieren gemeinsam Ihre Kampagnen-Ergebnisse und optimieren die Zielgruppen-Definition kontinuierlich.'
+            description: 'Ihr persönlicher Ansprechpartner analysiert Ihre Kampagnen-Ergebnisse und optimiert die Zielgruppen-Definition kontinuierlich.'
           }
         ]
       }
@@ -450,8 +450,8 @@ export const translations = {
 
     // Hero - Conversion-optimized
     hero: {
-      title: 'Leads That Actually Want to Buy',
-      subtitle: 'Verified decision-maker contacts in 48h – without self-service chaos or agency contracts.',
+      title: 'Skip the Tedious Lead List Building',
+      subtitle: 'Real humans + smart AI research your B2B leads. Verified, formatted, delivered in 48h.',
       cta: 'Free Consultation',
       ctaSubtext: 'No commitment • 15 min • Instant clarity',
       trustBadges: [
@@ -531,27 +531,27 @@ export const translations = {
         }
       },
       process: {
-        title: 'Our Process in Detail',
+        title: 'Our Process: Human + AI',
         steps: [
           {
             number: '01',
-            title: 'ICP Workshop',
-            description: 'We define your ideal customers together: industry, company size, decision-maker level, tech signals.'
+            title: 'Personal ICP Workshop',
+            description: 'A real person defines your ideal customers with you: industry, company size, decision-maker level, tech signals.'
           },
           {
             number: '02',
-            title: 'Signal Filtering',
-            description: 'Our AI-powered prompts identify buying signals: recent job changes, funding rounds, expansion into new markets.'
+            title: 'AI-Powered Signal Filtering',
+            description: 'Smart AI identifies buying signals: recent job changes, funding rounds, market expansion – supervised by our team.'
           },
           {
             number: '03',
             title: 'Manual Verification',
-            description: 'Every contact is checked for accuracy. We verify email, job title, and company affiliation.'
+            description: 'Real humans check every contact for accuracy. We personally verify email, job title, and company affiliation.'
           },
           {
             number: '04',
             title: 'Weekly Iteration',
-            description: 'We analyze your campaign results together and continuously optimize target group definition.'
+            description: 'Your personal contact analyzes your campaign results and continuously optimizes target group definition.'
           }
         ]
       }

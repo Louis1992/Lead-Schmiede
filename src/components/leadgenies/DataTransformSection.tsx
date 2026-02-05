@@ -18,15 +18,17 @@ export default function DataTransformSection({ lang = 'de' }: DataTransformSecti
   const [isVisible, setIsVisible] = useState(false);
 
   const t = lang === 'de' ? {
-    title: 'Von Daten-Chaos zu Sales-Ready',
-    subtitle: 'Wir verwandeln riesige Rohdaten-Exporte in perfekt aufbereitete Lead-Listen',
+    title: 'Von Rohdaten zu Sales-Ready: Datenaufbereitung inklusive',
+    subtitle: 'Echte Menschen + smarte KI verwandeln riesige Rohdaten-Exporte in perfekt aufbereitete Lead-Listen',
+    humanAiBadge: 'Mensch + KI',
     before: 'Rohdaten-Export',
     after: 'Ihre Lead-Liste',
     beforeItems: ['Tausende Zeilen', 'Unstrukturiert', 'Duplikate', 'Veraltete Daten', 'Fehlende Felder'],
     afterItems: ['Nur relevante Kontakte', 'Strukturiert & formatiert', 'Dedupliziert', '100% verifiziert', 'Vollständige Profile']
   } : {
-    title: 'From Data Chaos to Sales-Ready',
-    subtitle: 'We transform massive raw data exports into perfectly prepared lead lists',
+    title: 'From Raw Data to Sales-Ready: Data Preparation Included',
+    subtitle: 'Real humans + smart AI transform massive raw data exports into perfectly prepared lead lists',
+    humanAiBadge: 'Human + AI',
     before: 'Raw Data Export',
     after: 'Your Lead List',
     beforeItems: ['Thousands of rows', 'Unstructured', 'Duplicates', 'Outdated data', 'Missing fields'],
@@ -276,6 +278,28 @@ export default function DataTransformSection({ lang = 'de' }: DataTransformSecti
               gap: '8px'
             }}
           >
+            {/* Human + AI Badge */}
+            <div
+              style={{
+                background: 'linear-gradient(135deg, #1a1a2e 0%, #5c4d7d 100%)',
+                color: '#ffffff',
+                fontFamily: '"Source Sans 3", sans-serif',
+                fontSize: '0.6875rem',
+                fontWeight: 600,
+                padding: '6px 12px',
+                borderRadius: '100px',
+                marginBottom: '4px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                boxShadow: '0 4px 12px rgba(26, 26, 46, 0.2)'
+              }}
+            >
+              <span style={{ fontSize: '0.75rem' }}>👤</span>
+              <span>+</span>
+              <span style={{ fontSize: '0.75rem' }}>🤖</span>
+              <span style={{ marginLeft: '2px' }}>{t.humanAiBadge}</span>
+            </div>
             <div
               style={{
                 width: isMobile ? '50px' : '60px',
