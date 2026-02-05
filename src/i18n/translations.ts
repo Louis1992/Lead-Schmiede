@@ -270,7 +270,7 @@ export const translations = {
             },
             {
               question: 'Kann ich erst testen?',
-              answer: 'Ja! Unser Starter-Paket mit 100 Leads für €149 ist perfekt zum Testen. Sie können jederzeit zu größeren Paketen upgraden.'
+              answer: 'Ja! Unser Testpaket mit 20 Leads für €39 ist perfekt zum Kennenlernen. Sie können danach jederzeit zum Growth-Paket upgraden.'
             }
           ]
         }
@@ -283,63 +283,41 @@ export const translations = {
       subtitle: 'Einmalige Pakete – zahlen Sie nur, was Sie brauchen',
       packages: [
         {
-          name: 'Starter',
-          duration: '100 Leads',
-          price: '€149',
-          pricePerLead: '€1,49/Lead',
+          name: 'Test',
+          duration: '20 Leads',
+          price: '€39',
+          pricePerLead: '€1,95/Lead',
           features: [
-            '100 verifizierte B2B-Kontakte',
-            '30 Min. ICP-Beratung',
+            '20 verifizierte B2B-Kontakte',
+            'Kurze ICP-Abstimmung',
             'DSGVO-Dokumentation',
             'Excel/CSV-Export',
             'E-Mail-Support'
           ],
-          bestFor: 'Zum Testen',
-          cta: 'Starter-Paket anfragen',
+          bestFor: 'Zum Testen & Kennenlernen',
+          cta: 'Testpaket anfragen',
           highlighted: false
         },
         {
           name: 'Growth',
           duration: '500 Leads',
-          price: '€595',
-          pricePerLead: '€1,19/Lead',
-          savings: '20% günstiger',
+          price: '€745',
+          pricePerLead: '€1,49/Lead',
+          savings: '23% günstiger',
           features: [
             '500 verifizierte B2B-Kontakte',
             'Ausführliche ICP-Beratung',
-            '1 kostenlose Iteration',
             'DSGVO-Dokumentation',
+            'Excel/CSV-Export',
             'Prioritäts-Support'
           ],
-          bestFor: 'Erste Kampagnen',
+          bestFor: 'Kampagnen & Skalierung',
           cta: 'Growth-Paket anfragen',
           highlighted: true
-        },
-        {
-          name: 'Scale',
-          duration: '1.000 Leads',
-          price: '€990',
-          pricePerLead: '€0,99/Lead',
-          savings: '33% günstiger',
-          features: [
-            '1.000 verifizierte B2B-Kontakte',
-            'Umfassende ICP-Beratung',
-            '2 kostenlose Iterationen',
-            'DSGVO-Dokumentation',
-            'Dedizierter Ansprechpartner'
-          ],
-          bestFor: 'Skalierung',
-          cta: 'Scale-Paket anfragen',
-          highlighted: false
         }
       ],
-      enterprise: {
-        title: 'Enterprise',
-        description: 'Ab 2.500 Leads: Individuelle Preise, dedizierter Account Manager, monatliche Lieferungen',
-        cta: 'Individuelles Angebot',
-        pricePerLead: 'ab €0,70/Lead'
-      },
       bestForLabel: 'Ideal für:',
+      popularBadge: 'Empfohlen',
       paymentNote: 'Einmalige Zahlung per Vorkasse. Keine versteckten Kosten, kein Abo.'
     },
 
@@ -585,7 +563,7 @@ export const translations = {
             },
             {
               question: 'Can I test first?',
-              answer: 'Yes! Our Starter package with 100 leads for €149 is perfect for testing.'
+              answer: 'Yes! Our Test package with 20 leads for €39 is perfect for getting started. You can upgrade to the Growth package anytime.'
             }
           ]
         }
@@ -598,63 +576,41 @@ export const translations = {
       subtitle: 'One-time packages – pay only for what you need',
       packages: [
         {
-          name: 'Starter',
-          duration: '100 Leads',
-          price: '€149',
-          pricePerLead: '€1.49/lead',
+          name: 'Test',
+          duration: '20 Leads',
+          price: '€39',
+          pricePerLead: '€1.95/lead',
           features: [
-            '100 verified B2B contacts',
-            '30 min ICP consulting',
+            '20 verified B2B contacts',
+            'Brief ICP alignment',
             'GDPR documentation',
             'Excel/CSV export',
             'Email support'
           ],
-          bestFor: 'Testing',
-          cta: 'Request Starter',
+          bestFor: 'Testing & Getting Started',
+          cta: 'Request Test Package',
           highlighted: false
         },
         {
           name: 'Growth',
           duration: '500 Leads',
-          price: '€595',
-          pricePerLead: '€1.19/lead',
-          savings: '20% cheaper',
+          price: '€745',
+          pricePerLead: '€1.49/lead',
+          savings: '23% cheaper',
           features: [
             '500 verified B2B contacts',
             'Detailed ICP consulting',
-            '1 free iteration',
             'GDPR documentation',
+            'Excel/CSV export',
             'Priority support'
           ],
-          bestFor: 'First Campaigns',
-          cta: 'Request Growth',
+          bestFor: 'Campaigns & Scaling',
+          cta: 'Request Growth Package',
           highlighted: true
-        },
-        {
-          name: 'Scale',
-          duration: '1,000 Leads',
-          price: '€990',
-          pricePerLead: '€0.99/lead',
-          savings: '33% cheaper',
-          features: [
-            '1,000 verified B2B contacts',
-            'Comprehensive ICP consulting',
-            '2 free iterations',
-            'GDPR documentation',
-            'Dedicated contact person'
-          ],
-          bestFor: 'Scaling',
-          cta: 'Request Scale',
-          highlighted: false
         }
       ],
-      enterprise: {
-        title: 'Enterprise',
-        description: 'From 2,500 leads: Custom pricing, dedicated account manager, monthly deliveries',
-        cta: 'Get Custom Quote',
-        pricePerLead: 'from €0.70/lead'
-      },
       bestForLabel: 'Best for:',
+      popularBadge: 'Recommended',
       paymentNote: 'One-time payment upfront. No hidden costs, no subscription.'
     },
 

@@ -168,7 +168,7 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                     }}
                   >
                     <Star size={14} fill="#ffffff" />
-                    Beliebteste Wahl
+                    {t.popularBadge || 'Empfohlen'}
                   </div>
                 )}
 

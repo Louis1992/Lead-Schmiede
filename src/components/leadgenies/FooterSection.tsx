@@ -56,20 +56,18 @@ export default function FooterSection({ lang = 'de' }: FooterSectionProps) {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            gap: '8px'
+            gap: '12px'
           }}
         >
-          <span
+          <img
+            src="/logo-lead-schmiede.png"
+            alt="Lead-Schmiede"
             style={{
-              fontFamily: 'DM Serif Display, Georgia, serif',
-              fontSize: '1.75rem',
-              fontWeight: 400,
-              color: '#ffffff',
-              letterSpacing: '-0.02em'
+              height: '48px',
+              width: 'auto',
+              filter: 'brightness(0) invert(1)'
             }}
-          >
-            Lead-Schmiede
-          </span>
+          />
           <span
             style={{
               fontFamily: 'Source Sans 3, sans-serif',

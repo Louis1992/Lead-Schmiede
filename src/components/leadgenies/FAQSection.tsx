@@ -21,8 +21,7 @@ export default function FAQSection({ lang = 'de' }: FAQSectionProps) {
   const [isMobile, setIsMobile] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
   const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
-  const [titleVisible, setTitleVisible] = useState(false);
-  const [tabsVisible, setTabsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
   const faqData: FAQCategory[] = t.categories;
@@ -36,7 +35,6 @@ export default function FAQSection({ lang = 'de' }: FAQSectionProps) {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Sequential fade-in animations
   useEffect(() => {
     if (!sectionRef.current) return;
 
@@ -44,8 +42,7 @@ export default function FAQSection({ lang = 'de' }: FAQSectionProps) {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setTimeout(() => setTitleVisible(true), 100);
-            setTimeout(() => setTabsVisible(true), 300);
+            setIsVisible(true);
           }
         });
       },
@@ -62,6 +59,12 @@ export default function FAQSection({ lang = 'de' }: FAQSectionProps) {
     setActiveQuestion(activeQuestion === index ? null : index);
   };
 
+  const fadeInUp = (delay: number) => ({
+    opacity: isVisible ? 1 : 0,
+    transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
+    transition: `all 0.7s cubic-bezier(0.16, 1, 0.3, 1) ${delay}s`
+  });
+
   return (
     <section
       ref={sectionRef}
@@ -69,12 +72,26 @@ export default function FAQSection({ lang = 'de' }: FAQSectionProps) {
         position: 'relative',
         width: '100%',
         backgroundColor: '#ffffff',
-        paddingTop: isMobile ? '60px' : '100px',
-        paddingBottom: isMobile ? '60px' : '100px',
-        paddingLeft: '16px',
-        paddingRight: '16px'
+        paddingTop: isMobile ? '80px' : '120px',
+        paddingBottom: isMobile ? '80px' : '120px',
+        paddingLeft: '20px',
+        paddingRight: '20px'
       }}
     >
+      {/* Subtle background pattern */}
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundImage: `radial-gradient(circle at 25px 25px, rgba(26, 26, 46, 0.02) 2px, transparent 0)`,
+          backgroundSize: '50px 50px',
+          pointerEvents: 'none'
+        }}
+      />
+
       <div
         style={{
           position: 'relative',
@@ -85,30 +102,29 @@ export default function FAQSection({ lang = 'de' }: FAQSectionProps) {
         {/* Title */}
         <h2
           style={{
-            fontFamily: 'MomoTrustDisplay, sans-serif',
-            fontSize: isMobile ? '1.75rem' : '2.5rem',
-            fontWeight: 'bold',
-            color: '#0d0d28',
+            ...fadeInUp(0),
+            fontFamily: 'DM Serif Display, Georgia, serif',
+            fontSize: isMobile ? '2rem' : '2.75rem',
+            fontWeight: 400,
+            color: '#1a1a2e',
             textAlign: 'center',
-            marginBottom: isMobile ? '2rem' : '3rem',
-            opacity: titleVisible ? 1 : 0,
-            transition: 'opacity 0.6s ease-out'
+            marginBottom: isMobile ? '48px' : '64px',
+            letterSpacing: '-0.02em'
           }}
         >
           {t.title}
         </h2>
 
-        {/* Tabs */}
+        {/* Category Tabs */}
         <div
           style={{
+            ...fadeInUp(0.1),
             display: 'flex',
             flexDirection: isMobile ? 'column' : 'row',
-            gap: isMobile ? '1rem' : '2rem',
-            marginBottom: isMobile ? '2rem' : '3rem',
-            borderBottom: isMobile ? 'none' : '2px solid #E5E7EB',
-            opacity: tabsVisible ? 1 : 0,
-            transition: 'opacity 0.6s ease-out',
-            justifyContent: isMobile ? 'flex-start' : 'center'
+            gap: isMobile ? '12px' : '8px',
+            marginBottom: isMobile ? '32px' : '48px',
+            justifyContent: 'center',
+            flexWrap: 'wrap'
           }}
         >
           {faqData.map((category, index) => (
@@ -116,58 +132,45 @@ export default function FAQSection({ lang = 'de' }: FAQSectionProps) {
               key={index}
               onClick={() => {
                 setActiveTab(index);
-                setActiveQuestion(null); // Reset accordion when switching tabs
+                setActiveQuestion(null);
               }}
               style={{
-                position: 'relative',
-                fontFamily: 'Inter, sans-serif',
-                fontSize: isMobile ? '1rem' : '1.125rem',
-                fontWeight: activeTab === index ? '700' : '500',
-                color: activeTab === index ? '#4136b3' : '#6B7280',
-                background: 'none',
-                border: 'none',
+                fontFamily: 'Source Sans 3, sans-serif',
+                fontSize: '0.9375rem',
+                fontWeight: activeTab === index ? 600 : 500,
+                color: activeTab === index ? '#ffffff' : '#4a4e69',
+                background: activeTab === index
+                  ? 'linear-gradient(135deg, #1a1a2e 0%, #5c4d7d 100%)'
+                  : 'transparent',
+                border: activeTab === index
+                  ? 'none'
+                  : '1px solid rgba(26, 26, 46, 0.15)',
                 cursor: 'pointer',
-                paddingBottom: isMobile ? '0' : '1rem',
-                transition: 'color 0.3s ease',
-                textAlign: isMobile ? 'center' : 'left',
-                padding: isMobile ? '0.75rem 1rem' : '0 0 1rem 0',
-                backgroundColor: isMobile && activeTab === index ? '#F3F4F6' : 'transparent',
-                borderRadius: isMobile ? '12px' : '0'
+                padding: '12px 24px',
+                borderRadius: '100px',
+                transition: 'all 0.3s ease',
+                whiteSpace: 'nowrap'
               }}
               onMouseEnter={(e) => {
                 if (activeTab !== index) {
-                  e.currentTarget.style.color = '#4136b3';
+                  e.currentTarget.style.borderColor = '#e07a5f';
+                  e.currentTarget.style.color = '#e07a5f';
                 }
               }}
               onMouseLeave={(e) => {
                 if (activeTab !== index) {
-                  e.currentTarget.style.color = '#6B7280';
+                  e.currentTarget.style.borderColor = 'rgba(26, 26, 46, 0.15)';
+                  e.currentTarget.style.color = '#4a4e69';
                 }
               }}
             >
               {category.title}
-              {/* Animated underline (desktop only) */}
-              {!isMobile && (
-                <span
-                  style={{
-                    position: 'absolute',
-                    bottom: '-2px',
-                    left: 0,
-                    width: '100%',
-                    height: '3px',
-                    backgroundColor: '#4136b3',
-                    transform: activeTab === index ? 'scaleX(1)' : 'scaleX(0)',
-                    transformOrigin: 'left',
-                    transition: 'transform 0.3s ease'
-                  }}
-                />
-              )}
             </button>
           ))}
         </div>
 
         {/* FAQ Items (Accordion) */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+        <div style={{ ...fadeInUp(0.2), display: 'flex', flexDirection: 'column', gap: '16px' }}>
           {faqData[activeTab].items.map((item, index) => {
             const isOpen = activeQuestion === index;
 
@@ -175,11 +178,16 @@ export default function FAQSection({ lang = 'de' }: FAQSectionProps) {
               <div
                 key={index}
                 style={{
-                  backgroundColor: '#F9FAFB',
-                  borderRadius: '16px',
+                  backgroundColor: '#f8f9fa',
+                  borderRadius: '20px',
                   overflow: 'hidden',
-                  border: '1px solid #E5E7EB',
-                  transition: 'border-color 0.3s ease'
+                  border: isOpen
+                    ? '1px solid rgba(224, 122, 95, 0.3)'
+                    : '1px solid rgba(26, 26, 46, 0.08)',
+                  transition: 'all 0.3s ease',
+                  boxShadow: isOpen
+                    ? '0 8px 32px rgba(26, 26, 46, 0.08)'
+                    : '0 2px 8px rgba(26, 26, 46, 0.02)'
                 }}
               >
                 {/* Question Button */}
@@ -190,7 +198,7 @@ export default function FAQSection({ lang = 'de' }: FAQSectionProps) {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between',
-                    padding: isMobile ? '1.25rem' : '1.5rem',
+                    padding: isMobile ? '20px 24px' : '24px 32px',
                     background: 'none',
                     border: 'none',
                     cursor: 'pointer',
@@ -199,36 +207,36 @@ export default function FAQSection({ lang = 'de' }: FAQSectionProps) {
                 >
                   <span
                     style={{
-                      fontFamily: 'Inter, sans-serif',
+                      fontFamily: 'Source Sans 3, sans-serif',
                       fontSize: isMobile ? '1rem' : '1.125rem',
-                      fontWeight: '600',
-                      color: '#0d0d28',
+                      fontWeight: 600,
+                      color: '#1a1a2e',
                       flex: 1,
-                      paddingRight: '1rem'
+                      paddingRight: '16px',
+                      lineHeight: 1.4
                     }}
                   >
                     {item.question}
                   </span>
 
-                  {/* Plus/Minus Icon with rotation */}
+                  {/* Plus/Minus Icon */}
                   <div
                     style={{
-                      width: '32px',
-                      height: '32px',
-                      borderRadius: '50%',
-                      backgroundColor: isOpen ? '#4136b3' : '#E5E7EB',
+                      width: '36px',
+                      height: '36px',
+                      borderRadius: '12px',
+                      backgroundColor: isOpen ? '#e07a5f' : 'rgba(26, 26, 46, 0.08)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      transition: 'background-color 0.3s ease, transform 0.3s ease',
-                      transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                      transition: 'all 0.3s ease',
                       flexShrink: 0
                     }}
                   >
                     {isOpen ? (
-                      <Minus size={18} color="#ffffff" strokeWidth={3} />
+                      <Minus size={20} color="#ffffff" strokeWidth={2.5} />
                     ) : (
-                      <Plus size={18} color="#6B7280" strokeWidth={3} />
+                      <Plus size={20} color="#4a4e69" strokeWidth={2.5} />
                     )}
                   </div>
                 </button>
@@ -236,19 +244,19 @@ export default function FAQSection({ lang = 'de' }: FAQSectionProps) {
                 {/* Answer (Collapsible) */}
                 <div
                   style={{
-                    maxHeight: isOpen ? '200px' : '0',
+                    maxHeight: isOpen ? '300px' : '0',
                     opacity: isOpen ? 1 : 0,
                     overflow: 'hidden',
-                    transition: 'max-height 0.4s ease, opacity 0.4s ease'
+                    transition: 'max-height 0.4s ease, opacity 0.3s ease'
                   }}
                 >
                   <div
                     style={{
-                      padding: isMobile ? '0 1.25rem 1.25rem' : '0 1.5rem 1.5rem',
-                      fontFamily: 'Inter, sans-serif',
+                      padding: isMobile ? '0 24px 24px' : '0 32px 32px',
+                      fontFamily: 'Source Sans 3, sans-serif',
                       fontSize: isMobile ? '0.9375rem' : '1rem',
-                      color: '#6B7280',
-                      lineHeight: '1.6'
+                      color: '#4a4e69',
+                      lineHeight: 1.7
                     }}
                   >
                     {item.answer}

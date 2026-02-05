@@ -433,10 +433,20 @@ export default function HeroSection({ lang = 'de' }: HeroSectionProps) {
                       fontFamily: 'Source Sans 3, sans-serif',
                       fontSize: '0.8125rem',
                       opacity: 0.7,
-                      margin: 0
+                      margin: '0 0 4px 0'
                     }}
                   >
                     max.mustermann@techcorp.de
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: 'Source Sans 3, sans-serif',
+                      fontSize: '0.8125rem',
+                      opacity: 0.7,
+                      margin: 0
+                    }}
+                  >
+                    +49 170 1234567
                   </p>
                 </div>
                 <div
