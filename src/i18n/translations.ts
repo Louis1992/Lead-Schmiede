@@ -327,7 +327,7 @@ export const translations = {
             },
             {
               question: 'Kann ich erst testen?',
-              answer: 'Ja! Wir bieten 10 kostenlose Test-Leads, damit Sie unsere Qualität unverbindlich erleben können. Danach können Sie mit dem Starter-Paket (100 Leads für €149) einsteigen oder direkt skalieren.'
+              answer: 'Ja! Mit unserem Starter-Paket (100 Leads für €179) können Sie unsere Qualität direkt erleben. Unsere Qualitätsgarantie schützt Sie: Ungültige Leads ersetzen wir 1:1.'
             }
           ]
         }
@@ -340,109 +340,92 @@ export const translations = {
       subtitle: 'Wählen Sie das passende Modell für Ihre Lead-Generierung',
       oneTimeLabel: 'Einmalig',
       monthlyLabel: 'Monatlich',
-      monthlySavingsBadge: 'Flexibel',
+      monthlySavingsBadge: 'Leads übertragbar',
       perMonthLabel: 'Monat',
-      freeTestBanner: {
-        title: '10 Gratis Test-Leads',
-        description: 'Überzeugen Sie sich selbst – völlig unverbindlich und kostenlos.',
-        cta: 'Gratis testen'
-      },
       packages: [
         {
           name: 'Starter',
           duration: '100 Leads',
-          price: '€149',
-          pricePerLead: '€1,49/Lead',
+          price: '€179',
+          pricePerLead: '€1,79/Lead',
           features: [
             '100 verifizierte B2B-Kontakte',
             'ICP-Kurzberatung (15 Min)',
             'DSGVO-Dokumentation',
             'Excel/CSV-Export',
-            'E-Mail-Support'
+            'E-Mail-Support (48h)'
           ],
           bestFor: 'Erste Kampagne starten',
-          cta: 'Starter anfragen',
+          cta: 'Jetzt starten',
           highlighted: false
         },
         {
           name: 'Growth',
           duration: '500 Leads',
-          price: '€595',
-          pricePerLead: '€1,19/Lead',
-          savings: '20% gespart',
+          price: '€699',
+          pricePerLead: '€1,40/Lead',
+          savings: 'Sie sparen 196 €',
           features: [
             '500 verifizierte B2B-Kontakte',
-            'Ausführliche ICP-Beratung',
+            'Ausführliche ICP-Beratung (45 Min)',
             'DSGVO-Dokumentation',
-            'Excel/CSV-Export',
-            'Prioritäts-Support',
-            '1 Iteration inklusive'
+            'Excel/CSV + CRM-Format',
+            'Prioritäts-Support (24h)',
+            '1 Iteration inklusive',
+            'Signal-Filterung (Jobwechsel, Funding)'
           ],
           bestFor: 'Skalierung & Wachstum',
-          cta: 'Growth anfragen',
+          cta: 'Beratung sichern',
           highlighted: true
         },
         {
           name: 'Scale',
           duration: '1.000 Leads',
-          price: '€990',
-          pricePerLead: '€0,99/Lead',
-          savings: '33% gespart',
+          price: '€1.099',
+          pricePerLead: '€1,10/Lead',
+          savings: 'Sie sparen 691 €',
           features: [
             '1.000 verifizierte B2B-Kontakte',
-            'Premium ICP-Workshop',
+            'Premium ICP-Workshop (90 Min)',
             'DSGVO-Dokumentation',
-            'Dedizierter Ansprechpartner',
+            'Alle Export-Formate + API',
+            'Dedizierter Ansprechpartner (4h)',
             'Wöchentliche Iteration',
-            'Signal-basierte Filterung'
+            'Volle Signal-Filterung'
           ],
           bestFor: 'Maximale Skalierung',
-          cta: 'Scale anfragen',
+          cta: 'Premium-Beratung buchen',
           highlighted: false
-        },
-        {
-          name: 'Enterprise',
-          duration: '2.500+ Leads',
-          price: 'Ab €2.250',
-          pricePerLead: 'Ab €0,90/Lead',
-          features: [
-            'Unbegrenzte Leads nach Bedarf',
-            'Dedizierter Account Manager',
-            'API-Integration möglich',
-            'Custom Reporting',
-            'SLA & Premium Support',
-            'Individuelle Konditionen'
-          ],
-          bestFor: 'Große Vertriebsteams',
-          cta: 'Gespräch vereinbaren',
-          highlighted: false,
-          isEnterprise: true
         }
       ],
+      enterprise: {
+        title: 'Ab 2.500 Leads?',
+        description: 'Individuelle Konditionen für große Vertriebsteams – mit dediziertem Account Manager, API-Integration und SLA.',
+        cta: 'Gespräch vereinbaren'
+      },
       monthlyPackages: [
         {
           name: 'Starter',
           duration: '100 Leads/Monat',
-          price: '€129',
-          pricePerLead: '€1,29/Lead',
-          originalPrice: '€149 einmalig',
+          price: '€159',
+          pricePerLead: '€1,59/Lead',
           features: [
             '100 Leads jeden Monat',
             'Monatliche ICP-Optimierung',
             'DSGVO-Dokumentation',
             'Jederzeit pausierbar',
-            'Prioritäts-Support'
+            'E-Mail-Support (48h)'
           ],
           bestFor: 'Kontinuierlicher Pipeline-Aufbau',
-          cta: 'Abo starten',
+          cta: 'Jetzt starten',
           highlighted: false
         },
         {
           name: 'Growth',
           duration: '250 Leads/Monat',
-          price: '€279',
-          pricePerLead: '€1,12/Lead',
-          savings: '25% gespart',
+          price: '€349',
+          pricePerLead: '€1,40/Lead',
+          savings: 'Sie sparen 49 €/Mo',
           features: [
             '250 Leads jeden Monat',
             'Wöchentliche Optimierung',
@@ -452,15 +435,15 @@ export const translations = {
             'Kampagnen-Analyse'
           ],
           bestFor: 'Wachsende Teams',
-          cta: 'Abo starten',
+          cta: 'Beratung sichern',
           highlighted: true
         },
         {
           name: 'Scale',
           duration: '500 Leads/Monat',
-          price: '€449',
-          pricePerLead: '€0,90/Lead',
-          savings: '40% gespart',
+          price: '€549',
+          pricePerLead: '€1,10/Lead',
+          savings: 'Sie sparen 246 €/Mo',
           features: [
             '500 Leads jeden Monat',
             'Tägliche Optimierung',
@@ -470,7 +453,7 @@ export const translations = {
             'Wöchentliche Strategy Calls'
           ],
           bestFor: 'Sales-Teams mit Volumen',
-          cta: 'Abo starten',
+          cta: 'Premium-Beratung buchen',
           highlighted: false
         }
       ],
@@ -779,7 +762,7 @@ export const translations = {
             },
             {
               question: 'Can I test first?',
-              answer: 'Yes! We offer 10 free test leads so you can experience our quality with no commitment. After that, you can start with the Starter package (100 leads for €149) or scale directly.'
+              answer: 'Yes! With our Starter package (100 leads for €179) you can experience our quality directly. Our quality guarantee protects you: invalid leads are replaced 1:1.'
             }
           ]
         }
@@ -792,109 +775,92 @@ export const translations = {
       subtitle: 'Choose the right model for your lead generation',
       oneTimeLabel: 'One-Time',
       monthlyLabel: 'Monthly',
-      monthlySavingsBadge: 'Flexible',
+      monthlySavingsBadge: 'Leads roll over',
       perMonthLabel: 'month',
-      freeTestBanner: {
-        title: '10 Free Test Leads',
-        description: 'See for yourself – completely free and no strings attached.',
-        cta: 'Get Free Test'
-      },
       packages: [
         {
           name: 'Starter',
           duration: '100 Leads',
-          price: '€149',
-          pricePerLead: '€1.49/lead',
+          price: '€179',
+          pricePerLead: '€1.79/lead',
           features: [
             '100 verified B2B contacts',
             'ICP brief consultation (15 min)',
             'GDPR documentation',
             'Excel/CSV export',
-            'Email support'
+            'Email support (48h)'
           ],
           bestFor: 'First campaign launch',
-          cta: 'Request Starter',
+          cta: 'Get Started',
           highlighted: false
         },
         {
           name: 'Growth',
           duration: '500 Leads',
-          price: '€595',
-          pricePerLead: '€1.19/lead',
-          savings: '20% saved',
+          price: '€699',
+          pricePerLead: '€1.40/lead',
+          savings: 'Save €196',
           features: [
             '500 verified B2B contacts',
-            'Detailed ICP consulting',
+            'Detailed ICP consulting (45 min)',
             'GDPR documentation',
-            'Excel/CSV export',
-            'Priority support',
-            '1 iteration included'
+            'Excel/CSV + CRM format',
+            'Priority support (24h)',
+            '1 iteration included',
+            'Signal filtering (job changes, funding)'
           ],
           bestFor: 'Scaling & Growth',
-          cta: 'Request Growth',
+          cta: 'Book Consultation',
           highlighted: true
         },
         {
           name: 'Scale',
           duration: '1,000 Leads',
-          price: '€990',
-          pricePerLead: '€0.99/lead',
-          savings: '33% saved',
+          price: '€1,099',
+          pricePerLead: '€1.10/lead',
+          savings: 'Save €691',
           features: [
             '1,000 verified B2B contacts',
-            'Premium ICP workshop',
+            'Premium ICP workshop (90 min)',
             'GDPR documentation',
-            'Dedicated contact person',
+            'All export formats + API',
+            'Dedicated contact (4h response)',
             'Weekly iteration',
-            'Signal-based filtering'
+            'Full signal filtering'
           ],
           bestFor: 'Maximum scaling',
-          cta: 'Request Scale',
+          cta: 'Book Premium',
           highlighted: false
-        },
-        {
-          name: 'Enterprise',
-          duration: '2,500+ Leads',
-          price: 'From €2,250',
-          pricePerLead: 'From €0.90/lead',
-          features: [
-            'Unlimited leads as needed',
-            'Dedicated Account Manager',
-            'API integration possible',
-            'Custom reporting',
-            'SLA & Premium support',
-            'Custom terms'
-          ],
-          bestFor: 'Large sales teams',
-          cta: 'Schedule Call',
-          highlighted: false,
-          isEnterprise: true
         }
       ],
+      enterprise: {
+        title: '2,500+ Leads?',
+        description: 'Custom pricing for large sales teams – with dedicated Account Manager, API integration and SLA.',
+        cta: 'Schedule Call'
+      },
       monthlyPackages: [
         {
           name: 'Starter',
           duration: '100 Leads/month',
-          price: '€129',
-          pricePerLead: '€1.29/lead',
-          originalPrice: '€149 one-time',
+          price: '€159',
+          pricePerLead: '€1.59/lead',
           features: [
             '100 leads every month',
             'Monthly ICP optimization',
             'GDPR documentation',
             'Pause anytime',
-            'Priority support'
+            'Email support (48h)'
           ],
           bestFor: 'Continuous pipeline building',
-          cta: 'Start Subscription',
+          cta: 'Get Started',
           highlighted: false
         },
         {
           name: 'Growth',
           duration: '250 Leads/month',
-          price: '€279',
-          pricePerLead: '€1.12/lead',
-          savings: '25% saved',
+          price: '€349',
+          pricePerLead: '€1.40/lead',
+          savings: 'Save €49/mo',
           features: [
             '250 leads every month',
             'Weekly optimization',
@@ -904,15 +870,15 @@ export const translations = {
             'Campaign analysis'
           ],
           bestFor: 'Growing teams',
-          cta: 'Start Subscription',
+          cta: 'Book Consultation',
           highlighted: true
         },
         {
           name: 'Scale',
           duration: '500 Leads/month',
-          price: '€449',
-          pricePerLead: '€0.90/lead',
-          savings: '40% saved',
+          price: '€549',
+          pricePerLead: '€1.10/lead',
+          savings: 'Save €246/mo',
           features: [
             '500 leads every month',
             'Daily optimization',
@@ -922,7 +888,7 @@ export const translations = {
             'Weekly strategy calls'
           ],
           bestFor: 'High-volume sales teams',
-          cta: 'Start Subscription',
+          cta: 'Book Premium',
           highlighted: false
         }
       ],

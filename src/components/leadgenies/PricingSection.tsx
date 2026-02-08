@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Check, ArrowRight, Star, Gift, Zap, Crown, Building2 } from 'lucide-react';
+import { Check, ArrowRight, Star, Zap, Crown, Building2 } from 'lucide-react';
 import { translations, type Language } from '../../i18n/translations';
 
 interface PricingSectionProps {
@@ -51,7 +51,7 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
   });
 
   const packages = billingCycle === 'oneTime' ? t.packages : t.monthlyPackages;
-  const icons = [Gift, Zap, Star, Crown, Building2];
+  const icons = [Zap, Star, Crown];
 
   return (
     <section
@@ -81,7 +81,7 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
       <div
         style={{
           position: 'relative',
-          maxWidth: '1400px',
+          maxWidth: '1200px',
           margin: '0 auto'
         }}
       >
@@ -183,107 +183,17 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
           </div>
         </div>
 
-        {/* Free Test Banner - Only for oneTime */}
-        {billingCycle === 'oneTime' && t.freeTestBanner && (
-          <div
-            style={{
-              ...fadeInUp(0.2),
-              background: 'linear-gradient(135deg, rgba(129, 178, 154, 0.15) 0%, rgba(129, 178, 154, 0.25) 100%)',
-              border: '2px dashed #81b29a',
-              borderRadius: '16px',
-              padding: isMobile ? '20px' : '24px 32px',
-              marginBottom: '40px',
-              display: 'flex',
-              flexDirection: isMobile ? 'column' : 'row',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              gap: '16px'
-            }}
-          >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-              <div
-                style={{
-                  width: '48px',
-                  height: '48px',
-                  borderRadius: '50%',
-                  background: '#81b29a',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  flexShrink: 0
-                }}
-              >
-                <Gift size={24} color="#ffffff" />
-              </div>
-              <div>
-                <h3
-                  style={{
-                    fontFamily: 'Source Sans 3, sans-serif',
-                    fontSize: '1.125rem',
-                    fontWeight: 700,
-                    color: '#1a1a2e',
-                    margin: '0 0 4px 0'
-                  }}
-                >
-                  {t.freeTestBanner.title}
-                </h3>
-                <p
-                  style={{
-                    fontFamily: 'Source Sans 3, sans-serif',
-                    fontSize: '0.9375rem',
-                    color: '#4a4e69',
-                    margin: 0
-                  }}
-                >
-                  {t.freeTestBanner.description}
-                </p>
-              </div>
-            </div>
-            <button
-              onClick={handleCTAClick}
-              style={{
-                padding: '12px 24px',
-                borderRadius: '100px',
-                border: 'none',
-                background: '#81b29a',
-                color: '#ffffff',
-                fontFamily: 'Source Sans 3, sans-serif',
-                fontSize: '0.9375rem',
-                fontWeight: 600,
-                cursor: 'pointer',
-                transition: 'all 0.3s ease',
-                whiteSpace: 'nowrap',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '8px'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 8px 20px rgba(129, 178, 154, 0.4)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-            >
-              {t.freeTestBanner.cta}
-              <ArrowRight size={16} />
-            </button>
-          </div>
-        )}
-
-        {/* Pricing Cards */}
+        {/* Pricing Cards - Always 3 columns */}
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: isMobile ? '1fr' : `repeat(${packages.length}, 1fr)`,
-            gap: isMobile ? '24px' : '20px',
+            gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)',
+            gap: isMobile ? '24px' : '24px',
             alignItems: 'stretch'
           }}
         >
           {packages.map((pkg, index) => {
             const isHighlighted = pkg.highlighted;
-            const isEnterprise = pkg.isEnterprise;
             const cardDelay = 0.25 + index * 0.1;
             const Icon = icons[index] || Star;
 
@@ -295,20 +205,14 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                   position: 'relative',
                   background: isHighlighted
                     ? 'linear-gradient(135deg, #1a1a2e 0%, #5c4d7d 100%)'
-                    : isEnterprise
-                    ? 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)'
                     : '#ffffff',
                   borderRadius: '20px',
                   padding: isMobile ? '28px 20px' : '32px 24px',
                   border: isHighlighted
                     ? 'none'
-                    : isEnterprise
-                    ? '2px solid #e07a5f'
                     : '1px solid rgba(26, 26, 46, 0.08)',
                   boxShadow: isHighlighted
                     ? '0 20px 60px rgba(26, 26, 46, 0.25)'
-                    : isEnterprise
-                    ? '0 8px 32px rgba(224, 122, 95, 0.15)'
                     : '0 4px 24px rgba(26, 26, 46, 0.04)',
                   display: 'flex',
                   flexDirection: 'column',
@@ -358,7 +262,27 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                       fontWeight: 700,
                       padding: '5px 10px',
                       borderRadius: '100px',
-                      textTransform: 'uppercase',
+                      letterSpacing: '0.3px'
+                    }}
+                  >
+                    {pkg.savings}
+                  </div>
+                )}
+
+                {/* Savings Badge for highlighted card */}
+                {pkg.savings && isHighlighted && (
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: '-12px',
+                      right: '16px',
+                      background: '#81b29a',
+                      color: '#ffffff',
+                      fontFamily: 'Source Sans 3, sans-serif',
+                      fontSize: '0.6875rem',
+                      fontWeight: 700,
+                      padding: '5px 10px',
+                      borderRadius: '100px',
                       letterSpacing: '0.3px'
                     }}
                   >
@@ -375,8 +299,6 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                       borderRadius: '10px',
                       background: isHighlighted
                         ? 'rgba(255, 255, 255, 0.15)'
-                        : isEnterprise
-                        ? 'rgba(224, 122, 95, 0.1)'
                         : 'rgba(26, 26, 46, 0.05)',
                       display: 'flex',
                       alignItems: 'center',
@@ -386,7 +308,7 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                   >
                     <Icon
                       size={20}
-                      color={isHighlighted ? '#ffffff' : isEnterprise ? '#e07a5f' : '#5c4d7d'}
+                      color={isHighlighted ? '#ffffff' : '#5c4d7d'}
                     />
                   </div>
                   <h3
@@ -458,20 +380,6 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                       }}
                     >
                       {pkg.pricePerLead}
-                    </p>
-                  )}
-                  {pkg.originalPrice && (
-                    <p
-                      style={{
-                        fontFamily: 'Source Sans 3, sans-serif',
-                        fontSize: '0.875rem',
-                        color: '#9a8c98',
-                        marginTop: '4px',
-                        marginBottom: 0,
-                        textDecoration: 'line-through'
-                      }}
-                    >
-                      {pkg.originalPrice}
                     </p>
                   )}
                 </div>
@@ -574,30 +482,22 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                     transition: 'all 0.3s ease',
                     background: isHighlighted
                       ? 'linear-gradient(135deg, #e07a5f 0%, #f4a261 100%)'
-                      : isEnterprise
-                      ? '#e07a5f'
                       : '#1a1a2e',
                     color: '#ffffff',
                     boxShadow: isHighlighted
                       ? '0 8px 24px rgba(224, 122, 95, 0.4)'
-                      : isEnterprise
-                      ? '0 4px 16px rgba(224, 122, 95, 0.3)'
                       : '0 4px 12px rgba(26, 26, 46, 0.2)'
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-2px)';
                     e.currentTarget.style.boxShadow = isHighlighted
                       ? '0 12px 32px rgba(224, 122, 95, 0.5)'
-                      : isEnterprise
-                      ? '0 8px 24px rgba(224, 122, 95, 0.4)'
                       : '0 8px 20px rgba(26, 26, 46, 0.3)';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = 'translateY(0)';
                     e.currentTarget.style.boxShadow = isHighlighted
                       ? '0 8px 24px rgba(224, 122, 95, 0.4)'
-                      : isEnterprise
-                      ? '0 4px 16px rgba(224, 122, 95, 0.3)'
                       : '0 4px 12px rgba(26, 26, 46, 0.2)';
                   }}
                 >
@@ -608,6 +508,96 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
             );
           })}
         </div>
+
+        {/* Enterprise CTA Section */}
+        {billingCycle === 'oneTime' && t.enterprise && (
+          <div
+            style={{
+              ...fadeInUp(0.6),
+              marginTop: '40px',
+              background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)',
+              border: '2px dashed #e07a5f',
+              borderRadius: '16px',
+              padding: isMobile ? '24px 20px' : '28px 40px',
+              display: 'flex',
+              flexDirection: isMobile ? 'column' : 'row',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: '20px'
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+              <div
+                style={{
+                  width: '48px',
+                  height: '48px',
+                  borderRadius: '12px',
+                  background: 'rgba(224, 122, 95, 0.1)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0
+                }}
+              >
+                <Building2 size={24} color="#e07a5f" />
+              </div>
+              <div>
+                <h3
+                  style={{
+                    fontFamily: 'Source Sans 3, sans-serif',
+                    fontSize: '1.25rem',
+                    fontWeight: 700,
+                    color: '#1a1a2e',
+                    margin: '0 0 4px 0'
+                  }}
+                >
+                  {t.enterprise.title}
+                </h3>
+                <p
+                  style={{
+                    fontFamily: 'Source Sans 3, sans-serif',
+                    fontSize: '0.9375rem',
+                    color: '#4a4e69',
+                    margin: 0
+                  }}
+                >
+                  {t.enterprise.description}
+                </p>
+              </div>
+            </div>
+            <button
+              onClick={handleCTAClick}
+              style={{
+                padding: '14px 28px',
+                borderRadius: '10px',
+                border: 'none',
+                background: '#e07a5f',
+                color: '#ffffff',
+                fontFamily: 'Source Sans 3, sans-serif',
+                fontSize: '0.9375rem',
+                fontWeight: 600,
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                whiteSpace: 'nowrap',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                boxShadow: '0 4px 16px rgba(224, 122, 95, 0.3)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 8px 24px rgba(224, 122, 95, 0.4)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 16px rgba(224, 122, 95, 0.3)';
+              }}
+            >
+              {t.enterprise.cta}
+              <ArrowRight size={16} />
+            </button>
+          </div>
+        )}
 
         {/* Guarantee + Payment Note */}
         <div

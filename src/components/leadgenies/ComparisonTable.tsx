@@ -95,7 +95,7 @@ export default function ComparisonTable({ competitor, lang = 'de' }: ComparisonT
 
   const leadSchmiede = {
     name: 'Lead-Schmiede',
-    pricePerLead: '€1.29-1.49',
+    pricePerLead: '€1.10-1.79',
     timeInvestment: '0h',
     verification: lang === 'de' ? 'Manuell + KI' : 'Manual + AI',
     icpConsulting: true,

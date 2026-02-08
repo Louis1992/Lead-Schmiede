@@ -57,9 +57,9 @@ export default function ROICalculator({ lang = 'de' }: ROICalculatorProps) {
   // Calculations
   const hoursCurrently = (leadsPerMonth * minutesPerLead) / 60;
   const costCurrently = hoursCurrently * hourlyRate;
-  const leadSchmiedePrice = leadsPerMonth <= 100 ? 149
-    : leadsPerMonth <= 500 ? Math.ceil(leadsPerMonth / 100) * 119
-    : Math.ceil(leadsPerMonth / 100) * 99;
+  const leadSchmiedePrice = leadsPerMonth <= 100 ? 179
+    : leadsPerMonth <= 500 ? Math.ceil(leadsPerMonth / 100) * 140
+    : Math.ceil(leadsPerMonth / 100) * 110;
   const savings = Math.max(0, costCurrently - leadSchmiedePrice);
 
   // Animate numbers
