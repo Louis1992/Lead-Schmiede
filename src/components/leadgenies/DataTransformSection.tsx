@@ -24,7 +24,12 @@ export default function DataTransformSection({ lang = 'de' }: DataTransformSecti
     before: 'Rohdaten-Export',
     after: 'Ihre Lead-Liste',
     beforeItems: ['Tausende Zeilen', 'Unstrukturiert', 'Duplikate', 'Veraltete Daten', 'Fehlende Felder'],
-    afterItems: ['Nur relevante Kontakte', 'Strukturiert & formatiert', 'Dedupliziert', 'Verifiziert', 'Vollständige Profile']
+    afterItems: ['Nur relevante Kontakte', 'Strukturiert & formatiert', 'Dedupliziert', 'Verifiziert', 'Vollständige Profile'],
+    testBadge: 'Testangebot',
+    testTitle: '100 verifizierte Leads in 48h',
+    testPrice: '€249',
+    testFeatures: ['DSGVO-Dokumentation', 'ICP-Beratung inkl.', 'Qualitätsgarantie'],
+    testCta: 'Jetzt testen'
   } : {
     title: 'From Raw Data to Sales-Ready: Data Preparation Included',
     subtitle: 'Real humans + smart AI transform massive raw data exports into perfectly prepared lead lists',
@@ -32,7 +37,12 @@ export default function DataTransformSection({ lang = 'de' }: DataTransformSecti
     before: 'Raw Data Export',
     after: 'Your Lead List',
     beforeItems: ['Thousands of rows', 'Unstructured', 'Duplicates', 'Outdated data', 'Missing fields'],
-    afterItems: ['Only relevant contacts', 'Structured & formatted', 'Deduplicated', 'Verified', 'Complete profiles']
+    afterItems: ['Only relevant contacts', 'Structured & formatted', 'Deduplicated', 'Verified', 'Complete profiles'],
+    testBadge: 'Test Offer',
+    testTitle: '100 verified leads in 48h',
+    testPrice: '€249',
+    testFeatures: ['GDPR documentation', 'ICP consulting incl.', 'Quality guarantee'],
+    testCta: 'Try it now'
   };
 
   useEffect(() => {
@@ -524,6 +534,117 @@ export default function DataTransformSection({ lang = 'de' }: DataTransformSecti
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Test Offer CTA */}
+        <div
+          style={{
+            ...fadeInUp(0.5),
+            marginTop: isMobile ? '40px' : '56px',
+            background: 'linear-gradient(135deg, #1a1a2e 0%, #5c4d7d 100%)',
+            borderRadius: '20px',
+            padding: isMobile ? '28px 20px' : '32px 40px',
+            display: 'flex',
+            flexDirection: isMobile ? 'column' : 'row',
+            alignItems: 'center',
+            gap: isMobile ? '20px' : '32px',
+            boxShadow: '0 12px 40px rgba(26, 26, 46, 0.2)'
+          }}
+        >
+          {/* Badge + Title */}
+          <div style={{ flex: 1, textAlign: isMobile ? 'center' : 'left' }}>
+            <span
+              style={{
+                display: 'inline-block',
+                background: 'rgba(224, 122, 95, 0.2)',
+                color: '#f4a261',
+                fontFamily: '"Source Sans 3", sans-serif',
+                fontSize: '0.6875rem',
+                fontWeight: 700,
+                padding: '4px 12px',
+                borderRadius: '100px',
+                textTransform: 'uppercase',
+                letterSpacing: '0.5px',
+                marginBottom: '12px'
+              }}
+            >
+              {t.testBadge}
+            </span>
+            <h3
+              style={{
+                fontFamily: '"DM Serif Display", Georgia, serif',
+                fontSize: isMobile ? '1.375rem' : '1.5rem',
+                fontWeight: 400,
+                color: '#ffffff',
+                margin: '0 0 8px 0'
+              }}
+            >
+              {t.testTitle}
+            </h3>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: isMobile ? 'center' : 'flex-start' }}>
+              {t.testFeatures.map((feature, index) => (
+                <span
+                  key={index}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '4px',
+                    fontFamily: '"Source Sans 3", sans-serif',
+                    fontSize: '0.75rem',
+                    color: 'rgba(255, 255, 255, 0.7)'
+                  }}
+                >
+                  <Check size={12} color="#81b29a" />
+                  {feature}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Price + CTA */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexShrink: 0 }}>
+            <span
+              style={{
+                fontFamily: '"Space Grotesk", monospace',
+                fontSize: isMobile ? '2rem' : '2.25rem',
+                fontWeight: 600,
+                color: '#ffffff'
+              }}
+            >
+              {t.testPrice}
+            </span>
+            <button
+              onClick={() => window.open('https://calendly.com/louis-mickley-leadgenies/kurze-vorstellung-klon', '_blank')}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: 'linear-gradient(135deg, #e07a5f 0%, #f4a261 100%)',
+                color: '#ffffff',
+                fontFamily: '"Source Sans 3", sans-serif',
+                fontSize: '1rem',
+                fontWeight: 600,
+                padding: '14px 28px',
+                borderRadius: '100px',
+                border: 'none',
+                cursor: 'pointer',
+                boxShadow: '0 8px 24px rgba(224, 122, 95, 0.4)',
+                transition: 'all 0.3s ease',
+                whiteSpace: 'nowrap'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 12px 32px rgba(224, 122, 95, 0.5)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 8px 24px rgba(224, 122, 95, 0.4)';
+              }}
+            >
+              {t.testCta}
+              <ArrowRight size={18} />
+            </button>
           </div>
         </div>
       </div>
