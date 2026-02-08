@@ -635,7 +635,7 @@ export default function HeroSection({ lang = 'de' }: HeroSectionProps) {
                 transition: 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.5s'
               }}
             >
-              Ab €1,29/Lead
+              {lang === 'de' ? 'Ab €0,80/Lead' : 'From €0.80/lead'}
             </div>
           </div>
         </div>
