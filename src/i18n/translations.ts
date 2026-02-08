@@ -327,7 +327,7 @@ export const translations = {
             },
             {
               question: 'Kann ich erst testen?',
-              answer: 'Ja! Mit unserem Starter-Paket (100 Leads für €179) können Sie unsere Qualität direkt erleben. Unsere Qualitätsgarantie schützt Sie: Ungültige Leads ersetzen wir 1:1.'
+              answer: 'Ja! Mit unserem Starter-Paket (100 Leads für €249) können Sie unsere Qualität direkt erleben. Unsere Qualitätsgarantie schützt Sie: Ungültige Leads ersetzen wir 1:1.'
             }
           ]
         }
@@ -340,14 +340,24 @@ export const translations = {
       subtitle: 'Wählen Sie das passende Modell für Ihre Lead-Generierung',
       oneTimeLabel: 'Einmalig',
       monthlyLabel: 'Monatlich',
-      monthlySavingsBadge: 'Leads übertragbar',
+      monthlySavingsBadge: 'Recurring',
       perMonthLabel: 'Monat',
+      commitmentLabels: {
+        flexible: 'Flexibel',
+        threeMonths: '3 Monate',
+        sixMonths: '6 Monate'
+      },
+      commitmentBadges: {
+        flexible: 'Kündbar',
+        threeMonths: '',
+        sixMonths: 'Beste Ersparnis'
+      },
       packages: [
         {
           name: 'Starter',
           duration: '100 Leads',
-          price: '€179',
-          pricePerLead: '€1,79/Lead',
+          price: '€249',
+          pricePerLead: '€2,49/Lead',
           features: [
             '100 verifizierte B2B-Kontakte',
             'ICP-Kurzberatung (15 Min)',
@@ -362,9 +372,9 @@ export const translations = {
         {
           name: 'Growth',
           duration: '500 Leads',
-          price: '€699',
-          pricePerLead: '€1,40/Lead',
-          savings: 'Sie sparen 196 €',
+          price: '€999',
+          pricePerLead: '€2,00/Lead',
+          savings: 'Sie sparen 246 €',
           features: [
             '500 verifizierte B2B-Kontakte',
             'Ausführliche ICP-Beratung (45 Min)',
@@ -381,9 +391,9 @@ export const translations = {
         {
           name: 'Scale',
           duration: '1.000 Leads',
-          price: '€1.099',
-          pricePerLead: '€1,10/Lead',
-          savings: 'Sie sparen 691 €',
+          price: '€1.499',
+          pricePerLead: '€1,50/Lead',
+          savings: 'Sie sparen 991 €',
           features: [
             '1.000 verifizierte B2B-Kontakte',
             'Premium ICP-Workshop (90 Min)',
@@ -407,13 +417,16 @@ export const translations = {
         {
           name: 'Starter',
           duration: '100 Leads/Monat',
-          price: '€159',
-          pricePerLead: '€1,59/Lead',
+          pricing: {
+            flexible: { price: '€279', pricePerLead: '€2,79/Lead' },
+            threeMonths: { price: '€249', pricePerLead: '€2,49/Lead', savings: '11% gespart' },
+            sixMonths: { price: '€219', pricePerLead: '€2,19/Lead', savings: '22% gespart' }
+          },
           features: [
             '100 Leads jeden Monat',
             'Monatliche ICP-Optimierung',
             'DSGVO-Dokumentation',
-            'Jederzeit pausierbar',
+            'Ungenutzte Leads übertragbar',
             'E-Mail-Support (48h)'
           ],
           bestFor: 'Kontinuierlicher Pipeline-Aufbau',
@@ -423,9 +436,11 @@ export const translations = {
         {
           name: 'Growth',
           duration: '250 Leads/Monat',
-          price: '€349',
-          pricePerLead: '€1,40/Lead',
-          savings: 'Sie sparen 49 €/Mo',
+          pricing: {
+            flexible: { price: '€549', pricePerLead: '€2,20/Lead' },
+            threeMonths: { price: '€499', pricePerLead: '€2,00/Lead', savings: '9% gespart' },
+            sixMonths: { price: '€449', pricePerLead: '€1,80/Lead', savings: '18% gespart' }
+          },
           features: [
             '250 Leads jeden Monat',
             'Wöchentliche Optimierung',
@@ -441,9 +456,11 @@ export const translations = {
         {
           name: 'Scale',
           duration: '500 Leads/Monat',
-          price: '€549',
-          pricePerLead: '€1,10/Lead',
-          savings: 'Sie sparen 246 €/Mo',
+          pricing: {
+            flexible: { price: '€899', pricePerLead: '€1,80/Lead' },
+            threeMonths: { price: '€799', pricePerLead: '€1,60/Lead', savings: '11% gespart' },
+            sixMonths: { price: '€699', pricePerLead: '€1,40/Lead', savings: '22% gespart' }
+          },
           features: [
             '500 Leads jeden Monat',
             'Tägliche Optimierung',
@@ -460,7 +477,7 @@ export const translations = {
       bestForLabel: 'Ideal für:',
       popularBadge: 'Beliebteste',
       guaranteeText: 'Qualitätsgarantie: Ungültige Leads ersetzen wir 1:1',
-      paymentNote: 'Einmalig = Vorkasse • Monatlich = Jederzeit kündbar'
+      paymentNote: 'Einmalig = Vorkasse • Monatlich = Mindestlaufzeit je nach Paket'
     },
 
     // Contact Section
@@ -762,7 +779,7 @@ export const translations = {
             },
             {
               question: 'Can I test first?',
-              answer: 'Yes! With our Starter package (100 leads for €179) you can experience our quality directly. Our quality guarantee protects you: invalid leads are replaced 1:1.'
+              answer: 'Yes! With our Starter package (100 leads for €249) you can experience our quality directly. Our quality guarantee protects you: invalid leads are replaced 1:1.'
             }
           ]
         }
@@ -775,14 +792,24 @@ export const translations = {
       subtitle: 'Choose the right model for your lead generation',
       oneTimeLabel: 'One-Time',
       monthlyLabel: 'Monthly',
-      monthlySavingsBadge: 'Leads roll over',
+      monthlySavingsBadge: 'Recurring',
       perMonthLabel: 'month',
+      commitmentLabels: {
+        flexible: 'Flexible',
+        threeMonths: '3 Months',
+        sixMonths: '6 Months'
+      },
+      commitmentBadges: {
+        flexible: 'Cancel anytime',
+        threeMonths: '',
+        sixMonths: 'Best savings'
+      },
       packages: [
         {
           name: 'Starter',
           duration: '100 Leads',
-          price: '€179',
-          pricePerLead: '€1.79/lead',
+          price: '€249',
+          pricePerLead: '€2.49/lead',
           features: [
             '100 verified B2B contacts',
             'ICP brief consultation (15 min)',
@@ -797,9 +824,9 @@ export const translations = {
         {
           name: 'Growth',
           duration: '500 Leads',
-          price: '€699',
-          pricePerLead: '€1.40/lead',
-          savings: 'Save €196',
+          price: '€999',
+          pricePerLead: '€2.00/lead',
+          savings: 'Save €246',
           features: [
             '500 verified B2B contacts',
             'Detailed ICP consulting (45 min)',
@@ -816,9 +843,9 @@ export const translations = {
         {
           name: 'Scale',
           duration: '1,000 Leads',
-          price: '€1,099',
-          pricePerLead: '€1.10/lead',
-          savings: 'Save €691',
+          price: '€1,499',
+          pricePerLead: '€1.50/lead',
+          savings: 'Save €991',
           features: [
             '1,000 verified B2B contacts',
             'Premium ICP workshop (90 min)',
@@ -842,13 +869,16 @@ export const translations = {
         {
           name: 'Starter',
           duration: '100 Leads/month',
-          price: '€159',
-          pricePerLead: '€1.59/lead',
+          pricing: {
+            flexible: { price: '€279', pricePerLead: '€2.79/lead' },
+            threeMonths: { price: '€249', pricePerLead: '€2.49/lead', savings: '11% saved' },
+            sixMonths: { price: '€219', pricePerLead: '€2.19/lead', savings: '22% saved' }
+          },
           features: [
             '100 leads every month',
             'Monthly ICP optimization',
             'GDPR documentation',
-            'Pause anytime',
+            'Unused leads roll over',
             'Email support (48h)'
           ],
           bestFor: 'Continuous pipeline building',
@@ -858,9 +888,11 @@ export const translations = {
         {
           name: 'Growth',
           duration: '250 Leads/month',
-          price: '€349',
-          pricePerLead: '€1.40/lead',
-          savings: 'Save €49/mo',
+          pricing: {
+            flexible: { price: '€549', pricePerLead: '€2.20/lead' },
+            threeMonths: { price: '€499', pricePerLead: '€2.00/lead', savings: '9% saved' },
+            sixMonths: { price: '€449', pricePerLead: '€1.80/lead', savings: '18% saved' }
+          },
           features: [
             '250 leads every month',
             'Weekly optimization',
@@ -876,9 +908,11 @@ export const translations = {
         {
           name: 'Scale',
           duration: '500 Leads/month',
-          price: '€549',
-          pricePerLead: '€1.10/lead',
-          savings: 'Save €246/mo',
+          pricing: {
+            flexible: { price: '€899', pricePerLead: '€1.80/lead' },
+            threeMonths: { price: '€799', pricePerLead: '€1.60/lead', savings: '11% saved' },
+            sixMonths: { price: '€699', pricePerLead: '€1.40/lead', savings: '22% saved' }
+          },
           features: [
             '500 leads every month',
             'Daily optimization',
@@ -895,7 +929,7 @@ export const translations = {
       bestForLabel: 'Best for:',
       popularBadge: 'Most Popular',
       guaranteeText: 'Quality guarantee: Invalid leads replaced 1:1',
-      paymentNote: 'One-time = Prepaid • Monthly = Cancel anytime'
+      paymentNote: 'One-time = Prepaid • Monthly = Minimum commitment per plan'
     },
 
     // Contact Section

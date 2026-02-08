@@ -11,6 +11,7 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
   const [isMobile, setIsMobile] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [billingCycle, setBillingCycle] = useState<'oneTime' | 'monthly'>('oneTime');
+  const [commitment, setCommitment] = useState<'flexible' | 'threeMonths' | 'sixMonths'>('threeMonths');
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -52,6 +53,15 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
 
   const packages = billingCycle === 'oneTime' ? t.packages : t.monthlyPackages;
   const icons = [Zap, Star, Crown];
+  const commitmentKeys = ['flexible', 'threeMonths', 'sixMonths'] as const;
+
+  // Helper to get price/pricePerLead/savings for monthly packages
+  const getMonthlyPricing = (pkg: any) => {
+    if (pkg.pricing && pkg.pricing[commitment]) {
+      return pkg.pricing[commitment];
+    }
+    return { price: pkg.price, pricePerLead: pkg.pricePerLead, savings: pkg.savings };
+  };
 
   return (
     <section
@@ -181,6 +191,64 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
               </span>
             </button>
           </div>
+
+          {/* Commitment Selector - only visible for monthly */}
+          {billingCycle === 'monthly' && t.commitmentLabels && (
+            <div
+              style={{
+                ...fadeInUp(0.2),
+                display: 'flex',
+                justifyContent: 'center',
+                gap: '8px',
+                marginTop: '20px',
+                flexWrap: 'wrap'
+              }}
+            >
+              {commitmentKeys.map((key) => {
+                const isActive = commitment === key;
+                const badge = t.commitmentBadges?.[key];
+                return (
+                  <button
+                    key={key}
+                    onClick={() => setCommitment(key)}
+                    style={{
+                      padding: '8px 16px',
+                      borderRadius: '8px',
+                      border: isActive ? '2px solid #5c4d7d' : '1px solid rgba(26, 26, 46, 0.15)',
+                      background: isActive ? 'rgba(92, 77, 125, 0.08)' : '#ffffff',
+                      fontFamily: 'Source Sans 3, sans-serif',
+                      fontSize: '0.875rem',
+                      fontWeight: isActive ? 700 : 500,
+                      color: isActive ? '#1a1a2e' : '#4a4e69',
+                      cursor: 'pointer',
+                      transition: 'all 0.2s ease',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '6px'
+                    }}
+                  >
+                    {t.commitmentLabels[key]}
+                    {badge && (
+                      <span
+                        style={{
+                          background: key === 'sixMonths' ? '#81b29a' : 'rgba(26, 26, 46, 0.08)',
+                          color: key === 'sixMonths' ? '#ffffff' : '#9a8c98',
+                          fontSize: '0.625rem',
+                          fontWeight: 700,
+                          padding: '2px 6px',
+                          borderRadius: '4px',
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.3px'
+                        }}
+                      >
+                        {badge}
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+          )}
         </div>
 
         {/* Pricing Cards - Always 3 columns */}
@@ -192,14 +260,19 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
             alignItems: 'stretch'
           }}
         >
-          {packages.map((pkg, index) => {
+          {packages.map((pkg: any, index: number) => {
             const isHighlighted = pkg.highlighted;
             const cardDelay = 0.25 + index * 0.1;
             const Icon = icons[index] || Star;
 
+            // For monthly, get the price based on selected commitment
+            const displayPrice = billingCycle === 'monthly' ? getMonthlyPricing(pkg).price : pkg.price;
+            const displayPricePerLead = billingCycle === 'monthly' ? getMonthlyPricing(pkg).pricePerLead : pkg.pricePerLead;
+            const displaySavings = billingCycle === 'monthly' ? getMonthlyPricing(pkg).savings : pkg.savings;
+
             return (
               <div
-                key={index}
+                key={`${billingCycle}-${commitment}-${index}`}
                 style={{
                   ...fadeInUp(cardDelay),
                   position: 'relative',
@@ -249,7 +322,7 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                 )}
 
                 {/* Savings Badge */}
-                {pkg.savings && !isHighlighted && (
+                {displaySavings && (
                   <div
                     style={{
                       position: 'absolute',
@@ -265,28 +338,7 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                       letterSpacing: '0.3px'
                     }}
                   >
-                    {pkg.savings}
-                  </div>
-                )}
-
-                {/* Savings Badge for highlighted card */}
-                {pkg.savings && isHighlighted && (
-                  <div
-                    style={{
-                      position: 'absolute',
-                      top: '-12px',
-                      right: '16px',
-                      background: '#81b29a',
-                      color: '#ffffff',
-                      fontFamily: 'Source Sans 3, sans-serif',
-                      fontSize: '0.6875rem',
-                      fontWeight: 700,
-                      padding: '5px 10px',
-                      borderRadius: '100px',
-                      letterSpacing: '0.3px'
-                    }}
-                  >
-                    {pkg.savings}
+                    {displaySavings}
                   </div>
                 )}
 
@@ -354,7 +406,7 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                         lineHeight: 1
                       }}
                     >
-                      {pkg.price}
+                      {displayPrice}
                     </span>
                     {billingCycle === 'monthly' && (
                       <span
@@ -368,7 +420,7 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                       </span>
                     )}
                   </div>
-                  {pkg.pricePerLead && (
+                  {displayPricePerLead && (
                     <p
                       style={{
                         fontFamily: 'Source Sans 3, sans-serif',
@@ -379,7 +431,7 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                         marginBottom: 0
                       }}
                     >
-                      {pkg.pricePerLead}
+                      {displayPricePerLead}
                     </p>
                   )}
                 </div>
@@ -394,7 +446,7 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                     marginBottom: '24px'
                   }}
                 >
-                  {pkg.features.map((feature, featureIndex) => (
+                  {pkg.features.map((feature: string, featureIndex: number) => (
                     <div
                       key={featureIndex}
                       style={{
