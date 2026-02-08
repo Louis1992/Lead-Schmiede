@@ -18,7 +18,7 @@ const lang = 'de';
 
 // Page metadata (German)
 const pageTitle = "Lead-Schmiede - Maßgeschneiderte B2B Lead-Listen";
-const pageDescription = "Verifizierte B2B-Kontakte mit persönlicher ICP-Beratung. DSGVO-konform, manuell kuratiert. Ab €149 für 100 qualifizierte Leads.";
+const pageDescription = "Verifizierte B2B-Kontakte mit persönlicher ICP-Beratung. DSGVO-konform, manuell kuratiert. Ab €249 für 100 qualifizierte Leads.";
 ---
 
 <Layout
@@ -50,11 +50,11 @@ const pageDescription = "Verifizierte B2B-Kontakte mit persönlicher ICP-Beratun
     <!-- Pricing Section -->
     <PricingSection lang={lang} client:idle />
 
+    <!-- Cross-Sell Banner (LeadGenies) - directly after pricing for upsell -->
+    <CrossSellBanner lang={lang} client:idle />
+
     <!-- Testimonial Section -->
     <TestimonialSection lang={lang} client:idle />
-
-    <!-- Cross-Sell Banner (LeadGenies) -->
-    <CrossSellBanner lang={lang} client:idle />
 
     <!-- FAQ Section -->
     <section id="faq">

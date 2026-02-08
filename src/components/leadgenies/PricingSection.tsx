@@ -11,7 +11,7 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
   const [isMobile, setIsMobile] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [billingCycle, setBillingCycle] = useState<'oneTime' | 'monthly'>('oneTime');
-  const [commitment, setCommitment] = useState<'flexible' | 'threeMonths' | 'sixMonths'>('threeMonths');
+  const [commitment, setCommitment] = useState<'threeMonths' | 'sixMonths' | 'twelveMonths'>('threeMonths');
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -53,7 +53,7 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
 
   const packages = billingCycle === 'oneTime' ? t.packages : t.monthlyPackages;
   const icons = [Zap, Star, Crown];
-  const commitmentKeys = ['flexible', 'threeMonths', 'sixMonths'] as const;
+  const commitmentKeys = ['threeMonths', 'sixMonths', 'twelveMonths'] as const;
 
   // Helper to get price/pricePerLead/savings for monthly packages
   const getMonthlyPricing = (pkg: any) => {
@@ -231,8 +231,8 @@ export default function PricingSection({ lang = 'de' }: PricingSectionProps) {
                     {badge && (
                       <span
                         style={{
-                          background: key === 'sixMonths' ? '#81b29a' : 'rgba(26, 26, 46, 0.08)',
-                          color: key === 'sixMonths' ? '#ffffff' : '#9a8c98',
+                          background: key === 'twelveMonths' ? '#81b29a' : 'rgba(26, 26, 46, 0.08)',
+                          color: key === 'twelveMonths' ? '#ffffff' : '#9a8c98',
                           fontSize: '0.625rem',
                           fontWeight: 700,
                           padding: '2px 6px',

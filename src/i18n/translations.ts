@@ -343,14 +343,14 @@ export const translations = {
       monthlySavingsBadge: 'Recurring',
       perMonthLabel: 'Monat',
       commitmentLabels: {
-        flexible: 'Flexibel',
         threeMonths: '3 Monate',
-        sixMonths: '6 Monate'
+        sixMonths: '6 Monate',
+        twelveMonths: '12 Monate'
       },
       commitmentBadges: {
-        flexible: 'Kündbar',
         threeMonths: '',
-        sixMonths: 'Beste Ersparnis'
+        sixMonths: '',
+        twelveMonths: 'Beste Ersparnis'
       },
       packages: [
         {
@@ -418,9 +418,9 @@ export const translations = {
           name: 'Starter',
           duration: '100 Leads/Monat',
           pricing: {
-            flexible: { price: '€279', pricePerLead: '€2,79/Lead' },
-            threeMonths: { price: '€249', pricePerLead: '€2,49/Lead', savings: '11% gespart' },
-            sixMonths: { price: '€219', pricePerLead: '€2,19/Lead', savings: '22% gespart' }
+            threeMonths: { price: '€225', pricePerLead: '€2,25/Lead', savings: '10% gespart' },
+            sixMonths: { price: '€199', pricePerLead: '€1,99/Lead', savings: '20% gespart' },
+            twelveMonths: { price: '€175', pricePerLead: '€1,75/Lead', savings: '30% gespart' }
           },
           features: [
             '100 Leads jeden Monat',
@@ -437,9 +437,9 @@ export const translations = {
           name: 'Growth',
           duration: '250 Leads/Monat',
           pricing: {
-            flexible: { price: '€549', pricePerLead: '€2,20/Lead' },
-            threeMonths: { price: '€499', pricePerLead: '€2,00/Lead', savings: '9% gespart' },
-            sixMonths: { price: '€449', pricePerLead: '€1,80/Lead', savings: '18% gespart' }
+            threeMonths: { price: '€449', pricePerLead: '€1,80/Lead', savings: '10% gespart' },
+            sixMonths: { price: '€399', pricePerLead: '€1,60/Lead', savings: '20% gespart' },
+            twelveMonths: { price: '€349', pricePerLead: '€1,40/Lead', savings: '30% gespart' }
           },
           features: [
             '250 Leads jeden Monat',
@@ -457,9 +457,9 @@ export const translations = {
           name: 'Scale',
           duration: '500 Leads/Monat',
           pricing: {
-            flexible: { price: '€899', pricePerLead: '€1,80/Lead' },
-            threeMonths: { price: '€799', pricePerLead: '€1,60/Lead', savings: '11% gespart' },
-            sixMonths: { price: '€699', pricePerLead: '€1,40/Lead', savings: '22% gespart' }
+            threeMonths: { price: '€679', pricePerLead: '€1,36/Lead', savings: '10% gespart' },
+            sixMonths: { price: '€599', pricePerLead: '€1,20/Lead', savings: '20% gespart' },
+            twelveMonths: { price: '€529', pricePerLead: '€1,06/Lead', savings: '30% gespart' }
           },
           features: [
             '500 Leads jeden Monat',
@@ -477,7 +477,7 @@ export const translations = {
       bestForLabel: 'Ideal für:',
       popularBadge: 'Beliebteste',
       guaranteeText: 'Qualitätsgarantie: Ungültige Leads ersetzen wir 1:1',
-      paymentNote: 'Einmalig = Vorkasse • Monatlich = Mindestlaufzeit je nach Paket'
+      paymentNote: 'Einmalig = Vorkasse • Monatlich = 3, 6 oder 12 Monate Laufzeit'
     },
 
     // Contact Section
@@ -795,14 +795,14 @@ export const translations = {
       monthlySavingsBadge: 'Recurring',
       perMonthLabel: 'month',
       commitmentLabels: {
-        flexible: 'Flexible',
         threeMonths: '3 Months',
-        sixMonths: '6 Months'
+        sixMonths: '6 Months',
+        twelveMonths: '12 Months'
       },
       commitmentBadges: {
-        flexible: 'Cancel anytime',
         threeMonths: '',
-        sixMonths: 'Best savings'
+        sixMonths: '',
+        twelveMonths: 'Best savings'
       },
       packages: [
         {
@@ -870,9 +870,9 @@ export const translations = {
           name: 'Starter',
           duration: '100 Leads/month',
           pricing: {
-            flexible: { price: '€279', pricePerLead: '€2.79/lead' },
-            threeMonths: { price: '€249', pricePerLead: '€2.49/lead', savings: '11% saved' },
-            sixMonths: { price: '€219', pricePerLead: '€2.19/lead', savings: '22% saved' }
+            threeMonths: { price: '€225', pricePerLead: '€2.25/lead', savings: '10% saved' },
+            sixMonths: { price: '€199', pricePerLead: '€1.99/lead', savings: '20% saved' },
+            twelveMonths: { price: '€175', pricePerLead: '€1.75/lead', savings: '30% saved' }
           },
           features: [
             '100 leads every month',
@@ -889,9 +889,9 @@ export const translations = {
           name: 'Growth',
           duration: '250 Leads/month',
           pricing: {
-            flexible: { price: '€549', pricePerLead: '€2.20/lead' },
-            threeMonths: { price: '€499', pricePerLead: '€2.00/lead', savings: '9% saved' },
-            sixMonths: { price: '€449', pricePerLead: '€1.80/lead', savings: '18% saved' }
+            threeMonths: { price: '€449', pricePerLead: '€1.80/lead', savings: '10% saved' },
+            sixMonths: { price: '€399', pricePerLead: '€1.60/lead', savings: '20% saved' },
+            twelveMonths: { price: '€349', pricePerLead: '€1.40/lead', savings: '30% saved' }
           },
           features: [
             '250 leads every month',
@@ -909,9 +909,9 @@ export const translations = {
           name: 'Scale',
           duration: '500 Leads/month',
           pricing: {
-            flexible: { price: '€899', pricePerLead: '€1.80/lead' },
-            threeMonths: { price: '€799', pricePerLead: '€1.60/lead', savings: '11% saved' },
-            sixMonths: { price: '€699', pricePerLead: '€1.40/lead', savings: '22% saved' }
+            threeMonths: { price: '€679', pricePerLead: '€1.36/lead', savings: '10% saved' },
+            sixMonths: { price: '€599', pricePerLead: '€1.20/lead', savings: '20% saved' },
+            twelveMonths: { price: '€529', pricePerLead: '€1.06/lead', savings: '30% saved' }
           },
           features: [
             '500 leads every month',
@@ -929,7 +929,7 @@ export const translations = {
       bestForLabel: 'Best for:',
       popularBadge: 'Most Popular',
       guaranteeText: 'Quality guarantee: Invalid leads replaced 1:1',
-      paymentNote: 'One-time = Prepaid • Monthly = Minimum commitment per plan'
+      paymentNote: 'One-time = Prepaid • Monthly = 3, 6 or 12 month commitment'
     },
 
     // Contact Section

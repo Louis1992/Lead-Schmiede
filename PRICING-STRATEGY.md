@@ -35,29 +35,31 @@ Lead-Schmiede positioniert sich bewusst **ueber DIY-Tools aber unter Premium-Anb
 
 Das Monatsmodell nutzt **laufzeitbasierte Preise** -- laengere Commitments werden mit niedrigeren Preisen belohnt.
 
+Basis = gleicher Preis pro Lead wie Einmalkauf. Laengere Laufzeit = groesserer Rabatt.
+
 #### Starter (100 Leads/Monat)
 
 | Laufzeit | Preis/Monat | Pro Lead | Ersparnis |
 |----------|-------------|----------|-----------|
-| Flexibel (kuendbar) | 279 EUR | 2,79 EUR | -- |
-| 3 Monate | 249 EUR | 2,49 EUR | 11% |
-| 6 Monate | 219 EUR | 2,19 EUR | 22% |
+| 3 Monate | 225 EUR | 2,25 EUR | 10% |
+| 6 Monate | 199 EUR | 1,99 EUR | 20% |
+| 12 Monate | 175 EUR | 1,75 EUR | 30% |
 
 #### Growth (250 Leads/Monat)
 
 | Laufzeit | Preis/Monat | Pro Lead | Ersparnis |
 |----------|-------------|----------|-----------|
-| Flexibel (kuendbar) | 549 EUR | 2,20 EUR | -- |
-| 3 Monate | 499 EUR | 2,00 EUR | 9% |
-| 6 Monate | 449 EUR | 1,80 EUR | 18% |
+| 3 Monate | 449 EUR | 1,80 EUR | 10% |
+| 6 Monate | 399 EUR | 1,60 EUR | 20% |
+| 12 Monate | 349 EUR | 1,40 EUR | 30% |
 
 #### Scale (500 Leads/Monat)
 
 | Laufzeit | Preis/Monat | Pro Lead | Ersparnis |
 |----------|-------------|----------|-----------|
-| Flexibel (kuendbar) | 899 EUR | 1,80 EUR | -- |
-| 3 Monate | 799 EUR | 1,60 EUR | 11% |
-| 6 Monate | 699 EUR | 1,40 EUR | 22% |
+| 3 Monate | 679 EUR | 1,36 EUR | 10% |
+| 6 Monate | 599 EUR | 1,20 EUR | 20% |
+| 12 Monate | 529 EUR | 1,06 EUR | 30% |
 
 ### Enterprise (ab 2.500 Leads)
 
@@ -83,10 +85,11 @@ Kein oeffentlicher Preis -- "Gespraech vereinbaren". Individuelle Konditionen mi
 | Signal-Filterung | -- | Ja | Voll |
 
 ### 3. Commitment-basiertes Monatsmodell
-- **Flexibel** = Premium-Aufpreis fuer volle Flexibilitaet
-- **3 Monate** = Default-Auswahl (goldener Mittelweg)
-- **6 Monate** = "Beste Ersparnis"-Badge (Anreiz fuer laengere Bindung)
-- Monatlich ist immer **teurer pro Lead als Einmal** = Flexibilitaets-Aufpreis
+- Kein "Flexibel"-Tarif -- vermeidet Verwirrung mit Einmalkauf
+- **3 Monate** = Default-Auswahl (niedrigste Einstiegshuerde)
+- **6 Monate** = 20% Rabatt (mittlerer Anreiz)
+- **12 Monate** = "Beste Ersparnis"-Badge, 30% Rabatt (maximale Bindung)
+- Basis = Einmalkauf-Preis pro Lead, dann Staffelrabatt
 
 ### 4. Anchoring & Framing
 - Savings werden als **absolute Euro-Betraege** angezeigt ("Sie sparen 246 EUR")
@@ -116,7 +119,7 @@ Kein oeffentlicher Preis -- "Gespraech vereinbaren". Individuelle Konditionen mi
 
 ## Wichtige Regeln
 
-1. **Monatlich immer teurer pro Lead als Einmal** -- Flexibilitaet kostet einen Aufpreis
+1. **Monatlich-Basis = Einmalkauf-Preis pro Lead** -- Rabatt nur durch Laufzeit-Commitment
 2. **Growth ist immer hervorgehoben** -- visuell und als empfohlene Option
 3. **Enterprise nie mit konkretem Preis** -- immer "Gespraech vereinbaren"
 4. **Savings als absolute Betraege** -- nicht als Prozente (B2B-Kontext)
