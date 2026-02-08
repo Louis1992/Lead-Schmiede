@@ -416,18 +416,19 @@ export const translations = {
       monthlyPackages: [
         {
           name: 'Starter',
-          duration: '100 Leads/Monat',
+          duration: '500 Leads/Monat',
           pricing: {
-            threeMonths: { price: '€225', pricePerLead: '€2,25/Lead', savings: '10% gespart' },
-            sixMonths: { price: '€199', pricePerLead: '€1,99/Lead', savings: '20% gespart' },
-            twelveMonths: { price: '€175', pricePerLead: '€1,75/Lead', savings: '30% gespart' }
+            threeMonths: { price: '€899', pricePerLead: '€1,80/Lead', savings: '10% gespart' },
+            sixMonths: { price: '€799', pricePerLead: '€1,60/Lead', savings: '20% gespart' },
+            twelveMonths: { price: '€699', pricePerLead: '€1,40/Lead', savings: '30% gespart' }
           },
           features: [
-            '100 Leads jeden Monat',
+            '500 Leads jeden Monat',
             'Monatliche ICP-Optimierung',
             'DSGVO-Dokumentation',
             'Ungenutzte Leads übertragbar',
-            'E-Mail-Support (48h)'
+            'Prioritäts-Support (24h)',
+            '1 Iteration/Monat inklusive'
           ],
           bestFor: 'Kontinuierlicher Pipeline-Aufbau',
           cta: 'Jetzt starten',
@@ -435,41 +436,43 @@ export const translations = {
         },
         {
           name: 'Growth',
-          duration: '250 Leads/Monat',
+          duration: '1.000 Leads/Monat',
           pricing: {
-            threeMonths: { price: '€449', pricePerLead: '€1,80/Lead', savings: '10% gespart' },
-            sixMonths: { price: '€399', pricePerLead: '€1,60/Lead', savings: '20% gespart' },
-            twelveMonths: { price: '€349', pricePerLead: '€1,40/Lead', savings: '30% gespart' }
+            threeMonths: { price: '€1.349', pricePerLead: '€1,35/Lead', savings: '10% gespart' },
+            sixMonths: { price: '€1.199', pricePerLead: '€1,20/Lead', savings: '20% gespart' },
+            twelveMonths: { price: '€1.049', pricePerLead: '€1,05/Lead', savings: '30% gespart' }
           },
           features: [
-            '250 Leads jeden Monat',
+            '1.000 Leads jeden Monat',
             'Wöchentliche Optimierung',
             'DSGVO-Dokumentation',
             'Ungenutzte Leads übertragbar',
             'Dedizierter Ansprechpartner',
-            'Kampagnen-Analyse'
+            'Kampagnen-Analyse',
+            'Signal-Filterung'
           ],
-          bestFor: 'Wachsende Teams',
+          bestFor: 'Wachsende Sales-Teams',
           cta: 'Beratung sichern',
           highlighted: true
         },
         {
           name: 'Scale',
-          duration: '500 Leads/Monat',
+          duration: '2.000 Leads/Monat',
           pricing: {
-            threeMonths: { price: '€679', pricePerLead: '€1,36/Lead', savings: '10% gespart' },
-            sixMonths: { price: '€599', pricePerLead: '€1,20/Lead', savings: '20% gespart' },
-            twelveMonths: { price: '€529', pricePerLead: '€1,06/Lead', savings: '30% gespart' }
+            threeMonths: { price: '€1.999', pricePerLead: '€1,00/Lead', savings: '10% gespart' },
+            sixMonths: { price: '€1.799', pricePerLead: '€0,90/Lead', savings: '20% gespart' },
+            twelveMonths: { price: '€1.599', pricePerLead: '€0,80/Lead', savings: '30% gespart' }
           },
           features: [
-            '500 Leads jeden Monat',
+            '2.000 Leads jeden Monat',
             'Tägliche Optimierung',
             'DSGVO-Dokumentation',
             'Ungenutzte Leads übertragbar',
             'Premium Account Manager',
-            'Wöchentliche Strategy Calls'
+            'Wöchentliche Strategy Calls',
+            'Volle Signal-Filterung + API'
           ],
-          bestFor: 'Sales-Teams mit Volumen',
+          bestFor: 'Enterprise Sales-Teams',
           cta: 'Premium-Beratung buchen',
           highlighted: false
         }
@@ -868,18 +871,19 @@ export const translations = {
       monthlyPackages: [
         {
           name: 'Starter',
-          duration: '100 Leads/month',
+          duration: '500 Leads/month',
           pricing: {
-            threeMonths: { price: '€225', pricePerLead: '€2.25/lead', savings: '10% saved' },
-            sixMonths: { price: '€199', pricePerLead: '€1.99/lead', savings: '20% saved' },
-            twelveMonths: { price: '€175', pricePerLead: '€1.75/lead', savings: '30% saved' }
+            threeMonths: { price: '€899', pricePerLead: '€1.80/lead', savings: '10% saved' },
+            sixMonths: { price: '€799', pricePerLead: '€1.60/lead', savings: '20% saved' },
+            twelveMonths: { price: '€699', pricePerLead: '€1.40/lead', savings: '30% saved' }
           },
           features: [
-            '100 leads every month',
+            '500 leads every month',
             'Monthly ICP optimization',
             'GDPR documentation',
             'Unused leads roll over',
-            'Email support (48h)'
+            'Priority support (24h)',
+            '1 iteration/month included'
           ],
           bestFor: 'Continuous pipeline building',
           cta: 'Get Started',
@@ -887,41 +891,43 @@ export const translations = {
         },
         {
           name: 'Growth',
-          duration: '250 Leads/month',
+          duration: '1,000 Leads/month',
           pricing: {
-            threeMonths: { price: '€449', pricePerLead: '€1.80/lead', savings: '10% saved' },
-            sixMonths: { price: '€399', pricePerLead: '€1.60/lead', savings: '20% saved' },
-            twelveMonths: { price: '€349', pricePerLead: '€1.40/lead', savings: '30% saved' }
+            threeMonths: { price: '€1,349', pricePerLead: '€1.35/lead', savings: '10% saved' },
+            sixMonths: { price: '€1,199', pricePerLead: '€1.20/lead', savings: '20% saved' },
+            twelveMonths: { price: '€1,049', pricePerLead: '€1.05/lead', savings: '30% saved' }
           },
           features: [
-            '250 leads every month',
+            '1,000 leads every month',
             'Weekly optimization',
             'GDPR documentation',
             'Unused leads roll over',
             'Dedicated contact person',
-            'Campaign analysis'
+            'Campaign analysis',
+            'Signal filtering'
           ],
-          bestFor: 'Growing teams',
+          bestFor: 'Growing sales teams',
           cta: 'Book Consultation',
           highlighted: true
         },
         {
           name: 'Scale',
-          duration: '500 Leads/month',
+          duration: '2,000 Leads/month',
           pricing: {
-            threeMonths: { price: '€679', pricePerLead: '€1.36/lead', savings: '10% saved' },
-            sixMonths: { price: '€599', pricePerLead: '€1.20/lead', savings: '20% saved' },
-            twelveMonths: { price: '€529', pricePerLead: '€1.06/lead', savings: '30% saved' }
+            threeMonths: { price: '€1,999', pricePerLead: '€1.00/lead', savings: '10% saved' },
+            sixMonths: { price: '€1,799', pricePerLead: '€0.90/lead', savings: '20% saved' },
+            twelveMonths: { price: '€1,599', pricePerLead: '€0.80/lead', savings: '30% saved' }
           },
           features: [
-            '500 leads every month',
+            '2,000 leads every month',
             'Daily optimization',
             'GDPR documentation',
             'Unused leads roll over',
             'Premium Account Manager',
-            'Weekly strategy calls'
+            'Weekly strategy calls',
+            'Full signal filtering + API'
           ],
-          bestFor: 'High-volume sales teams',
+          bestFor: 'Enterprise sales teams',
           cta: 'Book Premium',
           highlighted: false
         }

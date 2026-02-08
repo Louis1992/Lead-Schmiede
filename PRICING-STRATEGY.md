@@ -37,29 +37,32 @@ Das Monatsmodell nutzt **laufzeitbasierte Preise** -- laengere Commitments werde
 
 Basis = gleicher Preis pro Lead wie Einmalkauf. Laengere Laufzeit = groesserer Rabatt.
 
-#### Starter (100 Leads/Monat)
+#### Starter (500 Leads/Monat)
 
 | Laufzeit | Preis/Monat | Pro Lead | Ersparnis |
 |----------|-------------|----------|-----------|
-| 3 Monate | 225 EUR | 2,25 EUR | 10% |
-| 6 Monate | 199 EUR | 1,99 EUR | 20% |
-| 12 Monate | 175 EUR | 1,75 EUR | 30% |
+| 3 Monate | 899 EUR | 1,80 EUR | 10% |
+| 6 Monate | 799 EUR | 1,60 EUR | 20% |
+| 12 Monate | 699 EUR | 1,40 EUR | 30% |
 
-#### Growth (250 Leads/Monat)
-
-| Laufzeit | Preis/Monat | Pro Lead | Ersparnis |
-|----------|-------------|----------|-----------|
-| 3 Monate | 449 EUR | 1,80 EUR | 10% |
-| 6 Monate | 399 EUR | 1,60 EUR | 20% |
-| 12 Monate | 349 EUR | 1,40 EUR | 30% |
-
-#### Scale (500 Leads/Monat)
+#### Growth (1.000 Leads/Monat)
 
 | Laufzeit | Preis/Monat | Pro Lead | Ersparnis |
 |----------|-------------|----------|-----------|
-| 3 Monate | 679 EUR | 1,36 EUR | 10% |
-| 6 Monate | 599 EUR | 1,20 EUR | 20% |
-| 12 Monate | 529 EUR | 1,06 EUR | 30% |
+| 3 Monate | 1.349 EUR | 1,35 EUR | 10% |
+| 6 Monate | 1.199 EUR | 1,20 EUR | 20% |
+| 12 Monate | 1.049 EUR | 1,05 EUR | 30% |
+
+#### Scale (2.000 Leads/Monat)
+
+| Laufzeit | Preis/Monat | Pro Lead | Ersparnis |
+|----------|-------------|----------|-----------|
+| 3 Monate | 1.999 EUR | 1,00 EUR | 10% |
+| 6 Monate | 1.799 EUR | 0,90 EUR | 20% |
+| 12 Monate | 1.599 EUR | 0,80 EUR | 30% |
+
+**Wichtig:** Monatliches Mindest-Volumen = 500 Leads. Kleinere Mengen nur als Einmalkauf.
+Ab 2.000 Leads/Monat (Scale) sinkt der Preis auf ~1 EUR/Lead -- das ist der Anreiz fuer grosse Teams, sich langfristig zu binden.
 
 ### Enterprise (ab 2.500 Leads)
 
